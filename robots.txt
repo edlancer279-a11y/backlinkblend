@@ -1,0 +1,10 @@
+# BacklinkBlend Search Crawler Directives
+User-agent: *
+Allow: /
+
+# Disallow legacy RSS feeds & comments feeds to resolve GSC Crawled Not Indexed
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /*/feed/
+
+Sitemap: https://backlinkblend.com/sitemap.xml

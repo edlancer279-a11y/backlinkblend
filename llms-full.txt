@@ -1,0 +1,49 @@
+﻿# BacklinkBlend Full Text Knowledge Base
+
+> Comprehensive Markdown Knowledge Base of all published masterclasses, guides, and technical frameworks on BacklinkBlend.
+
+---
+
+# What Is Perplexity AI? Features, Pricing, and How It Works
+
+Perplexity AI is a conversational search and answer engine designed to replace traditional search engine link lists with direct, synthesized answers backed by inline citations. Founded in 2022 by former AI researchers from OpenAI and Meta, the platform leverages Large Language Models (LLMs) alongside real-time web index retrieval.
+
+Key Features:
+- Pro Search (Copilot): Interactive search assistant that asks clarifying questions.
+- Focus Modes: Academic (ArXiv), YouTube, Reddit, Computational data.
+- Multi-Model Support: Access to GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, and Sonar models.
+
+---
+
+# What Is AI Hallucination? Causes, Risks, and How to Spot It
+
+AI hallucination refers to a phenomenon where Large Language Models (LLMs) produce confident responses containing incorrect or fabricated facts.
+
+Causes:
+- Training Data Gaps & Noise
+- Over-Optimization for Fluency over Accuracy
+- Prompt Ambiguity & Leading Questions
+
+Prevention Techniques:
+1. Verify Primary Sources Independently
+2. Use Retrieval-Augmented Generation (RAG)
+3. Set System Constraints and Zero Temperature
+4. Implement Chain-of-Thought Verification
+
+---
+
+# Clever AI Humanizer Review: Does It Really Work?
+
+Clever AI Humanizer rewrites AI-generated text to sound more natural and reduce likelihood of being flagged by AI content detectors.
+
+---
+
+# What Is Claude AI? A Plain-English Beginner's Guide
+
+Claude AI by Anthropic is a leading Large Language Model family emphasizing constitutional AI safety, long-context window handling (200k+ tokens), Artifacts inline rendering, and project workspaces.
+
+---
+
+# Enterprise AI Security Architecture: Threat Models & Defense Frameworks
+
+An executive blueprint for securing LLMs, agentic tools, and RAG pipelines against prompt injection, data poisoning, and model theft.
