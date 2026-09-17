@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182030"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#080C14"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="35%" stop-color="#F59E0B"/>
+      <stop offset="85%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+    <linearGradient id="linkGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="40%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#F59E0B" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Dark Slate Squircle Base -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGrad)" stroke="#334155" stroke-width="4"/>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.3"/>
+
+  <!-- Iconic Monogram Emblem: Intertwined B & Chain Link -->
+  <g filter="url(#goldGlow)">
+    <!-- Serif 'B' Stem & Spine -->
+    <path d="M 168,112 L 280,112 C 340,112 376,138 376,188 C 376,222 352,246 308,256 C 362,266 392,298 392,348 C 392,406 346,432 276,432 L 168,432 Z M 228,162 L 228,238 L 276,238 C 306,238 324,224 324,200 C 324,176 306,162 276,162 Z M 228,284 L 228,382 L 280,382 C 314,382 338,366 338,333 C 338,300 314,284 280,284 Z" fill="url(#goldGrad)"/>
+
+    <!-- Interlocking Angled Chain Link Loop -->
+    <path d="M 210,320 L 330,170 C 342,155 364,152 379,164 C 394,176 397,198 385,213 L 265,363 C 253,378 231,381 216,369 C 201,357 198,335 210,320 Z" fill="none" stroke="url(#linkGrad)" stroke-width="22" stroke-linecap="round"/>
+  </g>
+</svg>
