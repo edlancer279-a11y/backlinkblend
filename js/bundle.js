@@ -70,6 +70,126 @@
   // --------------------------------------------------------------------------
   const ARTICLES = [
     {
+      id: 'art-what-is-cursor-ai-guide',
+      slug: 'what-is-cursor-ai-guide',
+      title: 'What Is Cursor AI? Features, Code Editor & Pricing Guide (2026)',
+      deck: 'An authoritative 2026 technical guide to Cursor AI — analyzing the VS Code fork, Cursor Tab predictive autocomplete, multi-file Composer agent, codebase vector indexing, and tier pricing.',
+      category: 'technology',
+      author: AUTHORS['evelyn-vance'],
+      date: '2026-09-19',
+      readTime: '7 min read',
+      listenTime: '9 min audio',
+      image: 'assets/images/what_is_cursor_ai_guide_banner.jpg',
+      caption: 'High-fidelity architectural visualization of Cursor AI augmenting enterprise software workflows through predictive neural tab completion and multi-file agentic reasoning.',
+      featured: true,
+      trendingRank: 1,
+      tags: ['cursor ai', 'cursor code editor', 'ai code editor', 'cursor composer', 'developer tools', 'software engineering'],
+      takeaway: 'Cursor AI is an AI-native fork of Visual Studio Code that integrates frontier LLMs directly into the editor for whole-codebase semantic indexing, multi-file agentic editing with Composer, and predictive multi-line tab completions.',
+      focusKeyword: 'cursor ai',
+      metaDescription: 'Discover what Cursor AI is in 2026. Explore Cursor Tab, multi-file Composer agent, codebase vector indexing, pricing tiers, and VS Code migration.',
+      content: `
+        <p><strong>Cursor AI</strong> is an AI-first fork of Visual Studio Code engineered to accelerate software engineering workflows through whole-codebase vector indexing, multi-file agentic synthesis via Composer, and predictive context-aware tab completions.</p>
+
+        <p>As the software industry transitions from manual syntax authoring toward autonomous code generation, standard extension plugins often fail because they lack low-level control over the editor's core engine. By creating a purpose-built fork of Microsoft's open-source VS Code, the team behind Cursor has embedded frontier neural networks directly into the editor's abstract syntax tree (AST) parser, file indexing subsystem, and terminal runtime. Rather than merely offering an isolated chat window or basic single-line completions, developers can interact with the <a href="https://www.cursor.com/" target="_blank" rel="nofollow noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline;">official Cursor AI platform</a> to execute architectural refactors, conduct conversational codebase forensics, and generate enterprise-grade modules in seconds.</p>
+
+        <h2>Core Capabilities: Cursor Tab, Multi-File Composer & Codebase Indexing</h2>
+        <p>Cursor AI fundamentally diverges from conventional copilot tools by treating the entire workspace as an interconnected knowledge graph. The system delivers four flagship architectural capabilities:</p>
+
+        <ul>
+          <li><strong>Cursor Tab (Predictive Autocomplete):</strong> A custom-trained machine learning model that predicts your next semantic edit rather than simply continuing a line of text. It anticipates multi-line structural changes, suggests automatic parameter adjustments, and even predicts cursor position jumps across related methods as you code.</li>
+          <li><strong>Cursor Composer (Agentic Coding Mode):</strong> Accessed via <code>Cmd/Ctrl + I</code>, Composer operates as an autonomous engineering agent capable of planning, generating, and modifying dozens of files simultaneously. It interprets high-level natural language prompts, creates necessary directory trees, and applies clean git diffs across the project. This mirrors capabilities seen in the <a href="/article/enterprise-ai-agents" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/enterprise-ai-agents');" style="color: var(--accent-gold); text-decoration: underline;">enterprise AI agent orchestration</a> ecosystem.</li>
+          <li><strong>Deep Codebase Vector Indexing:</strong> Cursor computes local semantic embeddings for all files in your repository. When you query the editor using <code>@codebase</code>, it performs high-speed hybrid retrieval (BM25 lexical matching plus vector semantic search) to provide the active LLM with complete contextual awareness of helper functions, database schemas, and shared types.</li>
+          <li><strong>Dynamic Context Mentions:</strong> Developers can explicitly anchor context within prompts using granular primitives, including <code>@Files</code>, <code>@Folders</code>, <code>@Git</code>, <code>@Docs</code>, and <code>@Web</code>. This eliminates prompt drift and mirrors the precision retrieval mechanisms found in the <a href="/article/perplexity-ai" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/perplexity-ai');" style="color: var(--accent-gold); text-decoration: underline;">Perplexity AI real-time search engine</a>.</li>
+        </ul>
+
+        <div style="background: var(--bg-secondary); border-left: 4px solid var(--accent-gold); padding: 1.25rem; margin: 2rem 0; border-radius: var(--radius-sm);">
+          <h4 style="margin: 0 0 0.5rem 0; font-family: var(--font-serif-header); color: var(--text-primary);">Architectural Insight: Local Shadow Workspaces & Speculative AST Parsing</h4>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Traditional AI plugins operate out-of-band via background REST APIs, incurring 400ms+ roundtrip latencies that break developer flow state. Cursor circumvents this bottleneck by running a lightweight, local "shadow workspace" directly inside the renderer thread. As you type, the editor speculatively parses the Language Server Protocol (LSP) diagnostics and AST nodes in real time. When an AI completion or multi-file diff is proposed, Cursor runs background linter checks before presenting the suggestion, ensuring that suggested variables exist and type signatures strictly align with your dependencies.
+          </p>
+        </div>
+
+        <h2>Cursor AI Pricing Tiers & Credit Economy (2026)</h2>
+        <p>Cursor provides a generous entry tier alongside flexible usage tiers structured to support independent engineers, startup teams, and large enterprise codebases:</p>
+
+        <div style="overflow-x: auto; margin: 1.5rem 0;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm);">
+            <thead>
+              <tr style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+                <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">Plan / Tier</th>
+                <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">Monthly Cost</th>
+                <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">Included Model Usage</th>
+                <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">Key Features & Security</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Hobby Tier</td>
+                <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">$0 / Free</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">2-week Pro trial, then 2,000 completions & 50 slow requests</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Basic codebase indexing, Cursor Tab autocomplete, public community support</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Pro Tier</td>
+                <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">$20 / Month</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">500 fast requests/mo + unlimited slow requests</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Unlimited Cursor Tab, multi-file Composer agent, priority queue, full indexing</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Pro+ / Ultra Tier</td>
+                <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">$60 – $200 / Month</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">3x to 10x expanded credit pools for frontier models</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">High-throughput agentic loops, cloud agent execution, Bugbot automated review</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Business / Teams</td>
+                <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">$40 / User / Mo</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Shared team credit allocation with pooled overage protection</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Centralized dashboard, SAML SSO, mandatory Privacy Mode, custom team rules</td>
+              </tr>
+              <tr>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Enterprise Tier</td>
+                <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">Custom Quote</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Uncapped dedicated model capacity</td>
+                <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">SOC 2 Type II compliance, zero data retention agreements, custom SLA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Seamless Migration: Moving from VS Code to Cursor</h2>
+        <p>Because Cursor is a direct fork of Visual Studio Code, migrating your existing development environment requires almost zero downtime:</p>
+
+        <ol>
+          <li><strong>One-Click Import:</strong> Upon launching Cursor for the first time, an automated onboarding wizard detects your local VS Code installation and imports all extensions, custom keybindings, themes, and workspace settings with a single click.</li>
+          <li><strong>Model Selection:</strong> Within the settings panel, users can select frontier inference backbones such as <a href="/article/claude-ai" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/claude-ai');" style="color: var(--accent-gold); text-decoration: underline;">Claude AI neural models</a> (including Claude 3.5 Sonnet) or OpenAI's GPT-4o series, tailoring inference speed versus complex reasoning depth.</li>
+          <li><strong>Custom Rules with <code>.cursorrules</code>:</strong> Place a <code>.cursorrules</code> plain-text file in your repository root to configure project-specific styling conventions, architectural constraints, and test suites that the AI will automatically honor during all code generation phases.</li>
+          <li><strong>Interoperability with Specialized Tools:</strong> Cursor complements broader developer tooling, operating harmoniously alongside snippet search systems like the <a href="/article/blackbox-ai" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/blackbox-ai');" style="color: var(--accent-gold); text-decoration: underline;">Blackbox AI code generation suite</a> to cover both ad-hoc web research and comprehensive in-editor refactoring.</li>
+        </ol>
+
+        <h2>Conclusion</h2>
+        <p>The transition from legacy text editors to generative development environments marks a definitive paradigm shift in software engineering, and <strong>cursor ai</strong> stands at the vanguard of this evolution. By decoupling developers from repetitive boilerplate and mechanical syntax maintenance, the platform redefines programming into higher-order architectural orchestration. Cursor's native integration of multi-file agentic execution, speculative cursor tab prediction, and granular codebase vector embeddings bridges the gap between raw machine learning capabilities and practical day-to-day software delivery. For independent engineers and enterprise product teams alike, adopting an AI-native editor is no longer merely an incremental velocity advantage—it is rapidly becoming an operational necessity to remain competitive in modern continuous integration pipelines. As frontier models continue to expand their reasoning horizons, environments engineered specifically for agentic agency will dictate how applications are conceived, tested, and shipped. Developers seeking to maximize output should transition incrementally, beginning with the free tier to establish baseline workflows before unlocking high-throughput frontier reasoning.</p>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div style="margin-top: 1.5rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Is Cursor AI free to use?</h3>
+          <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">Yes. Cursor provides a free Hobby tier that includes a 14-day trial of Pro features, followed by ongoing monthly allocations of 2,000 predictive completions and 50 slow requests. Users can also configure their own OpenAI or Anthropic API keys to pay only for raw token consumption.</p>
+
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">How does Cursor AI differ from GitHub Copilot and standard VS Code?</h3>
+          <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">While GitHub Copilot functions primarily as an extension inside VS Code with single-line completions and side-panel chat, Cursor is an entirely custom fork. This native architecture allows Cursor to perform multi-file edits through Composer, predict cursor jumps with Cursor Tab, and index entire local repositories with semantic vector embeddings.</p>
+
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Can I import my existing VS Code extensions and settings into Cursor?</h3>
+          <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">Yes. During setup, Cursor automatically detects existing VS Code installations and allows one-click migration of all installed extensions, themes, snippet libraries, and keybindings without requiring manual re-configuration.</p>
+
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">What are .cursorrules files and how do they optimize development?</h3>
+          <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">A <code>.cursorrules</code> file is a markdown or text configuration placed in the root of your project. It acts as persistent system prompts for Cursor's AI models, dictating mandatory coding conventions, library choices, architectural patterns, and testing commands.</p>
+
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Does Cursor AI train its models on my private code?</h3>
+          <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">Under Cursor's Privacy Mode—which can be enforced globally or enabled in user settings—none of your proprietary code, prompts, or indexing vectors are ever stored on Cursor servers or used for machine learning model training. Cursor holds SOC 2 Type II compliance for enterprise data safety.</p>
+        </div>
+      `
+    },
+    {
       id: 'art-kling-ai-free',
       slug: 'kling-ai-free',
       title: 'What Is Kling AI? How to Use Kling AI Free & Video Guide (2026)',
