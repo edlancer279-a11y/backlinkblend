@@ -55,6 +55,32 @@
   RewriteRule ^Business/?$ /category/business [R=301,L]
   RewriteRule ^2026/.*$ / [R=301,L]
 
+  # 301 Permanent Redirects for Legacy Article Slugs (Resolves GSC duplicate folding into scary-ai)
+  RewriteRule ^article/character-ai-age-verification-guide/?$ /article/character-ai-age-verification [R=301,L]
+  RewriteRule ^character-ai-age-verification-guide/?$ /article/character-ai-age-verification [R=301,L]
+  RewriteRule ^article/clever-ai-humanizer-review/?$ /article/clever-ai-humanizer [R=301,L]
+  RewriteRule ^clever-ai-humanizer-review/?$ /article/clever-ai-humanizer [R=301,L]
+  RewriteRule ^article/suno-ai/?$ /article/what-is-suno-ai-guide [R=301,L]
+  RewriteRule ^suno-ai/?$ /article/what-is-suno-ai-guide [R=301,L]
+  RewriteRule ^article/what-is-perplexity-ai-guide/?$ /article/perplexity-ai [R=301,L]
+  RewriteRule ^what-is-perplexity-ai-guide/?$ /article/perplexity-ai [R=301,L]
+  RewriteRule ^article/what-is-ai-hallucination-causes-prevention/?$ /article/ai-hallucination [R=301,L]
+  RewriteRule ^what-is-ai-hallucination-causes-prevention/?$ /article/ai-hallucination [R=301,L]
+  RewriteRule ^article/droven-io-ai-tools-2026-overview/?$ /article/droven-io [R=301,L]
+  RewriteRule ^droven-io-ai-tools-2026-overview/?$ /article/droven-io [R=301,L]
+  RewriteRule ^article/ai-image-generator-prompts-that-work/?$ /article/ai-image-prompts [R=301,L]
+  RewriteRule ^ai-image-generator-prompts-that-work/?$ /article/ai-image-prompts [R=301,L]
+  RewriteRule ^article/what-is-nerovet-ai-dentistry/?$ /article/nerovet-ai-dentistry [R=301,L]
+  RewriteRule ^what-is-nerovet-ai-dentistry/?$ /article/nerovet-ai-dentistry [R=301,L]
+  RewriteRule ^article/uk-government-microsoft-copilot-trial-roundup/?$ /article/uk-copilot-trial [R=301,L]
+  RewriteRule ^uk-government-microsoft-copilot-trial-roundup/?$ /article/uk-copilot-trial [R=301,L]
+  RewriteRule ^article/grok-video-moderated-meaning/?$ /article/grok-video-moderated [R=301,L]
+  RewriteRule ^grok-video-moderated-meaning/?$ /article/grok-video-moderated [R=301,L]
+  RewriteRule ^article/hammer-ai-explained/?$ /article/hammer-ai [R=301,L]
+  RewriteRule ^hammer-ai-explained/?$ /article/hammer-ai [R=301,L]
+  RewriteRule ^article/agentic-ai-pindrop-anonybit-explained/?$ /article/agentic-ai-pindrop-anonybit [R=301,L]
+  RewriteRule ^agentic-ai-pindrop-anonybit-explained/?$ /article/agentic-ai-pindrop-anonybit [R=301,L]
+
   # SPA Routing Fallback for Single Page Application
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
