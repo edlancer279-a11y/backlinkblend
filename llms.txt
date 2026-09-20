@@ -4,6 +4,7 @@
 
 ## Core Technical Research & Articles
 
+- [What Is Hailuo AI? MiniMax Video Generator & Guide](https://backlinkblend.com/article/what-is-hailuo-ai-video-guide): An authoritative 2026 technical guide to Hailuo AI — examining MiniMax's Video-01 generative architecture, text-to-video realism, prompt mechanics, and tier pricing.
 - [What Is Cursor AI? Features, Code Editor & Pricing Guide](https://backlinkblend.com/article/what-is-cursor-ai-guide): An authoritative 2026 technical guide to Cursor AI — analyzing the VS Code fork, Cursor Tab predictive autocomplete, multi-file Composer agent, codebase vector indexing, and tier pricing.
 - [What Is Kling AI? How to Use Kling AI Free & Video Guide](https://backlinkblend.com/article/kling-ai-free): An authoritative 2026 technical analysis of Kling AI — exploring Kuaishou's breakthrough video generation model, daily free credits, 3D spatiotemporal architecture, and high-CTR cinematic prompts.
 - [What Is Suno AI? Features, Song Generator & Pricing Guide](https://backlinkblend.com/article/what-is-suno-ai-guide): A comprehensive 2026 guide to Suno AI — exploring its text-to-music generator, v3.5 neural audio models, custom lyrics creator, commercial licensing, and pricing.
