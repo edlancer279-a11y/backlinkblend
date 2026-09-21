@@ -43,8 +43,8 @@
   RewriteCond %{HTTP_HOST} ^www\.backlinkblend\.com$ [NC]
   RewriteRule ^(.*)$ https://backlinkblend.com/$1 [R=301,L]
 
-  # Direct Exclusions for Sitemap, Robots, & LLMs files (Do not rewrite)
-  RewriteRule ^(sitemap\.xml|robots\.txt|llms\.txt|llms-full\.txt)$ - [L]
+  # Direct Exclusions for Sitemap, Robots, Ads, & LLMs files (Do not rewrite)
+  RewriteRule ^(sitemap\.xml|robots\.txt|llms\.txt|llms-full\.txt|ads\.txt)$ - [L]
 
   # 301 Permanent Redirects for Old Indexed WordPress URLs & Feeds
   RewriteRule ^feed/?$ / [R=301,L]
@@ -55,31 +55,27 @@
   RewriteRule ^Business/?$ /category/business [R=301,L]
   RewriteRule ^2026/.*$ / [R=301,L]
 
-  # 301 Permanent Redirects for Legacy Article Slugs (Resolves GSC duplicate folding into scary-ai)
-  RewriteRule ^article/character-ai-age-verification-guide/?$ /article/character-ai-age-verification [R=301,L]
-  RewriteRule ^character-ai-age-verification-guide/?$ /article/character-ai-age-verification [R=301,L]
-  RewriteRule ^article/clever-ai-humanizer-review/?$ /article/clever-ai-humanizer [R=301,L]
-  RewriteRule ^clever-ai-humanizer-review/?$ /article/clever-ai-humanizer [R=301,L]
-  RewriteRule ^article/suno-ai/?$ /article/what-is-suno-ai-guide [R=301,L]
-  RewriteRule ^suno-ai/?$ /article/what-is-suno-ai-guide [R=301,L]
-  RewriteRule ^article/what-is-perplexity-ai-guide/?$ /article/perplexity-ai [R=301,L]
-  RewriteRule ^what-is-perplexity-ai-guide/?$ /article/perplexity-ai [R=301,L]
-  RewriteRule ^article/what-is-ai-hallucination-causes-prevention/?$ /article/ai-hallucination [R=301,L]
-  RewriteRule ^what-is-ai-hallucination-causes-prevention/?$ /article/ai-hallucination [R=301,L]
-  RewriteRule ^article/droven-io-ai-tools-2026-overview/?$ /article/droven-io [R=301,L]
-  RewriteRule ^droven-io-ai-tools-2026-overview/?$ /article/droven-io [R=301,L]
-  RewriteRule ^article/ai-image-generator-prompts-that-work/?$ /article/ai-image-prompts [R=301,L]
-  RewriteRule ^ai-image-generator-prompts-that-work/?$ /article/ai-image-prompts [R=301,L]
-  RewriteRule ^article/what-is-nerovet-ai-dentistry/?$ /article/nerovet-ai-dentistry [R=301,L]
-  RewriteRule ^what-is-nerovet-ai-dentistry/?$ /article/nerovet-ai-dentistry [R=301,L]
-  RewriteRule ^article/uk-government-microsoft-copilot-trial-roundup/?$ /article/uk-copilot-trial [R=301,L]
-  RewriteRule ^uk-government-microsoft-copilot-trial-roundup/?$ /article/uk-copilot-trial [R=301,L]
-  RewriteRule ^article/grok-video-moderated-meaning/?$ /article/grok-video-moderated [R=301,L]
-  RewriteRule ^grok-video-moderated-meaning/?$ /article/grok-video-moderated [R=301,L]
-  RewriteRule ^article/hammer-ai-explained/?$ /article/hammer-ai [R=301,L]
-  RewriteRule ^hammer-ai-explained/?$ /article/hammer-ai [R=301,L]
-  RewriteRule ^article/agentic-ai-pindrop-anonybit-explained/?$ /article/agentic-ai-pindrop-anonybit [R=301,L]
-  RewriteRule ^agentic-ai-pindrop-anonybit-explained/?$ /article/agentic-ai-pindrop-anonybit [R=301,L]
+  # 301 Permanent Redirects for ALL Legacy Article Slugs (Resolves GSC Alternative & Discovered Issues)
+  RewriteRule ^(article/)?what-is-blackbox-ai(-guide)?/?$ /article/blackbox-ai [R=301,L]
+  RewriteRule ^(article/)?what-is-remaker-ai(-guide)?/?$ /article/remaker-ai [R=301,L]
+  RewriteRule ^(article/)?what-is-viggle-ai(-guide)?/?$ /article/viggle-ai [R=301,L]
+  RewriteRule ^(article/)?deep-ai-image-generator-guide/?$ /article/deep-ai-image-generator [R=301,L]
+  RewriteRule ^(article/)?character-ai-age-verification-guide/?$ /article/character-ai-age-verification [R=301,L]
+  RewriteRule ^(article/)?clever-ai-humanizer-review/?$ /article/clever-ai-humanizer [R=301,L]
+  RewriteRule ^(article/)?suno-ai/?$ /article/what-is-suno-ai-guide [R=301,L]
+  RewriteRule ^(article/)?what-is-suno-ai/?$ /article/what-is-suno-ai-guide [R=301,L]
+  RewriteRule ^(article/)?what-is-perplexity-ai(-guide)?/?$ /article/perplexity-ai [R=301,L]
+  RewriteRule ^(article/)?what-is-ai-hallucination-causes-prevention/?$ /article/ai-hallucination [R=301,L]
+  RewriteRule ^(article/)?droven-io-ai-tools-2026(-overview)?/?$ /article/droven-io [R=301,L]
+  RewriteRule ^(article/)?ai-image-generator-prompts(-that-work)?/?$ /article/ai-image-prompts [R=301,L]
+  RewriteRule ^(article/)?what-is-nerovet-ai-dentistry/?$ /article/nerovet-ai-dentistry [R=301,L]
+  RewriteRule ^(article/)?uk-government-microsoft-copilot-trial(-roundup)?/?$ /article/uk-copilot-trial [R=301,L]
+  RewriteRule ^(article/)?grok-video-moderated-meaning/?$ /article/grok-video-moderated [R=301,L]
+  RewriteRule ^(article/)?hammer-ai-explained/?$ /article/hammer-ai [R=301,L]
+  RewriteRule ^(article/)?agentic-ai-pindrop-anonybit-explained/?$ /article/agentic-ai-pindrop-anonybit [R=301,L]
+
+  # 301 Permanent Redirects for Direct Root Slugs to Canonical /article/
+  RewriteRule ^(openai-careers-guide|what-is-seaart-ai-guide|what-is-hailuo-ai-video-guide|what-is-cursor-ai-guide|kling-ai-free|scary-ai|what-is-suno-ai-guide|blackbox-ai|viggle-ai|remaker-ai|deep-ai-image-generator|deep-ai|character-ai-age-verification|perplexity-ai|ai-hallucination|clever-ai-humanizer|claude-ai|droven-io|ai-image-prompts|nerovet-ai-dentistry|uk-copilot-trial|innocams-review|grok-video-moderated|enterprise-ai-agents|hammer-ai|agentic-ai-pindrop-anonybit|enterprise-ai-security)/?$ /article/$1 [R=301,L]
 
   # SPA Routing Fallback for Single Page Application
   RewriteCond %{REQUEST_FILENAME} !-f

@@ -17,25 +17,28 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="BacklinkBlend is an independent international digital publication delivering authoritative analysis on AI technology, finance, business, and digital strategy.">
   <meta name="keywords" content="BacklinkBlend, Business Strategy, AI Technology, Global Finance, Digital Marketing, Modern Culture, AI Agents, Research Reports">
-  <link id="canonical-link" rel="canonical" href="https://backlinkblend.com/">
+  <!-- Dynamic Synchronous Canonical Tag Resolution (Prevents Homepage Canonical Folding in Crawlers) -->
+  <script>
+    (function() {
+      var origin = 'https://backlinkblend.com';
+      var rawPath = (window.location.protocol !== 'file:' && window.location.pathname) ? window.location.pathname.replace(/^\/+|\/+$/g, '').trim() : '';
+      var canonicalUrl = origin + '/';
+      if (rawPath && rawPath !== 'index.html') {
+        if (rawPath.startsWith('article/') || rawPath.startsWith('category/') || rawPath === 'about' || rawPath === 'contact' || rawPath === 'privacy' || rawPath === 'terms' || rawPath === 'disclaimer' || rawPath === 'articles') {
+          canonicalUrl = origin + '/' + rawPath;
+        } else {
+          canonicalUrl = origin + '/article/' + rawPath;
+        }
+      }
+      document.write('<link id="canonical-link" rel="canonical" href="' + canonicalUrl + '">');
+    })();
+  </script>
+  <noscript>
+    <link id="canonical-link" rel="canonical" href="https://backlinkblend.com/">
+  </noscript>
   
   <!-- Google AdSense Verification & Auto Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2869103987354107" crossorigin="anonymous"></script>
-  <script>
-    (function() {
-      var cLink = document.getElementById('canonical-link');
-      if (cLink && window.location.protocol !== 'file:' && window.location.origin && window.location.origin !== 'null') {
-        var rawPath = window.location.pathname.replace(/^\/+|\/+$/g, '').trim();
-        if (!rawPath || rawPath === 'index.html') {
-          cLink.setAttribute('href', 'https://backlinkblend.com/');
-        } else if (rawPath.startsWith('article/') || rawPath.startsWith('category/') || rawPath === 'about' || rawPath === 'contact' || rawPath === 'privacy' || rawPath === 'terms' || rawPath === 'disclaimer' || rawPath === 'articles') {
-          cLink.setAttribute('href', 'https://backlinkblend.com/' + rawPath);
-        } else {
-          cLink.setAttribute('href', 'https://backlinkblend.com/article/' + rawPath);
-        }
-      }
-    })();
-  </script>
 
   <!-- Favicons & Touch Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -95,31 +98,6 @@
             "postalCode": "71500",
             "addressCountry": "Pakistan"
           }
-        }
-      },
-      {
-        "@type": "NewsArticle",
-        "@id": "https://backlinkblend.com/uk-copilot-trial#article",
-        "headline": "UK Government Microsoft Copilot Trial: Full Roundup",
-        "description": "Fact-checked roundup of UK government Microsoft Copilot trials across GDS, DBT, DWP, and HMRC, including 2026 Phase III metrics and 50,000 licence scale plans.",
-        "keywords": "Microsoft Copilot, UK Government, AI in the Public Sector, Government Digital Service, Workplace AI",
-        "articleSection": "AI Technology",
-        "datePublished": "2026-08-24",
-        "dateModified": "2026-08-24",
-        "image": "https://backlinkblend.com/assets/images/uk_gov_copilot_infographic_banner.jpg",
-        "author": [{
-          "@type": "Person",
-          "name": "Evelyn Vance",
-          "jobTitle": "Executive Editor, Technology & AI"
-        }],
-        "publisher": {
-          "@type": "Organization",
-          "name": "BacklinkBlend",
-          "url": "https://backlinkblend.com"
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://backlinkblend.com/uk-copilot-trial"
         }
       },
       {
@@ -427,7 +405,7 @@
     </div>
   </div>
 
-  <!-- Master Production Self-Contained Bundle Script v=65.0.0 -->
-  <script src="js/bundle.js?v=65.0.0"></script>
+  <!-- Master Production Self-Contained Bundle Script v=66.0.0 -->
+  <script src="js/bundle.js?v=66.0.0"></script>
 </body>
 </html>
