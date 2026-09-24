@@ -75,7 +75,7 @@
   RewriteRule ^(article/)?agentic-ai-pindrop-anonybit-explained/?$ /article/agentic-ai-pindrop-anonybit [R=301,L]
 
   # 301 Permanent Redirects for Direct Root Slugs to Canonical /article/
-  RewriteRule ^(best-books-for-critical-thinking|openai-careers-guide|what-is-seaart-ai-guide|what-is-hailuo-ai-video-guide|what-is-cursor-ai-guide|kling-ai-free|scary-ai|what-is-suno-ai-guide|blackbox-ai|viggle-ai|remaker-ai|deep-ai-image-generator|deep-ai|character-ai-age-verification|perplexity-ai|ai-hallucination|clever-ai-humanizer|claude-ai|droven-io|ai-image-prompts|nerovet-ai-dentistry|uk-copilot-trial|innocams-review|grok-video-moderated|enterprise-ai-agents|hammer-ai|agentic-ai-pindrop-anonybit|enterprise-ai-security)/?$ /article/$1 [R=301,L]
+  RewriteRule ^(data-center-resilience-ai|best-books-for-critical-thinking|openai-careers-guide|what-is-seaart-ai-guide|what-is-hailuo-ai-video-guide|what-is-cursor-ai-guide|kling-ai-free|scary-ai|what-is-suno-ai-guide|blackbox-ai|viggle-ai|remaker-ai|deep-ai-image-generator|deep-ai|character-ai-age-verification|perplexity-ai|ai-hallucination|clever-ai-humanizer|claude-ai|droven-io|ai-image-prompts|nerovet-ai-dentistry|uk-copilot-trial|innocams-review|grok-video-moderated|enterprise-ai-agents|hammer-ai|agentic-ai-pindrop-anonybit|enterprise-ai-security)/?$ /article/$1 [R=301,L]
 
   # SPA Routing Fallback for Single Page Application
   RewriteCond %{REQUEST_FILENAME} !-f
