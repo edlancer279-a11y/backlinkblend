@@ -1,6 +1,18 @@
-﻿# BacklinkBlend Full Text Knowledge Base
+# BacklinkBlend Full Text Knowledge Base
 
 > Comprehensive Markdown Knowledge Base of all published masterclasses, guides, and technical frameworks on BacklinkBlend.
+
+---
+
+# Best Books for Critical Thinking: 10 Essential Reads (2026)
+
+An authoritative 2026 curation of the best books for critical thinking — analyzing cognitive biases, mental models, probabilistic reasoning, and executive decision frameworks.
+
+Key Themes & Frameworks:
+- Dual-Process Cognitive Architecture & Heuristic Mitigation (Daniel Kahneman, Carl Sagan, Rolf Dobelli)
+- Multidisciplinary Mental Model Latticeworks & Epistemic Inversion (Charlie Munger, Shane Parrish)
+- Probabilistic Forecasting, Base Rates & Variance Isolation (Philip Tetlock, Annie Duke)
+- Socratic Interrogation & Belief Auditing (Julia Galef, Hans Rosling, Neil Browne & Stuart Keeley)
 
 ---
 
