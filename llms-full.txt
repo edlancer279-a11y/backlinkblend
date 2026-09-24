@@ -4,6 +4,18 @@
 
 ---
 
+# Data Center Resilience AI: Infrastructure, Power & Cooling Guide (2026)
+
+An authoritative 2026 engineering guide to data center resilience AI — exploring predictive maintenance, liquid cooling digital twins, and autonomous grid orchestration.
+
+Key Architecture & Insights:
+- 100kW–300kW+ Rack Thermal Envelopes & Direct-to-Chip Liquid Cooling
+- Physics-Informed Neural Networks (PINNs) and Computational Fluid Dynamics (CFD) Digital Twins
+- Predictive Failure Anomaly Detection for UPS Batteries (48–72h advance warning), CDUs, and Switchgear
+- Autonomous Microgrid Dispatch, BESS Integration, and Dynamic AI Power Capping
+
+---
+
 # Best Books for Critical Thinking: 10 Essential Reads (2026)
 
 An authoritative 2026 curation of the best books for critical thinking — analyzing cognitive biases, mental models, probabilistic reasoning, and executive decision frameworks.

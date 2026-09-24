@@ -4,6 +4,8 @@
 
 ## Core Technical Research & Articles
 
+- [Data Center Resilience AI: Infrastructure, Power & Cooling Guide (2026)](https://backlinkblend.com/article/data-center-resilience-ai): An authoritative 2026 engineering guide to data center resilience AI — exploring predictive maintenance, liquid cooling digital twins, and autonomous grid orchestration.
+
 - [Best Books for Critical Thinking: 10 Essential Reads (2026)](https://backlinkblend.com/article/best-books-for-critical-thinking): An authoritative 2026 curation of the best books for critical thinking — analyzing cognitive biases, mental models, probabilistic reasoning, and executive decision frameworks.
 
 - [Open AI Careers: Jobs, Salaries & How to Get Hired](https://backlinkblend.com/article/openai-careers-guide): An authoritative 2026 executive guide to Open AI careers — analyzing technical roles, research scientist compensation, interview loops, and hiring culture.
