@@ -9,12 +9,19 @@
   </url>
 
   <!-- Editorial Articles (Canonical Only) -->
-  <!-- Featured Article: Data Center Resilience AI: Infrastructure, Power & Cooling Guide (2026) -->
+  <!-- Featured Article: Google September 2026 Spam Update: Impact & Recovery Guide -->
+  <url>
+    <loc>https://backlinkblend.com/article/google-september-2026-spam-update-guide</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Article: Data Center Resilience AI: Infrastructure, Power & Cooling Guide (2026) -->
   <url>
     <loc>https://backlinkblend.com/article/data-center-resilience-ai</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.9</priority>
   </url>
   <!-- Article: Best Books for Critical Thinking: 10 Essential Reads (2026) -->
   <url>

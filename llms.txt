@@ -4,6 +4,8 @@
 
 ## Core Technical Research & Articles
 
+- [Google September 2026 Spam Update: Impact & Recovery Guide](https://backlinkblend.com/article/google-september-2026-spam-update-guide): An authoritative technical analysis of the Google September 2026 spam update — dissecting SpamBrain AI enhancements, scaled content abuse thresholds, and an executive recovery playbook for digital publishers.
+
 - [Data Center Resilience AI: Infrastructure, Power & Cooling Guide (2026)](https://backlinkblend.com/article/data-center-resilience-ai): An authoritative 2026 engineering guide to data center resilience AI — exploring predictive maintenance, liquid cooling digital twins, and autonomous grid orchestration.
 
 - [Best Books for Critical Thinking: 10 Essential Reads (2026)](https://backlinkblend.com/article/best-books-for-critical-thinking): An authoritative 2026 curation of the best books for critical thinking — analyzing cognitive biases, mental models, probabilistic reasoning, and executive decision frameworks.

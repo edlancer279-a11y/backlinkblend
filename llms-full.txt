@@ -4,6 +4,18 @@
 
 ---
 
+# Google September 2026 Spam Update: Impact & Recovery Guide
+
+An authoritative technical analysis of the Google September 2026 spam update — dissecting SpamBrain AI enhancements, scaled content abuse thresholds, and an executive recovery playbook for digital publishers.
+
+Key Architecture & Insights:
+- Multi-Week Global Rollout & Modernized SpamBrain Transformer Classifiers
+- Scaled Content Abuse: Cross-Document Semantic Entropy & Information Gain Auditing
+- Site Reputation Abuse (Parasite SEO) and Expired Domain Repurposing Containment
+- Comprehensive Impact Matrix & 4-Phase Technical Recovery Framework
+
+---
+
 # Data Center Resilience AI: Infrastructure, Power & Cooling Guide (2026)
 
 An authoritative 2026 engineering guide to data center resilience AI — exploring predictive maintenance, liquid cooling digital twins, and autonomous grid orchestration.
