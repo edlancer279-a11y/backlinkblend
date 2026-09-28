@@ -9,6 +9,14 @@
   </url>
 
   <!-- Editorial Articles (Canonical Only) -->
+
+  <!-- Featured Article: AI Content Audit 2026: Enterprise Framework, Tools & SEO Guide -->
+  <url>
+    <loc>https://backlinkblend.com/article/ai-content-audit-2026</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <!-- Featured Article: Google September 2026 Spam Update: Impact & Recovery Guide -->
   <url>
     <loc>https://backlinkblend.com/article/google-september-2026-spam-update-guide</loc>
