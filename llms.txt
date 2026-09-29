@@ -4,6 +4,10 @@
 
 ## Core Technical Research & Articles
 
+- [HP ProBook 4 G1i AI PC 14": Specs, NPU Features & Review](https://backlinkblend.com/article/hp-probook-4-g1i-ai-pc-14): An authoritative technical evaluation of the HP ProBook 4 G1i AI PC 14"—analyzing Intel Core Ultra silicon, local NPU architecture, HP Wolf Security, battery endurance, and enterprise value.
+
+- [AI Content Audit 2026: Enterprise Framework, Tools & SEO Guide](https://backlinkblend.com/article/ai-content-audit-2026): A comprehensive enterprise framework for executing an AI content audit in 2026—evaluating organic search compliance, LLM citation visibility, semantic entropy, and pruning workflows.
+
 - [Google September 2026 Spam Update: Impact & Recovery Guide](https://backlinkblend.com/article/google-september-2026-spam-update-guide): An authoritative technical analysis of the Google September 2026 spam update — dissecting SpamBrain AI enhancements, scaled content abuse thresholds, and an executive recovery playbook for digital publishers.
 
 - [Data Center Resilience AI: Infrastructure, Power & Cooling Guide (2026)](https://backlinkblend.com/article/data-center-resilience-ai): An authoritative 2026 engineering guide to data center resilience AI — exploring predictive maintenance, liquid cooling digital twins, and autonomous grid orchestration.
