@@ -15,7 +15,7 @@
     url: 'https://backlinkblend.com',
     description: 'BacklinkBlend is an independent international digital publication delivering authoritative analysis on AI technology, finance, business, and digital strategy.',
     twitter: '@BacklinkBlend',
-    contactEmail: 'contact@backlinkblend.com',
+    contactEmail: 'info@homeglowpro.co.uk',
     location: 'Hyderabad, Sindh 71500, Pakistan'
   };
 
@@ -4028,6 +4028,67 @@
   }
 
   // --------------------------------------------------------------------------
+  
+  // --------------------------------------------------------------------------
+  // CONTACT FORM AJAX HANDLER (FormSubmit.co Backend Forwarder)
+  // --------------------------------------------------------------------------
+  window.handleContactSubmit = function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = document.getElementById('contact-submit-btn');
+    const statusEl = document.getElementById('contact-form-status');
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Transmitting Message...';
+    }
+    if (statusEl) {
+      statusEl.style.display = 'none';
+    }
+
+    const formData = new FormData(form);
+    const dataObj = {};
+    formData.forEach((value, key) => { dataObj[key] = value; });
+
+    fetch('https://formsubmit.co/ajax/info@homeglowpro.co.uk', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(dataObj)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Transmit Inquiry →';
+      }
+      form.reset();
+      if (statusEl) {
+        statusEl.style.display = 'block';
+        statusEl.style.background = 'rgba(16, 185, 129, 0.12)';
+        statusEl.style.color = 'var(--text-primary)';
+        statusEl.style.border = '1px solid #10b981';
+        statusEl.innerHTML = '✅ <strong>Thank you!</strong> Your message has been sent directly to our inbox (<code>info@homeglowpro.co.uk</code>). We will review your inquiry and respond promptly.';
+      }
+    })
+    .catch(err => {
+      console.error('Contact form submission error:', err);
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Transmit Inquiry →';
+      }
+      if (statusEl) {
+        statusEl.style.display = 'block';
+        statusEl.style.background = 'rgba(239, 68, 68, 0.12)';
+        statusEl.style.color = 'var(--text-primary)';
+        statusEl.style.border = '1px solid #ef4444';
+        statusEl.innerHTML = '⚠️ Note: Direct transmission encountered a network hiccup. Please write to us directly at <a href="mailto:info@homeglowpro.co.uk" style="color: var(--accent-gold); text-decoration: underline; font-weight: 700;">info@homeglowpro.co.uk</a>.';
+      }
+    });
+  };
+
   // 7. APP CONTROLLER
   // --------------------------------------------------------------------------
   class App {
@@ -4696,7 +4757,8 @@
     }
 
     // 6. CONTACT US PAGE
-    renderContactView() {
+    
+renderContactView() {
       this.setActiveNav('contact');
       updateSEO({
         title: 'Contact Us — Editorial Desk & Inquiries',
@@ -4715,32 +4777,36 @@
           <div class="grid-2" style="margin-bottom: 3rem;">
             <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2.5rem;">
               <h2 class="font-serif" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary);">Send Us a Message</h2>
-              <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to the BacklinkBlend editorial desk.'); this.reset();" style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <form id="editorial-contact-form" action="https://formsubmit.co/info@homeglowpro.co.uk" method="POST" onsubmit="window.handleContactSubmit(event);" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <input type="hidden" name="_subject" value="New Inquiry from BacklinkBlend Editorial Form" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <div id="contact-form-status" style="display: none; padding: 1rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.95rem; line-height: 1.5;"></div>
                 <div>
                   <label style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); display: block; margin-bottom: 0.35rem; text-transform: uppercase;">FULL NAME</label>
-                  <input type="text" required placeholder="Enter your full name" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); padding: 0.85rem 1rem;" />
+                  <input type="text" name="name" required placeholder="Enter your full name" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); padding: 0.85rem 1rem;" />
                 </div>
                 <div>
                   <label style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); display: block; margin-bottom: 0.35rem; text-transform: uppercase;">EMAIL ADDRESS</label>
-                  <input type="email" required placeholder="name@domain.com" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); padding: 0.85rem 1rem;" />
+                  <input type="email" name="email" required placeholder="name@domain.com" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); padding: 0.85rem 1rem;" />
                 </div>
                 <div>
                   <label style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); display: block; margin-bottom: 0.35rem; text-transform: uppercase;">INQUIRY CATEGORY</label>
-                  <select class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); background: var(--bg-surface); padding: 0.85rem 1rem;">
-                    <option>Editorial Tip & Research Briefing</option>
-                    <option>Press Release Submission</option>
-                    <option>General Support & Feedback</option>
+                  <select name="category" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); background: var(--bg-surface); padding: 0.85rem 1rem;">
+                    <option value="Editorial Tip & Research Briefing">Editorial Tip & Research Briefing</option>
+                    <option value="Press Release Submission">Press Release Submission</option>
+                    <option value="General Support & Feedback">General Support & Feedback</option>
                   </select>
                 </div>
                 <div>
                   <label style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); display: block; margin-bottom: 0.35rem; text-transform: uppercase;">SUBJECT</label>
-                  <input type="text" required placeholder="Brief subject" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); padding: 0.85rem 1rem;" />
+                  <input type="text" name="subject" required placeholder="Brief subject" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); padding: 0.85rem 1rem;" />
                 </div>
                 <div>
                   <label style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); display: block; margin-bottom: 0.35rem; text-transform: uppercase;">MESSAGE</label>
-                  <textarea rows="5" required placeholder="Write your message here..." class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); border-radius: var(--radius-sm); padding: 1rem;"></textarea>
+                  <textarea rows="5" name="message" required placeholder="Write your message here..." class="newsletter-input" style="width: 100%; border: 1px solid var(--border-strong); color: var(--text-primary); border-radius: var(--radius-sm); padding: 1rem;"></textarea>
                 </div>
-                <button type="submit" class="btn-primary" style="margin-top: 0.5rem; justify-content: center; padding: 1rem;">Transmit Inquiry →</button>
+                <button type="submit" id="contact-submit-btn" class="btn-primary" style="margin-top: 0.5rem; justify-content: center; padding: 1rem;">Transmit Inquiry →</button>
               </form>
             </div>
 
@@ -4749,7 +4815,7 @@
                 <h3 style="font-family: var(--font-serif-header); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">Direct Communication</h3>
                 <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">For formal inquiries, press briefs, or direct correspondence:</p>
                 <div style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0.5rem;">
-                  ✉️ Email: <a href="mailto:contact@backlinkblend.com" style="color: var(--accent-gold); text-decoration: underline;">contact@backlinkblend.com</a>
+                  ✉️ Email: <a href="mailto:info@homeglowpro.co.uk" style="color: var(--accent-gold); text-decoration: underline;">info@homeglowpro.co.uk</a>
                 </div>
               </div>
 
@@ -4790,7 +4856,7 @@
             <h2>1. Information We Collect</h2>
             <p>BacklinkBlend collects both personal and non-personal technical information strictly to provide a secure and optimized reading experience:</p>
             <ul>
-              <li><strong>Personal Data Provided Voluntarily:</strong> When you contact us via our Contact Us page or submit an email to <code>contact@backlinkblend.com</code>, we receive your name, email address, and the content of your message.</li>
+              <li><strong>Personal Data Provided Voluntarily:</strong> When you contact us via our Contact Us page or submit an email to <code>info@homeglowpro.co.uk</code>, we receive your name, email address, and the content of your message.</li>
               <li><strong>Log Files & Technical Analytics:</strong> Standard server log files capture technical data including IP addresses, browser types, Internet Service Providers (ISP), referring/exit pages, operating system timestamps, and click counts. This data is non-personally identifiable and used exclusively for analytical health monitoring and system security.</li>
             </ul>
 
@@ -4820,7 +4886,7 @@
               <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> You have the right to request the deletion of your personal data from our contact databases.</li>
               <li><strong>Right to Object & Restrict Processing:</strong> You have the right to object to or restrict the processing of your personal data under legitimate grounds.</li>
             </ul>
-            <p>If you wish to exercise any of these rights, please email our Data Privacy Officer at <code>contact@backlinkblend.com</code> or write to our editorial bureau at <strong>Hyderabad, Sindh 71500, Pakistan</strong>. We respond to all formal requests within 30 business days.</p>
+            <p>If you wish to exercise any of these rights, please email our Data Privacy Officer at <code>info@homeglowpro.co.uk</code> or write to our editorial bureau at <strong>Hyderabad, Sindh 71500, Pakistan</strong>. We respond to all formal requests within 30 business days.</p>
 
             <h2>6. Children's Information</h2>
             <p>BacklinkBlend does not knowingly collect personal identifiable information from children under the age of 13. If you believe your child has provided such information on our website, please contact us immediately for prompt removal.</p>
@@ -4921,7 +4987,7 @@
             <p>Nothing published on BacklinkBlend constitutes personalized financial, investment, legal, cybersecurity, or medical advice. Readers must conduct independent due diligence and consult qualified licensed professionals before making major capital allocations, enterprise infrastructure updates, or health decisions.</p>
 
             <h2>5. Editorial Corrections Policy</h2>
-            <p>BacklinkBlend is committed to rapid correction of factual errors. If you identify an error or discrepancy in any article, please inform our editorial desk at <code>contact@backlinkblend.com</code>. We review and correct verified inaccuracies within 48 business hours.</p>
+            <p>BacklinkBlend is committed to rapid correction of factual errors. If you identify an error or discrepancy in any article, please inform our editorial desk at <code>info@homeglowpro.co.uk</code>. We review and correct verified inaccuracies within 48 business hours.</p>
           </div>
         </div>
       `;

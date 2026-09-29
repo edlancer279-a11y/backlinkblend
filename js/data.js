@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   url: 'https://backlinkblend.com',
   description: 'BacklinkBlend is an independent international digital publication delivering authoritative analysis on AI technology, finance, business, and digital strategy.',
   twitter: '@BacklinkBlend',
-  contactEmail: 'contact@backlinkblend.com',
+  contactEmail: 'info@homeglowpro.co.uk',
   location: 'Hyderabad, Sindh 71500, Pakistan'
 };
 
