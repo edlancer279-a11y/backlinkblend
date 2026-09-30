@@ -53,6 +53,115 @@ export const AUTHORS = {
 
 export const ARTICLES = [
   {
+    id: 'art-what-is-artificial-intelligence-guide',
+    slug: 'what-is-artificial-intelligence-guide',
+    title: 'What Is Artificial Intelligence? Types, Architecture & Future',
+    deck: 'An authoritative architectural guide to artificial intelligence—analyzing neural foundation models, generative vs. agentic paradigms, test-time compute, and enterprise deployment.',
+    category: 'technology',
+    author: AUTHORS['evelyn-vance'],
+    date: '2026-09-30',
+    readTime: '9 min read',
+    listenTime: '11 min audio',
+    image: 'assets/images/what_is_artificial_intelligence_guide_banner.jpg',
+    caption: 'Architectural visualization of artificial intelligence spanning foundation transformers, multi-agent reasoning, and multimodal cognitive compute.',
+    featured: true,
+    trendingRank: 1,
+    tags: ['artificial intelligence', 'machine learning', 'deep learning', 'generative ai', 'agentic ai', 'foundation models'],
+    takeaway: 'Artificial intelligence represents computational systems capable of executing perception, symbolic reasoning, pattern abstraction, and autonomous multi-step decision-making across complex environments.',
+    focusKeyword: 'artificial intelligence',
+    metaDescription: 'Understand artificial intelligence: explore foundational architectures, generative versus agentic paradigms, test-time compute, and enterprise deployment.',
+    content: `
+      <p>The field of <strong>artificial intelligence</strong> encompasses computational architectures, mathematical learning algorithms, and cognitive neural networks engineered to simulate, augment, or surpass human capabilities in perception, logical reasoning, semantic synthesis, and autonomous goal-directed action.</p>
+
+      <p>Over the past decade, artificial intelligence has migrated from theoretical laboratory research into the foundational substrate of global industry and scientific discovery. While early manifestations relied on hand-crafted heuristic rule trees and narrow statistical discriminators, modern systems operate upon massive deep neural networks capable of emergent generalization. As documented by researchers in the <a href="https://hai.stanford.edu/research/ai-index-report" target="_blank" rel="nofollow noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline;">Stanford University AI Index Report</a>, the discipline has entered an era defined by multimodal foundation models, agentic workflow orchestration, and exponential investments in compute density.</p>
+
+      <h2>1. The Modern AI Taxonomy: From Predictive to Agentic Systems</h2>
+      <p>To analyze artificial intelligence with technical precision, engineering leaders categorize implementations not merely by vague notions of machine "intelligence," but by their underlying functional capabilities and algorithmic paradigms. The modern computational landscape is organized across four distinct vectors:</p>
+
+      <div style="overflow-x: auto; margin: 1.5rem 0;">
+        <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm);">
+          <thead>
+            <tr style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">AI Paradigm</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">Algorithmic Foundation</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">Primary Cognitive Mode</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">Enterprise Application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Predictive / Discriminative AI</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Gradient boosted trees, CNNs, logistic classifiers</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Pattern recognition, statistical regression, binary classification</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Credit scoring, anomaly detection, churn forecasting</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Generative AI</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Autoregressive transformers, diffusion models, GANs</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Novel content synthesis, contextual translation, semantic coding</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Automated code generation, synthetic media, conversational UX</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Agentic AI</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">ReAct loops, tree search, tool-calling APIs, memory vectors</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Multi-step planning, environmental observation, self-correction</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Autonomous workflow execution, automated DevOps, market arbitration</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Neurosymbolic & Physical AI</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Neural representations paired with formal logic and physics engines</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Deterministic verification, spatial reasoning, kinetic manipulation</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Autonomous vehicles, humanoid robotics, medical verification</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>2. Frontier Neural Architectures: Transformers, MoE & Test-Time Compute</h2>
+      <p>The contemporary generative revolution traces its lineage directly to the self-attention transformer architecture. By replacing recurrent sequential bottlenecks with parallelized matrix operations over token embeddings, transformers allowed models to scale compute and data predictably according to empirical neural scaling laws.</p>
+
+      <p>However, frontier research has evolved well beyond monolithic dense transformers. Today's premier frontier models—such as the multi-modal reasoning engines evaluated in our <a href="/article/claude-ai" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/claude-ai');" style="color: var(--accent-gold); text-decoration: underline;">Claude AI neural ecosystem</a>—frequently utilize <strong>Mixture-of-Experts (MoE)</strong> routing. In an MoE architecture, only a sparse subset of specialized neural subnetworks are activated per token, dramatically lowering inference latency while providing immense parameter capacity. Concurrently, frontier labs have unlocked a secondary scaling dimension: <em>test-time compute</em>.</p>
+
+      <div style="background: var(--bg-secondary); border-left: 4px solid var(--accent-gold); padding: 1.25rem; margin: 2rem 0; border-radius: var(--radius-sm);">
+        <h4 style="margin: 0 0 0.5rem 0; font-family: var(--font-serif-header); color: var(--text-primary);">Architectural Insight: The Shift from Pre-Training Scale to Test-Time Compute Reasoning</h4>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+          For years, AI performance gains were driven primarily by pre-training compute—spending tens of millions of dollars calculating loss across petabytes of text and media. In the current paradigm, scaling laws are equally governed by inference-time deliberation. By allowing foundation models to generate hidden chains-of-thought, verify intermediate hypotheses, and execute Monte Carlo tree searches prior to delivering final answers, systems exhibit orders-of-magnitude improvements on complex mathematical, cryptographic, and algorithmic proofs without expanding raw parameter weights.
+        </p>
+      </div>
+
+      <h2>3. Autonomous Agentic Systems & Multi-Model Orchestration</h2>
+      <p>The transition from passive text prediction to active agency marks the defining engineering transition of this decade. While early generative models functioned as static chatbots, modern architectures empower models with tools, persistent memory, and execution privileges across production environments.</p>
+
+      <p>In production enterprise deployments, organizations deploy specialized multi-agent swarms rather than relying on a solitary generalist model. Orchestration layers direct high-level strategic reasoning to heavy frontier models while delegating high-throughput subtasks—such as API parsing, data normalization, and localized formatting—to lightweight, distilled edge models. As explored in our comprehensive breakdown of <a href="/article/enterprise-ai-agents" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/enterprise-ai-agents');" style="color: var(--accent-gold); text-decoration: underline;">enterprise AI agent architectures</a>, decoupling strategic planning from execution guarantees both computational cost containment and determinism in mission-critical corporate operations.</p>
+
+      <h2>4. Physical Compute Infrastructure & Governance Constraints</h2>
+      <p>Despite the ethereal perception of machine intelligence in the cloud, artificial intelligence remains fundamentally tethered to thermodynamics, silicon supply chains, and power distribution grids. Training frontier clusters requires gigawatt-scale power allocations, high-bandwidth interconnects (such as NVLink and InfiniBand), and sophisticated liquid-cooling facilities, as detailed in our analysis of <a href="/article/data-center-resilience-ai" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/data-center-resilience-ai');" style="color: var(--accent-gold); text-decoration: underline;">data center resilience and AI compute infrastructure</a>.</p>
+
+      <p>Simultaneously, enterprise adoption must navigate epistemic reliability and regulatory compliance. Large language models inherently risk generating plausible yet factually incorrect outputs, necessitating systematic safeguards against catastrophic hallucinations, a core operational vector detailed in our guide to <a href="/article/ai-hallucination" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/ai-hallucination');" style="color: var(--accent-gold); text-decoration: underline;">AI hallucination mitigation strategies</a>. From retrieval-augmented generation (RAG) to verifiable neurosymbolic constraints, engineering teams are constructing multi-layered defense architectures that ensure automated systems remain compliant, safe, and aligned with human intent.</p>
+
+      <h2>Conclusion</h2>
+      <p>The rapid progression of <strong>artificial intelligence</strong> has transcended traditional algorithmic automation to inaugurate an epoch of cognitive synthetic infrastructure. Moving beyond standalone transformer checkpoints, state-of-the-art computational ecosystems now fuse multimodal sensory inputs, test-time inference reasoning, and self-directed multi-agent orchestration into unified operational fabrics. While profound technical hurdles—most notably hallucination boundaries, high-density data center thermal limits, and model alignment governance—continue to demand rigorous architectural oversight, the enterprise trajectory remains unmistakably transformative. Organizations that successfully transition from isolated generative proof-of-concepts toward resilient, observable cognitive architectures will secure asymmetric competitive moats across global markets. As frontier research institutions advance toward agentic autonomy and neurosymbolic verification, maintaining an unyielding commitment to architectural transparency, ethical guardrails, and sustainable computing economics will dictate the future trajectory of global technological capability and human-machine collaboration.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div style="margin-top: 1.5rem;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">What is artificial intelligence in simple terms?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">Artificial intelligence is the discipline of creating software systems and machine learning models capable of performing tasks that historically required human intelligence. This includes understanding language, recognizing visual patterns, solving complex problems, and making autonomous decisions.</p>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">What is the difference between Narrow AI and Artificial General Intelligence (AGI)?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">Narrow AI refers to systems optimized to excel at specific tasks, such as transcription, image recognition, or code generation. Artificial General Intelligence (AGI) represents a theoretical future threshold where an autonomous computational system can understand, learn, and perform any intellectual task at or above the human cognitive level across all domains.</p>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">How does Generative AI differ from Predictive AI?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">Predictive AI analyzes historical data to classify information or forecast outcomes (such as fraud detection or credit underwriting). Generative AI uses probabilistic neural networks to synthesize original content, such as computer code, articles, high-resolution imagery, and voice audio.</p>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">What are AI agents and how do they work?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">AI agents are autonomous software entities powered by foundation models that perceive their environment, break goals into sequential plans, execute external tool APIs, and continuously evaluate their progress until a multi-step objective is fulfilled without continuous human prompting.</p>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">What are the primary challenges facing AI deployment in 2026?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">Key challenges include model hallucinations, energy and data center cooling constraints, copyright and training data sovereignty, cybersecurity vulnerabilities like prompt injection, and aligning autonomous agent behaviors with legal and corporate governance policies.</p>
+      </div>
+    `
+  },
+  {
     id: 'art-what-is-nectar-ai-guide',
     slug: 'what-is-nectar-ai-guide',
     title: 'What Is Nectar AI? Features, Roleplay Models & Pricing Guide',
