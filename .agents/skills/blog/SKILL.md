@@ -61,9 +61,12 @@ Choose one of the 6 core pillars:
 - **`slug`**: kebab-case URL slug (e.g., `what-is-cursor-ai-guide`)
 - **`title`**: 50–65 characters, high CTR, containing primary keyword (e.g., `"What Is Cursor AI? Features, Code Editor & Pricing Guide"`)
 - **`deck`**: 1–2 sentence executive overview summarizing the article
+- **`category`**: One of the 6 pillars (e.g., `'technology'`)
+- **`author`**: Resident author reference (e.g., `AUTHORS['evelyn-vance']`)
+- **`date`**: Current publication date in `'YYYY-MM-DD'` format
 - **`readTime`**: e.g., `'6 min read'`
 - **`listenTime`**: e.g., `'8 min audio'`
-- **`image`**: `'assets/images/' + slug + '_banner.jpg'`
+- **`image`**: `'assets/images/' + slug.replace(/-/g, '_') + '_banner.jpg'`
 - **`caption`**: Concise editorial caption describing the visual
 - **`featured`**: `true` or `false`
 - **`trendingRank`**: Integer `1` to `5` or `null`
@@ -172,7 +175,7 @@ Directly follow the conclusion with an FAQ section:
    - Modern, sleek editorial digital art, UI representation, or high-tech workspace.
    - Clean, balanced composition without AI text hallucinations or fake watermarks.
 3. **Save Path**:
-   Save directly to `assets/images/<slug>_banner.jpg` (or `.png`/`.webp`).
+   Save directly to `assets/images/<slug_with_underscores>_banner.jpg` (or `.png`/`.webp`).
 
 ---
 
@@ -196,6 +199,12 @@ Add the clean, canonical article URL right under the homepage entry in `sitemap.
   </url>
 ```
 
+#### 4. Append to `llms.txt` & `llms-full.txt` (GEO Visibility)
+Add the article link and executive deck to `llms.txt` under `## Core Technical Research & Articles` to ensure citation visibility in AI search engines (Perplexity, ChatGPT Search, Claude):
+```markdown
+- [[Article Title]](https://backlinkblend.com/article/[slug]): [Article Deck]
+```
+
 ---
 
 ### Step 8: Quality Audit & Verification Checklist
@@ -206,9 +215,10 @@ Before reporting completion to the user, verify:
 - [ ] Exactly 1 external link exists with the correct `rel` setting (nofollow by default, dofollow only if requested).
 - [ ] Mandatory Conclusion is present, between 120–200 words.
 - [ ] FAQ contains 4–5 questions with direct answers.
-- [ ] Banner image exists at `assets/images/<slug>_banner.jpg`.
+- [ ] Banner image exists at `assets/images/<slug_with_underscores>_banner.jpg`.
 - [ ] `js/bundle.js` and `js/data.js` are free of JavaScript syntax errors.
 - [ ] `sitemap.xml` contains the clean canonical URL `/article/<slug>` (no duplicate entries).
+- [ ] `llms.txt` is updated with the new article link.
 
 #### Final Report to User
 Provide a concise summary:
@@ -216,4 +226,4 @@ Provide a concise summary:
 2. Assigned Author & Category
 3. Focus Keyword & Word Count
 4. External link mode used (Default Nofollow or Requested Dofollow)
-5. Confirmation of registration in `bundle.js`, `data.js`, and `sitemap.xml`.
+5. Confirmation of registration in `bundle.js`, `data.js`, `sitemap.xml`, and `llms.txt`.

@@ -53,6 +53,148 @@ export const AUTHORS = {
 
 export const ARTICLES = [
   {
+    id: 'art-who-created-chatgpt',
+    slug: 'who-created-chatgpt',
+    title: 'Who Created ChatGPT? Founders, OpenAI History & Architecture',
+    deck: 'An authoritative technical and historical analysis of who created ChatGPT—tracing OpenAI\'s founding team, key alignment researchers, RLHF breakthroughs, and corporate evolution.',
+    category: 'technology',
+    author: AUTHORS['evelyn-vance'],
+    date: '2026-10-01',
+    readTime: '8 min read',
+    listenTime: '10 min audio',
+    image: 'assets/images/who_created_chatgpt_banner.jpg',
+    caption: 'Architectural and historical overview of OpenAI\'s founding team, alignment researchers, and neural transformer infrastructure behind ChatGPT.',
+    featured: true,
+    trendingRank: 1,
+    tags: ['ChatGPT', 'OpenAI', 'Sam Altman', 'Ilya Sutskever', 'Generative AI', 'RLHF', 'Machine Learning'],
+    takeaway: 'ChatGPT was created by artificial intelligence research lab OpenAI, co-founded by Sam Altman, Greg Brockman, Ilya Sutskever, and John Schulman, and built through breakthrough Reinforcement Learning from Human Feedback (RLHF) architectures.',
+    focusKeyword: 'who created chatgpt',
+    metaDescription: 'Discover who created ChatGPT: explore OpenAI\'s founding team, lead researchers like Ilya Sutskever and John Schulman, RLHF architecture, and history.',
+    content: `
+      <p>The definitive answer to <strong>who created chatgpt</strong> is the San Francisco-based artificial intelligence research laboratory <strong>OpenAI</strong>, developed under the executive leadership of Sam Altman, the scientific direction of Ilya Sutskever, and an elite cadre of alignment engineers led by John Schulman, Long Ouyang, and Liam Fedus.</p>
+
+      <p>When ChatGPT was unveiled to the public on November 30, 2022, it triggered the fastest technological inflection point in modern commercial history. Yet, unlike historical inventions credited to lone inventors, ChatGPT was the culmination of an intensive multi-year convergence of foundation models, distributed high-performance computing, and novel alignment methodologies. Understanding its creation requires dissecting the founding coalition of OpenAI, the technical breakthroughs that preceded its release, and the specific researchers who transformed raw neural networks into an intuitive conversational interface.</p>
+
+      <h2>1. The Founding of OpenAI: A Collective Vision (2015)</h2>
+      <p>OpenAI was formally announced on December 11, 2015, as an open-source, non-profit artificial intelligence research institute designed to build safe and beneficial Artificial General Intelligence (AGI). The founding group brought together high-profile Silicon Valley technologists, venture capitalists, and world-class computer scientists:</p>
+
+      <ul>
+        <li><strong>Sam Altman</strong>: Former president of startup accelerator Y Combinator, who served as co-chair and later assumed the role of Chief Executive Officer.</li>
+        <li><strong>Elon Musk</strong>: CEO of Tesla and SpaceX, who co-founded and co-funded the venture before stepping down from the board of directors in 2018 to prevent prospective conflicts of interest with Tesla\'s autonomous driving engineering.</li>
+        <li><strong>Greg Brockman</strong>: Former Chief Technology Officer at Stripe, who joined as OpenAI\'s founding CTO and later President, orchestrating its world-class systems and cluster infrastructure.</li>
+        <li><strong>Ilya Sutskever</strong>: Co-founder and Chief Scientist, a renowned deep learning pioneer who studied under Geoffrey Hinton and co-authored AlexNet, serving as the intellectual and scientific anchor of the company.</li>
+        <li><strong>John Schulman</strong>: Co-founder and research scientist specializing in reinforcement learning, who developed the mathematical foundations that later enabled conversational alignment.</li>
+        <li><strong>Wojciech Zaremba</strong>: Co-founder who previously conducted research at Google Brain and Facebook AI Research (FAIR), leading robotics and deep learning programs.</li>
+      </ul>
+
+      <p>The institute launched with a collective commitment of $1 billion in philanthropic funding pledged by Sam Altman, Elon Musk, Peter Thiel, Reid Hoffman, Jessica Livingston, Amazon Web Services, Infosys, and YC Research.</p>
+
+      <div style="overflow-x: auto; margin: 1.5rem 0;">
+        <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm);">
+          <thead>
+            <tr style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">Contributor & Role</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">Founding / Organizational Function</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">Core Technical Focus</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">Architectural Impact on ChatGPT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Sam Altman (CEO)</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Co-Founder & Chief Executive</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Capital formation & strategic partnerships</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Secured the Microsoft supercomputing partnership and led public deployment strategy.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Ilya Sutskever</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Co-Founder & Former Chief Scientist</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Representation learning & scaling laws</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Championed large-scale unsupervised transformer pre-training and neural scaling.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Greg Brockman</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Co-Founder & President</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Distributed systems & GPU clusters</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Architected high-throughput infrastructure required to train multi-billion parameter models.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">John Schulman</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Co-Founder & Alignment Lead</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Reinforcement Learning & PPO</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Invented PPO and led the RLHF alignment team that transformed GPT into conversational ChatGPT.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Mira Murati</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Former Chief Technology Officer</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Productization & safety governance</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Directed the transition of internal research models into reliable, high-availability consumer tools.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Long Ouyang & Jeff Wu</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Lead Research Scientists</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Instruction following & preference models</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Co-authored the landmark InstructGPT paper, creating the direct technical prototype for ChatGPT.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Alec Radford</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Principal Research Scientist</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Generative pre-training & language modeling</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Lead author of GPT-1, GPT-2, and GPT-3, establishing the foundational autoregressive transformer backbone.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>2. The Algorithmic Evolution: From GPT-1 to the InstructGPT Breakthrough</h2>
+      <p>To grasp who created ChatGPT from an engineering perspective, one must separate the underlying foundation model from the alignment process. The Generative Pre-trained Transformer (GPT) series originated with Alec Radford\'s landmark 2018 paper, proving that unsupervised autoregressive pre-training on vast unlabelled text corpora followed by supervised fine-tuning could yield unprecedented language understanding.</p>
+
+      <p>As explored in our comprehensive architectural analysis of <a href="/article/what-is-artificial-intelligence-guide" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/what-is-artificial-intelligence-guide');" style="color: var(--accent-gold); text-decoration: underline;">modern artificial intelligence foundation architectures</a>, raw autoregressive transformers are trained solely to minimize cross-entropy loss over web-scraped token corpuses. While GPT-3 (released in 2020 with 175 billion parameters) demonstrated staggering in-context few-shot learning, it was fundamentally an unconstrained text completion machine. If prompted with a question, it might invent additional questions rather than answer, mimic toxic forum comments, or drift erratically. Without targeted alignment, unguided models frequently generated falsehoods and semantic drift, demonstrating why the <a href="/article/ai-hallucination" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/ai-hallucination');" style="color: var(--accent-gold); text-decoration: underline;">mitigation of generative AI hallucinations</a> became OpenAI\'s foremost research priority.</p>
+
+      <div style="background: var(--bg-secondary); border-left: 4px solid var(--accent-gold); padding: 1.25rem; margin: 2rem 0; border-radius: var(--radius-sm);">
+        <h4 style="margin: 0 0 0.5rem 0; font-family: var(--font-serif-header); color: var(--text-primary);">Architectural Insight: The Three-Stage RLHF Alignment Pipeline</h4>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+          ChatGPT owes its conversational coherence not to expanding raw model scale, but to John Schulman\'s implementation of Reinforcement Learning from Human Feedback (RLHF). The process operates across three rigorous phases: (1) Supervised Fine-Tuning (SFT) on curated prompt-response pairs; (2) Reward Model (RM) training where human labelers rank candidate outputs to parameterize human preferences; and (3) Proximal Policy Optimization (PPO), continuously tuning model weights to maximize reward scores while enforcing a KL-divergence penalty to prevent policy collapse.
+        </p>
+      </div>
+
+      <p>In early 2022, OpenAI alignment researchers Long Ouyang, Jeff Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, and their colleagues published the InstructGPT paper. By fine-tuning GPT-3 with RLHF, they proved that a 1.3-billion parameter aligned model consistently outperformed a 175-billion parameter unaligned base model in human evaluation. ChatGPT was architected as a direct sibling to InstructGPT, trained on an updated GPT-3.5 foundation model (specifically fine-tuned from code-davinci-002) and optimized specifically for multi-turn conversational dialogue.</p>
+
+      <h2>3. November 30, 2022: The Launch That Reshaped Computing</h2>
+      <p>The actual deployment of ChatGPT was spearheaded by OpenAI\'s product and engineering units under then-CTO Mira Murati. Despite internal debates regarding whether the interface was too rudimentary or prone to edge-case errors, leadership approved a low-friction web release. According to <a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank" rel="nofollow noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline;">historical records of ChatGPT\'s November 2022 debut</a>, the system was initially launched as a free \'research preview\' intended to harvest human interaction logs for iterative alignment.</p>
+
+      <p>The public reaction shattered all industry benchmarks. Within five days of release, ChatGPT crossed 1 million registered users. Within two months, it surpassed 100 million monthly active users, setting a record as the fastest-growing consumer web application in history. The sudden influx of millions of concurrent queries forced Greg Brockman and the systems engineering cohort to pioneer novel inference optimizations, GPU memory virtualization, and aggressive dynamic request caching across Microsoft Azure\'s data center fabric.</p>
+
+      <h2>4. Corporate Restructuring and the Modern OpenAI Ecosystem</h2>
+      <p>The massive computational demands of training and serving frontier foundation models catalyzed a structural transformation inside OpenAI. In 2019, the organization created a commercial \'capped-profit\' arm—OpenAI Global LLC—retaining the original non-profit board as its governing body. This legal structure allowed OpenAI to secure over $13 billion in cumulative capital commitments from Microsoft Corporation, granting the tech giant enterprise licensing rights and integrating ChatGPT capabilities into Microsoft Copilot and Azure OpenAI Service.</p>
+
+      <p>However, the tension between non-profit safety governance and hyper-commercial productization led to significant leadership shifts. Key alignment researchers departed during these corporate transformations—most notably Dario Amodei and Daniela Amodei, who left OpenAI to establish the <a href="/article/claude-ai" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/claude-ai');" style="color: var(--accent-gold); text-decoration: underline;">Claude AI neural ecosystem at Anthropic</a>, followed later by Ilya Sutskever founding Safe Superintelligence (SSI) and John Schulman joining Anthropic. Despite these leadership transitions, OpenAI continues to drive frontier model research spanning GPT-4o, reasoning models like OpenAI o1, and multi-agent systems.</p>
+
+      <p>For researchers and systems engineers evaluating opportunities across the frontier AI landscape, the rigorous talent density and high-stakes compensation models are thoroughly examined in our guide to <a href="/article/openai-careers-guide" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/openai-careers-guide');" style="color: var(--accent-gold); text-decoration: underline;">OpenAI careers and research loops</a>.</p>
+
+      <h2>Conclusion</h2>
+      <p>Understanding who created chatgpt requires looking beyond a single inventor to recognize the interdisciplinary convergence of visionaries, foundational researchers, and alignment engineers at OpenAI. While executive leadership under Sam Altman and Greg Brockman provided the corporate momentum and compute capital, scientific luminaries such as Ilya Sutskever, John Schulman, Alec Radford, and Mira Murati transformed theoretical autoregressive transformers into an intuitive conversational interface. By pioneering Reinforcement Learning from Human Feedback (RLHF) and fine-tuning the GPT-3.5 series into InstructGPT, this team bridged the chasm between raw token prediction and helpful, aligned machine dialogue. As generative intelligence advances into multi-agent autonomy, multimodal reasoning, and test-time compute, the legacy of OpenAI’s original engineering cohort remains the definitive benchmark for modern AI productization. For technology executives and system architects, the creation of ChatGPT stands as compelling proof that alignment and reinforcement learning—not merely compute scale—define the frontier of artificial intelligence.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div style="margin-top: 1.5rem;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Who is the actual person who invented ChatGPT?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">ChatGPT was not invented by a single person; it was created by a dedicated team at the AI research lab OpenAI. Key technical architects include co-founder and alignment lead John Schulman, chief scientist Ilya Sutskever, lead GPT architect Alec Radford, InstructGPT co-authors Long Ouyang and Jeff Wu, guided under executive leadership by CEO Sam Altman and CTO Mira Murati.</p>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Did Elon Musk create ChatGPT?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">No. While Elon Musk was one of OpenAI\'s original co-founders and early financial donors in 2015, he stepped down from OpenAI\'s board of directors in 2018 due to disagreements over corporate direction and potential conflicts with Tesla\'s AI initiatives. Musk had no operational or technical role in the creation or release of ChatGPT in 2022.</p>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">When was ChatGPT first created and released to the public?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">ChatGPT was developed throughout 2022 as an extension of OpenAI\'s InstructGPT alignment research and was officially launched to the public as a free research preview on November 30, 2022.</p>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">What technology and training method made ChatGPT possible?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">ChatGPT is powered by generative autoregressive transformer architectures fine-tuned using Reinforcement Learning from Human Feedback (RLHF). This technique leverages human comparison rankings and Proximal Policy Optimization (PPO) to steer raw next-token predictors toward truthful, context-aware, conversational interactions.</p>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Who owns ChatGPT today?</h3>
+        <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">ChatGPT is owned and operated by OpenAI, governed under its unique non-profit and capped-profit corporate structure, with Microsoft holding a significant minority commercial investment and cloud hosting partnership.</p>
+      </div>
+    `
+  },
+  {
     id: 'art-what-is-artificial-intelligence-guide',
     slug: 'what-is-artificial-intelligence-guide',
     title: 'What Is Artificial Intelligence? Types, Architecture & Future',

@@ -4,6 +4,7 @@
 
 ## Core Technical Research & Articles
 
+- [Who Created ChatGPT? Founders, OpenAI History & Architecture](https://backlinkblend.com/article/who-created-chatgpt): An authoritative technical and historical analysis of who created ChatGPT—tracing OpenAI's founding team, key alignment researchers, RLHF breakthroughs, and corporate evolution.
 - [HP ProBook 4 G1i AI PC 14": Specs, NPU Features & Review](https://backlinkblend.com/article/hp-probook-4-g1i-ai-pc-14): An authoritative technical evaluation of the HP ProBook 4 G1i AI PC 14"—analyzing Intel Core Ultra silicon, local NPU architecture, HP Wolf Security, battery endurance, and enterprise value.
 
 - [AI Content Audit 2026: Enterprise Framework, Tools & SEO Guide](https://backlinkblend.com/article/ai-content-audit-2026): A comprehensive enterprise framework for executing an AI content audit in 2026—evaluating organic search compliance, LLM citation visibility, semantic entropy, and pruning workflows.

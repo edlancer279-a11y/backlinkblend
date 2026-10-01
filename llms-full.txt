@@ -4,6 +4,19 @@
 
 ---
 
+# Who Created ChatGPT? Founders, OpenAI History & Architecture
+
+An authoritative technical and historical analysis of who created ChatGPT—tracing OpenAI's founding team, key alignment researchers, RLHF breakthroughs, and corporate evolution.
+
+Key Architecture & Insights:
+- OpenAI Founding Coalition: Sam Altman, Greg Brockman, Ilya Sutskever, Elon Musk, John Schulman, Wojciech Zaremba (Dec 2015)
+- Transition from Monolithic Next-Token Predictors (GPT-3) to Conversational Alignment via InstructGPT
+- Three-Stage RLHF Alignment: Supervised Fine-Tuning (SFT), Reward Model (RM) Parameterization, and PPO Policy Tuning
+- Public Launch on November 30, 2022: Scaling to 100M Monthly Active Users within 60 Days
+- Corporate Evolution: Non-profit to Capped-Profit LLC, Microsoft Partnership, and Frontier Supercomputing
+
+---
+
 # HP ProBook 4 G1i AI PC 14": Specs, NPU Features & Review
 
 An authoritative technical evaluation of the HP ProBook 4 G1i AI PC 14"—analyzing Intel Core Ultra silicon, local NPU architecture, HP Wolf Security, battery endurance, and enterprise value.

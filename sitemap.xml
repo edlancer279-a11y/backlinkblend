@@ -9,6 +9,13 @@
   </url>
 
   <!-- Editorial Articles (Canonical Only) -->
+  <!-- Featured Article: Who Created ChatGPT? Founders, OpenAI History & Architecture -->
+  <url>
+    <loc>https://backlinkblend.com/article/who-created-chatgpt</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <!-- Featured Article: What Is Artificial Intelligence? Types, Architecture & Future -->
   <url>
     <loc>https://backlinkblend.com/article/what-is-artificial-intelligence-guide</loc>
