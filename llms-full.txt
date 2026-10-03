@@ -4,6 +4,19 @@
 
 ---
 
+# What Is Luma Dream Machine AI? Video Generator & Guide
+
+An authoritative technical and creative analysis of Luma Dream Machine AI—evaluating Luma AI's 3D spatiotemporal video diffusion engine, camera motion trajectories, keyframe interpolation, and pricing.
+
+Key Architecture & Insights:
+- 3D Spatiotemporal Diffusion-Transformer Foundation
+- Granular Cinematic Camera Motion Controls (Pan, Tilt, Orbit, Crane, Dolly Zoom)
+- Start & End Keyframe Conditioning (Temporal Interpolation)
+- Multi-Shot Extension & Narrative Persistence
+- Commercial Production Pipeline & Tier Pricing Matrix
+
+---
+
 # What Is Google Mixboard? Features, AI Canvas & Guide
 
 An authoritative technical and creative evaluation of Google Mixboard—exploring Google Labs' infinite moodboard canvas, Gemini vision models, iterative diffusion workflows, and design ideation.
