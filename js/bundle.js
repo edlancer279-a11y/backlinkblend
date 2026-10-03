@@ -15,7 +15,7 @@
     url: 'https://backlinkblend.com',
     description: 'BacklinkBlend is an independent international digital publication delivering authoritative analysis on AI technology, finance, business, and digital strategy.',
     twitter: '@BacklinkBlend',
-    contactEmail: 'info@homeglowpro.co.uk',
+    contactEmail: 'backlinkblend@gmail.com',
     location: 'Hyderabad, Sindh 71500, Pakistan'
   };
 
@@ -4667,7 +4667,7 @@
     const dataObj = {};
     formData.forEach((value, key) => { dataObj[key] = value; });
 
-    fetch('https://formsubmit.co/ajax/info@homeglowpro.co.uk', {
+    fetch('https://formsubmit.co/ajax/backlinkblend@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -4687,7 +4687,7 @@
         statusEl.style.background = 'rgba(16, 185, 129, 0.12)';
         statusEl.style.color = 'var(--text-primary)';
         statusEl.style.border = '1px solid #10b981';
-        statusEl.innerHTML = '✅ <strong>Thank you!</strong> Your message has been sent directly to our inbox (<code>info@homeglowpro.co.uk</code>). We will review your inquiry and respond promptly.';
+        statusEl.innerHTML = '✅ <strong>Thank you!</strong> Your message has been sent directly to our inbox (<code>backlinkblend@gmail.com</code>). We will review your inquiry and respond promptly.';
       }
     })
     .catch(err => {
@@ -4701,7 +4701,7 @@
         statusEl.style.background = 'rgba(239, 68, 68, 0.12)';
         statusEl.style.color = 'var(--text-primary)';
         statusEl.style.border = '1px solid #ef4444';
-        statusEl.innerHTML = '⚠️ Note: Direct transmission encountered a network hiccup. Please write to us directly at <a href="mailto:info@homeglowpro.co.uk" style="color: var(--accent-gold); text-decoration: underline; font-weight: 700;">info@homeglowpro.co.uk</a>.';
+        statusEl.innerHTML = '⚠️ Note: Direct transmission encountered a network hiccup. Please write to us directly at <a href="mailto:backlinkblend@gmail.com" style="color: var(--accent-gold); text-decoration: underline; font-weight: 700;">backlinkblend@gmail.com</a>.';
       }
     });
   };
@@ -5394,7 +5394,7 @@ renderContactView() {
           <div class="grid-2" style="margin-bottom: 3rem;">
             <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2.5rem;">
               <h2 class="font-serif" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary);">Send Us a Message</h2>
-              <form id="editorial-contact-form" action="https://formsubmit.co/info@homeglowpro.co.uk" method="POST" onsubmit="window.handleContactSubmit(event);" style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <form id="editorial-contact-form" action="https://formsubmit.co/backlinkblend@gmail.com" method="POST" onsubmit="window.handleContactSubmit(event);" style="display: flex; flex-direction: column; gap: 1.25rem;">
                 <input type="hidden" name="_subject" value="New Inquiry from BacklinkBlend Editorial Form" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
@@ -5432,7 +5432,7 @@ renderContactView() {
                 <h3 style="font-family: var(--font-serif-header); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">Direct Communication</h3>
                 <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">For formal inquiries, press briefs, or direct correspondence:</p>
                 <div style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0.5rem;">
-                  ✉️ Email: <a href="mailto:info@homeglowpro.co.uk" style="color: var(--accent-gold); text-decoration: underline;">info@homeglowpro.co.uk</a>
+                  ✉️ Email: <a href="mailto:backlinkblend@gmail.com" style="color: var(--accent-gold); text-decoration: underline;">backlinkblend@gmail.com</a>
                 </div>
               </div>
 
@@ -5473,7 +5473,7 @@ renderContactView() {
             <h2>1. Information We Collect</h2>
             <p>BacklinkBlend collects both personal and non-personal technical information strictly to provide a secure and optimized reading experience:</p>
             <ul>
-              <li><strong>Personal Data Provided Voluntarily:</strong> When you contact us via our Contact Us page or submit an email to <code>info@homeglowpro.co.uk</code>, we receive your name, email address, and the content of your message.</li>
+              <li><strong>Personal Data Provided Voluntarily:</strong> When you contact us via our Contact Us page or submit an email to <code>backlinkblend@gmail.com</code>, we receive your name, email address, and the content of your message.</li>
               <li><strong>Log Files & Technical Analytics:</strong> Standard server log files capture technical data including IP addresses, browser types, Internet Service Providers (ISP), referring/exit pages, operating system timestamps, and click counts. This data is non-personally identifiable and used exclusively for analytical health monitoring and system security.</li>
             </ul>
 
@@ -5503,7 +5503,7 @@ renderContactView() {
               <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> You have the right to request the deletion of your personal data from our contact databases.</li>
               <li><strong>Right to Object & Restrict Processing:</strong> You have the right to object to or restrict the processing of your personal data under legitimate grounds.</li>
             </ul>
-            <p>If you wish to exercise any of these rights, please email our Data Privacy Officer at <code>info@homeglowpro.co.uk</code> or write to our editorial bureau at <strong>Hyderabad, Sindh 71500, Pakistan</strong>. We respond to all formal requests within 30 business days.</p>
+            <p>If you wish to exercise any of these rights, please email our Data Privacy Officer at <code>backlinkblend@gmail.com</code> or write to our editorial bureau at <strong>Hyderabad, Sindh 71500, Pakistan</strong>. We respond to all formal requests within 30 business days.</p>
 
             <h2>6. Children's Information</h2>
             <p>BacklinkBlend does not knowingly collect personal identifiable information from children under the age of 13. If you believe your child has provided such information on our website, please contact us immediately for prompt removal.</p>
@@ -5604,7 +5604,7 @@ renderContactView() {
             <p>Nothing published on BacklinkBlend constitutes personalized financial, investment, legal, cybersecurity, or medical advice. Readers must conduct independent due diligence and consult qualified licensed professionals before making major capital allocations, enterprise infrastructure updates, or health decisions.</p>
 
             <h2>5. Editorial Corrections Policy</h2>
-            <p>BacklinkBlend is committed to rapid correction of factual errors. If you identify an error or discrepancy in any article, please inform our editorial desk at <code>info@homeglowpro.co.uk</code>. We review and correct verified inaccuracies within 48 business hours.</p>
+            <p>BacklinkBlend is committed to rapid correction of factual errors. If you identify an error or discrepancy in any article, please inform our editorial desk at <code>backlinkblend@gmail.com</code>. We review and correct verified inaccuracies within 48 business hours.</p>
           </div>
         </div>
       `;
