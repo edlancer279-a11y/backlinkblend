@@ -207,6 +207,23 @@ Add the article link and executive deck to `llms.txt` under `## Core Technical R
 
 ---
 
+
+#### 5. Bump Production Bundle Version in `index.html` (Cache Busting)
+Increment the bundle version query parameter (e.g., `?v=74.0.0` -> `?v=75.0.0`) in `index.html` so clients and CDN edge servers immediately fetch the latest bundle:
+```html
+  <!-- Master Production Self-Contained Bundle Script v=XX.0.0 -->
+  <script src="js/bundle.js?v=XX.0.0"></script>
+```
+
+#### 6. Add Root Redirect to `.htaccess`
+Prepend the new article slug to the 301 direct root redirect rule in `.htaccess`:
+```apache
+  # 301 Permanent Redirects for Direct Root Slugs to Canonical /article/
+  RewriteRule ^([slug]|who-created-chatgpt|...)/?$ /article/$1 [R=301,L]
+```
+
+---
+
 ### Step 8: Quality Audit & Verification Checklist
 
 Before reporting completion to the user, verify:
@@ -219,6 +236,8 @@ Before reporting completion to the user, verify:
 - [ ] `js/bundle.js` and `js/data.js` are free of JavaScript syntax errors.
 - [ ] `sitemap.xml` contains the clean canonical URL `/article/<slug>` (no duplicate entries).
 - [ ] `llms.txt` is updated with the new article link.
+- [ ] `index.html` bundle version incremented for cache busting.
+- [ ] `.htaccess` updated with the new article root redirect.
 
 #### Final Report to User
 Provide a concise summary:
