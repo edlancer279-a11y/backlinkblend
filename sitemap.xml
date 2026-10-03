@@ -9,7 +9,14 @@
   </url>
 
   <!-- Editorial Articles (Canonical Only) -->
-  <!-- Featured Article: Who Created ChatGPT? Founders, OpenAI History & Architecture -->
+
+  <!-- Featured Article: What Is Google Mixboard? Features, AI Canvas & Guide -->
+  <url>
+    <loc>https://backlinkblend.com/article/google-mixboard-guide</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>  <!-- Featured Article: Who Created ChatGPT? Founders, OpenAI History & Architecture -->
   <url>
     <loc>https://backlinkblend.com/article/who-created-chatgpt</loc>
     <lastmod>2026-10-01</lastmod>
