@@ -222,6 +222,12 @@ Prepend the new article slug to the 301 direct root redirect rule in `.htaccess`
   RewriteRule ^([slug]|who-created-chatgpt|...)/?$ /article/$1 [R=301,L]
 ```
 
+#### 7. Execute Static Site Pre-renderer (AdSense & Search Bot Compatibility)
+Run the automated SSG generator to produce pre-rendered static HTML files with full Schema.org structured data, AdSense script tags, and complete article content:
+```bash
+node scripts/build_static.mjs
+```
+
 ---
 
 ### Step 8: Quality Audit & Verification Checklist

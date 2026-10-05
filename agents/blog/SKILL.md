@@ -175,7 +175,7 @@ Directly follow the conclusion with an FAQ section:
    - Modern, sleek editorial digital art, UI representation, or high-tech workspace.
    - Clean, balanced composition without AI text hallucinations or fake watermarks.
 3. **Save Path**:
-   Save directly to `assets/images/<slug>_banner.jpg` (or `.png`/`.webp`).
+   Save directly to `assets/images/<slug_with_underscores>_banner.jpg` (or `.png`/`.webp`).
 
 ---
 
@@ -220,6 +220,12 @@ Prepend the new article slug to the 301 direct root redirect rule in `.htaccess`
 ```apache
   # 301 Permanent Redirects for Direct Root Slugs to Canonical /article/
   RewriteRule ^([slug]|who-created-chatgpt|...)/?$ /article/$1 [R=301,L]
+```
+
+#### 7. Execute Static Site Pre-renderer (AdSense & Search Bot Compatibility)
+Run the automated SSG generator to produce pre-rendered static HTML files with full Schema.org structured data, AdSense script tags, and complete article content:
+```bash
+node scripts/build_static.mjs
 ```
 
 ---

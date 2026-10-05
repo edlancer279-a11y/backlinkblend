@@ -414,6 +414,48 @@
     </div>
   </div>
 
+  <!-- Cookie Consent Banner (GDPR & AdSense Compliant) -->
+  <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; max-width: 600px; margin: 0 auto; background: var(--bg-surface); border: 1px solid var(--accent-gold); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 1.25rem 1.5rem; z-index: 99999; backdrop-filter: blur(12px);">
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+        <span style="font-family: var(--font-serif-header); font-weight: 700; font-size: 1rem; color: var(--text-primary);">Cookie & Privacy Preferences</span>
+        <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-gold); font-weight: 600;">GDPR & AdSense Compliant</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+        BacklinkBlend uses cookies and third-party advertising partners (such as Google AdSense) to deliver personalized content, measure engagement, and maintain site security. Review our <a href="/privacy" style="color: var(--accent-gold); text-decoration: underline;">Privacy Policy</a>.
+      </p>
+      <div style="display: flex; gap: 0.75rem; justify-content: flex-end; flex-wrap: wrap;">
+        <button id="cookie-essential-btn" style="background: transparent; border: 1px solid var(--border-strong); color: var(--text-secondary); padding: 0.45rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; cursor: pointer;">Essential Only</button>
+        <button id="cookie-accept-btn" style="background: var(--accent-gold); border: none; color: #FFFFFF; padding: 0.45rem 1.1rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 700; cursor: pointer;">Accept All Cookies</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('bb_cookie_consent');
+        var banner = document.getElementById('cookie-consent-banner');
+        if (!consent && banner) {
+          banner.style.display = 'block';
+        }
+        var acceptBtn = document.getElementById('cookie-accept-btn');
+        var essentialBtn = document.getElementById('cookie-essential-btn');
+        if (acceptBtn) {
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('bb_cookie_consent', 'accepted');
+            if (banner) banner.style.display = 'none';
+          });
+        }
+        if (essentialBtn) {
+          essentialBtn.addEventListener('click', function() {
+            localStorage.setItem('bb_cookie_consent', 'essential');
+            if (banner) banner.style.display = 'none';
+          });
+        }
+      } catch(e) {}
+    })();
+  </script>
+
   <!-- Master Production Self-Contained Bundle Script v=77.0.0 -->
   <script src="js/bundle.js?v=77.0.0"></script>
 </body>
