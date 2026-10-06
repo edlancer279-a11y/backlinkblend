@@ -255,7 +255,7 @@ function generatePrivacyPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=79.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
   const dir = path.join(rootDir, 'privacy');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -311,7 +311,7 @@ function generateAboutPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=79.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
   const dir = path.join(rootDir, 'about');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -378,7 +378,7 @@ function generateContactPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=79.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
   const dir = path.join(rootDir, 'contact');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -418,7 +418,7 @@ function generateTermsPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=79.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
   const dir = path.join(rootDir, 'terms');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -456,7 +456,7 @@ function generateDisclaimerPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=79.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
   const dir = path.join(rootDir, 'disclaimer');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -558,7 +558,7 @@ function generateArticlePages() {
       </div>
     `;
 
-    const html = getHead(title, desc, canonical, image, jsonLd) + getBaseHeader(art.category) + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=79.0.0"></script></body></html>`;
+    const html = getHead(title, desc, canonical, image, jsonLd) + getBaseHeader(art.category) + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
     
     const dir = path.join(rootDir, 'article', art.slug);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
