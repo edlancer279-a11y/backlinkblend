@@ -4,6 +4,32 @@
 
 ---
 
+# Turnitin AI Detector: Accuracy, How It Works & Guide
+
+An authoritative technical evaluation of the Turnitin AI detector—examining sentence perplexity, burstiness scoring, false positive rates, LMS integration, and academic integrity policies.
+
+Key Architecture & Insights:
+- Transformer-Based Academic Writing Classifier (Sentence-Level Attribution Pipeline)
+- Perplexity (Next-Token Predictability Metric) & Burstiness (Syntactic Cadence Variance Metric)
+- False Positive Risk Profiles (<1% Benchmark for >20% AI Signals vs. Elevated Risk in 1-19% Band)
+- Linguistic Bias Implications for Non-Native English Authors (Stanford Empirical Findings)
+- LMS Workflow Integration (Canvas, Blackboard, Moodle) & Academic Misconduct Pedagogical Guidelines
+
+---
+
+# What Is Poly AI? Enterprise Voice Assistant & Guide
+
+An authoritative technical evaluation of Poly AI—exploring its conversational voice agent architecture, proprietary Raven LLM, enterprise call center integration, and the PolyBuzz distinction.
+
+Key Architecture & Insights:
+- Proprietary Raven Spoken Dialogue LLM Architecture (Sub-Second Latency & Acoustic Understanding)
+- Full-Duplex Acoustic Barge-In Detection & Interruptible Telephony Turn-Taking (200-400ms Response Window)
+- Enterprise Disambiguation: PolyAI (B2B Voice Telephony) vs. PolyBuzz (Consumer Character Chatbot App)
+- Agent Studio (No-Code Brand Alignment) & Agent Development Kit (ADK CRM/SIP Webhooks)
+- Turnkey Managed Enterprise Deployment, Six-Figure Base Contracts & 40-70% Call Deflection ROI
+
+---
+
 # What Is Google NotebookLM? Audio Overview, Features & Guide
 
 An authoritative technical evaluation of Google NotebookLM—exploring Gemini 1.5 Pro source grounding, multimodal document synthesis, Audio Overview podcast generation, and enterprise research workflows.

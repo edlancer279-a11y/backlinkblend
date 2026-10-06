@@ -4,6 +4,8 @@
 
 ## Core Technical Research & Articles
 
+- [Turnitin AI Detector: Accuracy, How It Works & Guide](https://backlinkblend.com/article/turnitin-ai-detector-guide): An authoritative technical evaluation of the Turnitin AI detector—examining sentence perplexity, burstiness scoring, false positive rates, LMS integration, and academic integrity policies.
+- [What Is Poly AI? Enterprise Voice Assistant & Guide](https://backlinkblend.com/article/what-is-poly-ai-guide): An authoritative technical evaluation of Poly AI—exploring its conversational voice agent architecture, proprietary Raven LLM, enterprise call center integration, and the PolyBuzz distinction.
 - [What Is Google NotebookLM? Audio Overview, Features & Guide](https://backlinkblend.com/article/what-is-google-notebooklm-guide): An authoritative technical evaluation of Google NotebookLM—exploring Gemini 1.5 Pro source grounding, multimodal document synthesis, Audio Overview podcast generation, and enterprise research workflows.
 - [What Is Luma Dream Machine AI? Video Generator & Guide](https://backlinkblend.com/article/luma-dream-machine-ai-guide): An authoritative technical and creative analysis of Luma Dream Machine AI—evaluating Luma AI's 3D spatiotemporal video diffusion engine, camera motion trajectories, keyframe interpolation, and pricing.
 - [What Is Google Mixboard? Features, AI Canvas & Guide](https://backlinkblend.com/article/google-mixboard-guide): An authoritative technical and creative evaluation of Google Mixboard—exploring Google Labs' infinite moodboard canvas, Gemini vision models, iterative diffusion workflows, and design ideation.
