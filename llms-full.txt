@@ -4,6 +4,45 @@
 
 ---
 
+# Suno AI Music Generation: Prompts, Metatags & Studio Guide
+
+A masterclass in Suno AI music generation—exploring the GMVP prompt architecture, structural bracket metatags, vocal timbre steering, stem separation, and studio mastering.
+
+Key Architecture & Insights:
+- GMVP Prompt Framework (Genre, Mood, Vocals, Production) Comma-Delimited Syntax
+- Sequential Acoustic Parsing & Stacked Bracket Metatags ([Verse], [Chorus | Anthemic | Stacked Harmonies], [Drop])
+- Phonetic Formatting: Parenthetical Ad-Libs, Line Break Cadence, & Slant-Rhyme Mitigation
+- Suno Studio DAW Workflows: 4-Stem Separation, 4-Bar Audio Inpainting, & Multitrack WAV Mastering
+- Streaming Loudness Standards (-14 LUFS Benchmark) & Commercial Release Compliance
+
+---
+
+# Suno AI vs Udio: Features, Audio Quality & Music Guide
+
+An authoritative technical evaluation comparing Suno AI and Udio—evaluating diffusion architectures, vocal realism, instrumental soundstages, DAW workflows, and commercial licensing.
+
+Key Architecture & Insights:
+- Continuous Latent Diffusion (Udio) vs. Discrete Autoregressive Transformer Synthesis (Suno AI)
+- Vocal Formants & Micro-Pitch Articulation: Human Breath Dynamics & Emotional Vibrato Modeling
+- Acoustic Soundstage Resolution & High-Frequency Stereo Transient Separation
+- In-Browser Production Paradigms: Suno Studio DAW Linear Architecture vs. Udio Modular Tree Stems
+- Copyright Compliance, Streaming Royalties, and Enterprise Commercial Rights Policies
+
+---
+
+# What Is Janitor AI? Features, JanitorLLM, Lorebooks & Guide
+
+An authoritative technical evaluation of Janitor AI—exploring its character roleplay engine, proprietary JanitorLLM, dynamic lorebook memory injection, BYOK API routing, and safety architecture.
+
+Key Architecture & Insights:
+- Decoupled Frontend Orchestration Canvas & Open Multi-Model Routing
+- In-House Fine-Tuned JanitorLLM (JLLM) Optimized for Narrative Dialogue & Persona Staging
+- Dynamic Lorebook Memory Triggers & Message Depth Context Conservation
+- Bring-Your-Own-Key (BYOK) Integration with OpenRouter, KoboldAI, Ollama, & Custom Endpoints
+- Content Moderation Architecture: NSFW/SFW Content Toggles, Default Private Chat Encryption, & Age Verification Controls
+
+---
+
 # Turnitin AI Detector: Accuracy, How It Works & Guide
 
 An authoritative technical evaluation of the Turnitin AI detector—examining sentence perplexity, burstiness scoring, false positive rates, LMS integration, and academic integrity policies.
