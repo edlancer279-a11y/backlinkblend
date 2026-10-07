@@ -5917,7 +5917,11 @@
     renderArticlesView() {
       forceScrollToTop();
       this.setActiveNav('articles');
-      updateSEO({ title: 'All Editorial Articles & Frameworks', description: 'Browse all deep-dive articles across BacklinkBlend.' });
+      updateSEO({
+        title: 'All Editorial Articles & Frameworks — BacklinkBlend',
+        description: 'Browse all deep-dive articles and blueprints across BacklinkBlend.',
+        canonicalUrl: 'https://backlinkblend.com/articles'
+      });
 
       let filtered = ARTICLES;
       if (this.activeCategoryFilter !== 'all') {
@@ -5951,8 +5955,9 @@
 
       this.setActiveNav(`category/${category.slug}`);
       updateSEO({
-        title: `${category.name} Journal & Research`,
-        description: category.description
+        title: `${category.name} Journal & Research — BacklinkBlend`,
+        description: category.description,
+        canonicalUrl: `https://backlinkblend.com/category/${category.slug}`
       });
 
       const categoryArticles = ARTICLES.filter(a => a && a.category && a.category.toLowerCase() === category.slug);

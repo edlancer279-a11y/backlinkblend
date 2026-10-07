@@ -54,12 +54,10 @@
 
 ## Categories & Editorial Pillars
 
-- [AI Technology](https://backlinkblend.com/category/technology): Autonomous AI architectures, quantum computing, cloud infrastructure, and software engineering.
-- [AI Agents](https://backlinkblend.com/category/ai-agents): Multi-agent orchestration systems, agentic workflows, and neural decision engines.
-- [Business Strategy](https://backlinkblend.com/category/business): Corporate growth, venture dynamics, and enterprise decision frameworks.
-- [Global Finance](https://backlinkblend.com/category/finance): Macroeconomic liquidity, private markets, and fintech innovation.
-- [Digital Marketing](https://backlinkblend.com/category/digital-marketing): Search engine optimization, content architecture, and digital authority.
-- [Modern Culture](https://backlinkblend.com/category/culture): Architectural design, contemporary philosophy, and digital culture.
+- [Link Building](https://backlinkblend.com/category/link-building): Advanced backlink acquisition, high-authority guest posting, broken link building, and tiered digital PR outreach strategies.
+- [AI & Automation](https://backlinkblend.com/category/ai-automation): Next-generation artificial intelligence tools, autonomous workflow agents, prompt architecture, and algorithmic search optimization.
+- [SEO & Backlink Tools](https://backlinkblend.com/category/seo-tools): In-depth software evaluations, backlink audit platforms, domain authority metrics, and crawler intelligence tools.
+- [Digital Authority](https://backlinkblend.com/category/digital-authority): Search engine algorithm updates, Generative Engine Optimization (GEO), domain authority scaling, and organic growth frameworks.
 
 ## Publication Info & Legal Trust
 

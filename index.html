@@ -4,52 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Environment Adaptive Base URL for SPA Routing & Asset Resolution -->
-  <script>
-    if (window.location.protocol !== 'file:' && window.location.origin && window.location.origin !== 'null') {
-      document.write('<base href="/">');
-    } else {
-      document.write('<base href="./">');
-    }
-  </script>
+  <!-- Static Base URL for Asset Resolution -->
+  <base href="/">
 
   <title>BacklinkBlend — Link Building, AI Search & Digital Authority</title>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="BacklinkBlend is an independent digital publication delivering authoritative analysis on link building, AI-driven SEO, backlink software, and search engine authority.">
   <meta name="keywords" content="BacklinkBlend, Link Building, Backlinks, AI SEO, SEO Tools, Digital Authority, Domain Authority, Search Rankings, Generative Engine Optimization">
-  <!-- Dynamic Synchronous Canonical Tag Resolution (Prevents Homepage Canonical Folding in Crawlers) -->
-  <script>
-    (function() {
-      var origin = 'https://backlinkblend.com';
-      var rawPath = (window.location.protocol !== 'file:' && window.location.pathname) ? window.location.pathname.replace(/^\/+|\/+$/g, '').trim() : '';
-      var canonicalUrl = origin + '/';
-      if (rawPath && rawPath !== 'index.html') {
-        if (rawPath.startsWith('article/') || rawPath.startsWith('category/') || rawPath === 'about' || rawPath === 'contact' || rawPath === 'privacy' || rawPath === 'terms' || rawPath === 'disclaimer' || rawPath === 'articles') {
-          canonicalUrl = origin + '/' + rawPath;
-        } else {
-          canonicalUrl = origin + '/article/' + rawPath;
-        }
-      }
-      document.write('<link id="canonical-link" rel="canonical" href="' + canonicalUrl + '">');
-    })();
-  </script>
-  <noscript>
-    <link id="canonical-link" rel="canonical" href="https://backlinkblend.com/">
-  </noscript>
+  
+  <!-- Canonical URL (Homepage is self-canonical; inner pages have dedicated static HTML files) -->
+  <link id="canonical-link" rel="canonical" href="https://backlinkblend.com/">
   
   <!-- Google AdSense Verification & Auto Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2869103987354107" crossorigin="anonymous"></script>
 
-  <!-- Favicons & Touch Icons -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.jpg">
+  <!-- Favicons & Touch Icons (Absolute URLs to prevent relative resolution traps) -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/jpeg" href="/assets/images/favicon.jpg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.jpg">
 
   <!-- Preload Critical LCP Hero Asset & Preconnect to Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/images/hero_tech_ai_1786192193469.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/hero_tech_ai_1786192193469.jpg" fetchpriority="high">
 
   <!-- Async Google Fonts Loading to Eliminate Render-Blocking -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -57,8 +35,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap">
   </noscript>
 
-  <!-- Core Design System CSS v=12.0.0 -->
-  <link rel="stylesheet" href="css/styles.css?v=12.0.0">
+  <!-- Core Design System CSS v=12.0.0 (Absolute Root Path) -->
+  <link rel="stylesheet" href="/css/styles.css?v=12.0.0">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:site_name" content="BacklinkBlend">
@@ -465,6 +443,6 @@
   </script>
 
   <!-- Master Production Self-Contained Bundle Script v=86.0.0 -->
-  <script src="js/bundle.js?v=86.0.0"></script>
+  <script src="/js/bundle.js?v=86.0.0"></script>
 </body>
 </html>

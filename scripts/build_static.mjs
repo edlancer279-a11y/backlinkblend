@@ -633,11 +633,163 @@ function generateArticlePages() {
   console.log(`Generated ${ARTICLES.length} article static HTML pages in article/<slug>/index.html`);
 }
 
+function renderStaticCardHTML(art) {
+  if (!art) return '';
+  const authorName = (art.author && art.author.name) ? art.author.name : 'BacklinkBlend Editorial';
+  const catName = art.category ? art.category.toUpperCase() : 'EDITORIAL';
+  const title = art.title || 'Untitled Article';
+  const deck = art.deck || art.excerpt || art.metaDescription || '';
+  const image = normalizeImgPath(art.image);
+  const readTime = art.readTime || '5 min read';
+  const slug = art.slug || 'home';
+
+  return `
+    <article class="editorial-card">
+      <a href="/article/${slug}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+        <div class="card-img-wrapper">
+          <img src="${image}" alt="${title}" loading="lazy" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
+        </div>
+        <div class="card-body">
+          <span class="badge badge-outline" style="align-self: flex-start; font-size: 0.65rem;">${catName}</span>
+          <h2 class="card-title" style="font-size: 1.2rem; line-height: 1.4; margin: 0.5rem 0;">${title}</h2>
+          <p class="card-excerpt">${deck}</p>
+          <div class="card-footer" style="margin-top: auto; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono); padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+            <span>By ${authorName}</span>
+            <span>${readTime}</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  `;
+}
+
+// 7. GENERATE ALL ARTICLES HUB REPOSITORY
+function generateArticlesPage() {
+  const title = "All Editorial Articles & Frameworks — BacklinkBlend";
+  const desc = "Browse all deep-dive articles, strategic blueprints, and research masterclasses across Link Building, AI & Automation, SEO Tools, and Digital Authority on BacklinkBlend.";
+  const canonical = "https://backlinkblend.com/articles";
+
+  const cardsHtml = ARTICLES.map(art => renderStaticCardHTML(art)).join('');
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": title,
+    "description": desc,
+    "url": canonical,
+    "publisher": {
+      "@type": "Organization",
+      "name": "BacklinkBlend",
+      "url": "https://backlinkblend.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://backlinkblend.com/assets/images/favicon.jpg"
+      }
+    }
+  };
+
+  const content = `
+    <div style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
+      <nav class="breadcrumbs" style="margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
+        <a href="/" style="color: var(--accent-gold); text-decoration: none;">Home</a>
+        <span style="margin: 0 0.5rem;">/</span>
+        <span style="color: var(--text-secondary);">All Articles</span>
+      </nav>
+
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h1 class="section-title" style="font-family: var(--font-serif-header); font-size: 2.5rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">Editorial Repository</h1>
+        <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-gold);">${ARTICLES.length} Stories Indexed</span>
+      </div>
+
+      <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
+        ${cardsHtml}
+      </div>
+    </div>
+  `;
+
+  const html = getHead(title, desc, canonical, 'https://backlinkblend.com/assets/images/hero_tech_ai_1786192193469.jpg', jsonLd) + getBaseHeader('articles') + `<main id="app-content">${content}</main>` + getPageFooterHtml();
+  const dir = path.join(rootDir, 'articles');
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
+  console.log("Generated /articles/index.html");
+}
+
+// 8. GENERATE ALL CATEGORY HUB PAGES
+function generateCategoryPages() {
+  console.log(`Generating static pages for ${CATEGORIES.length} categories...`);
+
+  CATEGORIES.forEach(cat => {
+    const title = `${cat.name} Journal & Research — BacklinkBlend`;
+    const desc = cat.description;
+    const canonical = `https://backlinkblend.com/category/${cat.slug}`;
+
+    const catArticles = ARTICLES.filter(a => a && a.category && a.category.toLowerCase() === cat.slug);
+    const cardsHtml = catArticles.map(art => renderStaticCardHTML(art)).join('');
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": title,
+      "description": desc,
+      "url": canonical,
+      "publisher": {
+        "@type": "Organization",
+        "name": "BacklinkBlend",
+        "url": "https://backlinkblend.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://backlinkblend.com/assets/images/favicon.jpg"
+        }
+      }
+    };
+
+    const content = `
+      <div style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
+        <nav class="breadcrumbs" style="margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
+          <a href="/" style="color: var(--accent-gold); text-decoration: none;">Home</a>
+          <span style="margin: 0 0.5rem;">/</span>
+          <span style="color: var(--text-secondary);">${cat.name}</span>
+        </nav>
+
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 3rem 2.5rem; margin-bottom: 3rem;">
+          <span class="badge" style="margin-bottom: 1rem; display: inline-block;">CATEGORY HUB</span>
+          <h1 class="font-serif" style="font-size: 2.75rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem;">${cat.name}</h1>
+          <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 680px; line-height: 1.6;">${cat.description}</p>
+          <div style="margin-top: 1.5rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">
+            ${catArticles.length} Deep-Dive Articles Published
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <h2 class="section-title" style="font-family: var(--font-serif-header); font-size: 1.8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">Category Index</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">${cat.name} Stories</span>
+        </div>
+
+        ${catArticles.length > 0 ? `
+          <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
+            ${cardsHtml}
+          </div>
+        ` : `
+          <p style="text-align: center; color: var(--text-muted); padding: 4rem 0;">No articles published in this hub yet. Check back soon!</p>
+        `}
+      </div>
+    `;
+
+    const html = getHead(title, desc, canonical, 'https://backlinkblend.com/assets/images/hero_tech_ai_1786192193469.jpg', jsonLd) + getBaseHeader(cat.slug) + `<main id="app-content">${content}</main>` + getPageFooterHtml();
+    const dir = path.join(rootDir, 'category', cat.slug);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
+    console.log(`Generated /category/${cat.slug}/index.html`);
+  });
+}
+
 // EXECUTE ALL
 generatePrivacyPage();
 generateAboutPage();
 generateContactPage();
 generateTermsPage();
 generateDisclaimerPage();
+generateArticlesPage();
+generateCategoryPages();
 generateArticlePages();
 console.log("Static Site Generation completed successfully!");

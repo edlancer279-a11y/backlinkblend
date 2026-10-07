@@ -51,14 +51,33 @@
   # Direct Exclusions for Sitemap, Robots, Ads, & LLMs files (Do not rewrite)
   RewriteRule ^(sitemap\.xml|robots\.txt|llms\.txt|llms-full\.txt|ads\.txt)$ - [L]
 
+  # 1. SPIDER TRAP DEFENSE: Instantly 404 any crawler recursion loops with nested asset or category paths
+  RewriteCond %{REQUEST_URI} (css|js)/.*(css|js) [NC,OR]
+  RewriteCond %{REQUEST_URI} /(article|category)/.*/(article|category) [NC,OR]
+  RewriteCond %{REQUEST_URI} /(css|js|assets)/.+\.(html|htm)$ [NC]
+  RewriteRule ^ - [R=404,L]
+
+  # 2. STRICT ASSET PROTECTION: Missing static files must NEVER fall back to index.html (Return 404 immediately)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} \.(css|js|jpe?g|png|gif|webp|svg|ico|woff|woff2|ttf|eot|xml|txt|json|map)$ [NC]
+  RewriteRule ^ - [R=404,L]
+
   # 301 Permanent Redirects for Old Indexed WordPress URLs & Feeds
   RewriteRule ^feed/?$ / [R=301,L]
   RewriteRule ^comments/feed/?$ / [R=301,L]
   RewriteRule ^about-us/?$ /about [R=301,L]
   RewriteRule ^write-for-us/?$ /contact [R=301,L]
   RewriteRule ^editors-pick-shopnaclo/?$ / [R=301,L]
-  RewriteRule ^Business/?$ /category/business [R=301,L]
+  RewriteRule ^Business/?$ /category/digital-authority [R=301,L]
   RewriteRule ^2026/.*$ / [R=301,L]
+
+  # 301 Permanent Redirects for Legacy Category Slugs to Active Editorial Pillars
+  RewriteRule ^category/technology/?$ /category/ai-automation [R=301,L]
+  RewriteRule ^category/ai-agents/?$ /category/ai-automation [R=301,L]
+  RewriteRule ^category/digital-marketing/?$ /category/digital-authority [R=301,L]
+  RewriteRule ^category/business/?$ /category/digital-authority [R=301,L]
+  RewriteRule ^category/finance/?$ /category/seo-tools [R=301,L]
+  RewriteRule ^category/culture/?$ /category/link-building [R=301,L]
 
   # 301 Permanent Redirects for ALL Legacy Article Slugs (Resolves GSC Alternative & Discovered Issues)
   RewriteRule ^(article/)?what-is-blackbox-ai(-guide)?/?$ /article/blackbox-ai [R=301,L]
@@ -87,17 +106,28 @@
   # Normalize trailing slashes to clean canonical URLs (301 Permanent Redirect)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^article/([a-zA-Z0-9_-]+)/$ /article/$1 [R=301,L]
-  RewriteRule ^(about|contact|privacy|terms|disclaimer)/$ /$1 [R=301,L]
+  RewriteRule ^category/([a-zA-Z0-9_-]+)/$ /category/$1 [R=301,L]
+  RewriteRule ^(articles|about|contact|privacy|terms|disclaimer)/$ /$1 [R=301,L]
 
   # Direct internal rewrite for pre-rendered article pages (Serves 200 OK directly, avoids DirectorySlash)
   RewriteCond %{DOCUMENT_ROOT}/article/$1/index.html -f
   RewriteRule ^article/([a-zA-Z0-9_-]+)$ article/$1/index.html [L]
 
+  # Direct internal rewrite for pre-rendered category hubs
+  RewriteCond %{DOCUMENT_ROOT}/category/$1/index.html -f
+  RewriteRule ^category/([a-zA-Z0-9_-]+)$ category/$1/index.html [L]
+
+  # Direct internal rewrite for pre-rendered articles repository hub
+  RewriteCond %{DOCUMENT_ROOT}/articles/index.html -f
+  RewriteRule ^articles$ articles/index.html [L]
+
+  # Direct internal rewrite for static info pages
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(about|contact|privacy|terms|disclaimer)$ $1/index.html [L]
 
-  # SPA Routing Fallback for Single Page Application
+  # SPA Routing Fallback for Single Page Application (Strictly for non-asset HTML routes)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.(css|js|jpe?g|png|gif|webp|svg|ico|woff|woff2|ttf|eot|xml|txt|json|map)$ [NC]
   RewriteRule ^ index.html [L]
 </IfModule>

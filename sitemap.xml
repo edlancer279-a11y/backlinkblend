@@ -321,45 +321,33 @@
   <!-- All Articles Hub -->
   <url>
     <loc>https://backlinkblend.com/articles</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Category Hubs -->
+  <!-- Editorial Pillar Category Hubs -->
   <url>
-    <loc>https://backlinkblend.com/category/business</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://backlinkblend.com/category/link-building</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://backlinkblend.com/category/technology</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://backlinkblend.com/category/ai-automation</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://backlinkblend.com/category/finance</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://backlinkblend.com/category/seo-tools</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://backlinkblend.com/category/digital-marketing</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://backlinkblend.com/category/culture</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://backlinkblend.com/category/ai-agents</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://backlinkblend.com/category/digital-authority</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
