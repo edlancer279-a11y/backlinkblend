@@ -78,7 +78,7 @@ function normalizeImgPath(img) {
 }
 
 function getPageFooterHtml() {
-  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=84.0.0"></script></body></html>`;
+  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=85.0.0"></script></body></html>`;
 }
 
 function getBaseHeader(activeNav = '') {

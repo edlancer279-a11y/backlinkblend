@@ -5455,7 +5455,7 @@
         const mainRoute = parts[0] || 'home';
         const param = parts.slice(1).filter(Boolean).join('/') || null;
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        forceScrollToTop();
 
         if (this.routes[mainRoute]) {
           this.routes[mainRoute](param);
@@ -5548,6 +5548,22 @@
       return url;
     }
     return '/' + url;
+  }
+
+  function forceScrollToTop() {
+    try {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+    } catch (e) {}
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 10);
   }
 
   class App {
@@ -5679,7 +5695,7 @@
     }
 
     navigateTo(rawRoute) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      forceScrollToTop();
       const cleanRoute = (rawRoute || '').trim().replace(/^#\/?|^\//, '');
       
       if (cleanRoute === 'home' || cleanRoute === '') {
@@ -5783,6 +5799,7 @@
 
     // 1. HOME VIEW
     renderHome() {
+      forceScrollToTop();
       this.setActiveNav('home');
       updateSEO({ title: 'Home — Global Digital Publication', description: SITE_CONFIG.description });
 
@@ -5894,6 +5911,7 @@
 
     // 2. ALL ARTICLES VIEW
     renderArticlesView() {
+      forceScrollToTop();
       this.setActiveNav('articles');
       updateSEO({ title: 'All Editorial Articles & Frameworks', description: 'Browse all deep-dive articles across BacklinkBlend.' });
 
@@ -5919,6 +5937,7 @@
 
     // 3. CATEGORY HUB VIEW
     renderCategoryView(rawSlug) {
+      forceScrollToTop();
       const slug = (rawSlug || '').trim().toLowerCase().replace(/^category\//, '').replace(/^\/+|\/+$/g, '');
       const category = CATEGORIES.find(c => c.slug === slug || c.id === slug);
       if (!category) {
@@ -5964,6 +5983,7 @@
 
     // 4. ARTICLE DETAIL READER
     renderArticleDetail(rawSlug) {
+      forceScrollToTop();
       try {
         let slug = (rawSlug || '').trim().toLowerCase().replace(/^article\//, '').replace(/^\/+|\/+$/g, '');
         
