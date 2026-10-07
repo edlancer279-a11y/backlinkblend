@@ -48,13 +48,11 @@ Assign the article to the appropriate resident author in `AUTHORS`:
 - `elena-rostova` (Global Culture & Design Director): Architectural design, modern minimalism, digital culture.
 
 #### Category Assignment
-Choose one of the 6 core pillars:
-- `technology` (AI Technology)
-- `ai-agents` (AI Agents)
-- `business` (Business Strategy)
-- `finance` (Global Finance)
-- `digital-marketing` (Digital Marketing)
-- `culture` (Modern Culture)
+Choose one of the 4 core pillars:
+- `link-building` (Link Building): Backlinks, guest posting, broken link building, outreach, tiered links, digital PR.
+- `ai-automation` (AI & Automation): AI tools, LLMs, neural models, autonomous AI agents, prompt engineering, generative workflows.
+- `seo-tools` (SEO & Backlink Tools): Ahrefs, Semrush, backlink audit platforms, crawler tools, email outreach software.
+- `digital-authority` (Digital Authority): Google algorithms, spam updates, search engine optimization, Generative Engine Optimization (GEO), domain authority.
 
 #### Metadata Blueprint
 - **`id`**: `'art-' + slug`

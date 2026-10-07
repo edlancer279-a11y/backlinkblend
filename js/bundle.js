@@ -8,27 +8,26 @@
   'use strict';
 
   // --------------------------------------------------------------------------
+    // --------------------------------------------------------------------------
   // 1. SITE CONFIGURATION
   // --------------------------------------------------------------------------
   const SITE_CONFIG = {
-    title: 'BacklinkBlend — Global Digital Publication',
+    title: 'BacklinkBlend — Link Building, AI Search & Digital Authority',
     url: 'https://backlinkblend.com',
-    description: 'BacklinkBlend is an independent international digital publication delivering authoritative analysis on AI technology, finance, business, and digital strategy.',
+    description: 'BacklinkBlend is an independent digital publication delivering authoritative analysis on link building, AI-driven SEO, backlink software, and search engine authority.',
     twitter: '@BacklinkBlend',
     contactEmail: 'backlinkblend@gmail.com',
     location: 'Hyderabad, Sindh 71500, Pakistan'
   };
 
   // --------------------------------------------------------------------------
-  // 2. CATEGORIES DATABASE (6 CORE PILLARS)
+  // 2. CATEGORIES DATABASE (4 FOCUSED CORE PILLARS)
   // --------------------------------------------------------------------------
   const CATEGORIES = [
-    { id: 'business', name: 'Business Strategy', slug: 'business', icon: 'briefcase', description: 'Executive strategy, corporate growth, venture dynamics, and enterprise decision frameworks.' },
-    { id: 'technology', name: 'AI Technology', slug: 'technology', icon: 'cpu', description: 'Autonomous AI architectures, quantum computing, cloud infrastructure, and software engineering.' },
-    { id: 'finance', name: 'Global Finance', slug: 'finance', icon: 'trending-up', description: 'Sovereign wealth funds, macroeconomic liquidity, private markets, and fintech innovation.' },
-    { id: 'digital-marketing', name: 'Digital Marketing', slug: 'digital-marketing', icon: 'activity', description: 'Search engine optimization, content architecture, growth strategy, and digital authority.' },
-    { id: 'culture', name: 'Modern Culture', slug: 'culture', icon: 'globe', description: 'Architectural design, contemporary philosophy, urban sanctuaries, and digital culture.' },
-    { id: 'ai-agents', name: 'AI Agents', slug: 'ai-agents', icon: 'book-open', description: 'Autonomous AI agents, multi-agent orchestration systems, agentic workflows, and neural decision engines.' }
+    { id: 'link-building', name: 'Link Building', slug: 'link-building', icon: 'link', description: 'Advanced backlink acquisition, high-authority guest posting, broken link building, and tiered digital PR outreach strategies.' },
+    { id: 'ai-automation', name: 'AI & Automation', slug: 'ai-automation', icon: 'cpu', description: 'Next-generation artificial intelligence tools, autonomous workflow agents, prompt architecture, and algorithmic search optimization.' },
+    { id: 'seo-tools', name: 'SEO & Backlink Tools', slug: 'seo-tools', icon: 'activity', description: 'In-depth software evaluations, backlink audit platforms, domain authority metrics, and crawler intelligence tools.' },
+    { id: 'digital-authority', name: 'Digital Authority', slug: 'digital-authority', icon: 'shield', description: 'Search engine algorithm updates, Generative Engine Optimization (GEO), domain authority scaling, and organic growth frameworks.' }
   ];
 
   // --------------------------------------------------------------------------
@@ -74,7 +73,7 @@
     slug: 'suno-ai-music-generation-guide',
     title: 'Suno AI Music Generation: Prompts, Metatags & Studio Guide',
     deck: 'A masterclass in Suno AI music generation—exploring the GMVP prompt architecture, structural bracket metatags, vocal timbre steering, stem separation, and studio mastering.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-07',
     readTime: '7 min read',
@@ -223,7 +222,7 @@
     slug: 'suno-ai-vs-udio-guide',
     title: 'Suno AI vs Udio: Features, Audio Quality & Music Guide',
     deck: 'An authoritative technical evaluation comparing Suno AI and Udio—evaluating diffusion architectures, vocal realism, instrumental soundstages, DAW workflows, and commercial licensing.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-07',
     readTime: '7 min read',
@@ -372,7 +371,7 @@
     slug: 'what-is-janitor-ai-guide',
     title: 'What Is Janitor AI? Features, JanitorLLM, Lorebooks & Guide',
     deck: 'An authoritative technical evaluation of Janitor AI—exploring its character roleplay engine, proprietary JanitorLLM, dynamic lorebook memory injection, BYOK API routing, and safety architecture.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-07',
     readTime: '7 min read',
@@ -510,7 +509,7 @@
     slug: 'turnitin-ai-detector-guide',
     title: 'Turnitin AI Detector: Accuracy, How It Works & Guide',
     deck: 'An authoritative technical evaluation of the Turnitin AI detector—examining sentence perplexity, burstiness scoring, false positive rates, LMS integration, and academic integrity policies.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-06',
     readTime: '7 min read',
@@ -637,7 +636,7 @@
     slug: 'what-is-poly-ai-guide',
     title: 'What Is Poly AI? Enterprise Voice Assistant & Guide',
     deck: 'An authoritative technical evaluation of Poly AI—exploring its conversational voice agent architecture, proprietary Raven LLM, enterprise call center integration, and the PolyBuzz distinction.',
-    category: 'ai-agents',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-06',
     readTime: '7 min read',
@@ -772,7 +771,7 @@
     slug: 'what-is-google-notebooklm-guide',
     title: 'What Is Google NotebookLM? Audio Overview, Features & Guide',
     deck: 'An authoritative technical evaluation of Google NotebookLM—exploring Gemini 1.5 Pro source grounding, multimodal document synthesis, Audio Overview podcast generation, and enterprise research workflows.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-05',
     readTime: '7 min read',
@@ -908,7 +907,7 @@
     slug: 'luma-dream-machine-ai-guide',
     title: 'What Is Luma Dream Machine AI? Video Generator & Guide',
     deck: 'An authoritative technical and creative analysis of Luma Dream Machine AI—evaluating Luma AI\'s 3D spatiotemporal video diffusion engine, camera motion trajectories, keyframe interpolation, and pricing.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-03',
     readTime: '7 min read',
@@ -1043,7 +1042,7 @@
     slug: 'google-mixboard-guide',
     title: 'What Is Google Mixboard? Features, AI Canvas & Guide',
     deck: 'An authoritative technical and creative evaluation of Google Mixboard—exploring Google Labs\' infinite moodboard canvas, Gemini vision models, iterative diffusion workflows, and design ideation.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-03',
     readTime: '7 min read',
@@ -1171,7 +1170,7 @@
     slug: 'who-created-chatgpt',
     title: 'Who Created ChatGPT? Founders, OpenAI History & Architecture',
     deck: 'An authoritative technical and historical analysis of who created ChatGPT—tracing OpenAI\'s founding team, key alignment researchers, RLHF breakthroughs, and corporate evolution.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-10-01',
     readTime: '8 min read',
@@ -1313,7 +1312,7 @@
     slug: 'what-is-artificial-intelligence-guide',
     title: 'What Is Artificial Intelligence? Types, Architecture & Future',
     deck: 'An authoritative architectural guide to artificial intelligence—analyzing neural foundation models, generative vs. agentic paradigms, test-time compute, and enterprise deployment.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-09-30',
     readTime: '9 min read',
@@ -1422,7 +1421,7 @@
     slug: 'what-is-nectar-ai-guide',
     title: 'What Is Nectar AI? Features, Roleplay Models & Pricing Guide',
     deck: 'An authoritative technical review and architecture breakdown of Nectar AI—exploring its multimodal generative models, Dream Builder character engine, uncensored roleplay capabilities, and subscription economics.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-09-30',
     readTime: '8 min read',
@@ -1525,7 +1524,7 @@
     slug: 'hp-probook-4-g1i-ai-pc-14',
     title: 'HP ProBook 4 G1i AI PC 14": Specs, NPU Features & Review',
     deck: 'An authoritative technical evaluation of the HP ProBook 4 G1i AI PC 14"—analyzing Intel Core Ultra silicon, local NPU architecture, HP Wolf Security, battery endurance, and enterprise value.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-09-29',
     readTime: '8 min read',
@@ -1643,7 +1642,7 @@
     slug: 'ai-content-audit-2026',
     title: 'AI Content Audit 2026: Enterprise Framework, Tools & SEO Guide',
     deck: 'An authoritative 2026 operational blueprint for auditing enterprise AI content—evaluating information gain, search engine spam compliance, extractability, and citation performance.',
-    category: 'digital-marketing',
+    category: 'seo-tools',
     author: AUTHORS['marcus-vane'],
     date: '2026-09-28',
     readTime: '8 min read',
@@ -1767,7 +1766,7 @@
     slug: 'google-september-2026-spam-update-guide',
     title: 'Google September 2026 Spam Update: Impact & Recovery Guide',
     deck: 'An authoritative technical analysis of the Google September 2026 spam update — dissecting SpamBrain AI enhancements, scaled content abuse thresholds, and an executive recovery playbook for digital publishers.',
-    category: 'digital-marketing',
+    category: 'link-building',
     author: AUTHORS['marcus-vane'],
     date: '2026-09-25',
     readTime: '9 min read',
@@ -1887,7 +1886,7 @@
     slug: 'data-center-resilience-ai',
     title: 'Data Center Resilience AI: Infrastructure, Power & Cooling Guide (2026)',
     deck: 'An authoritative 2026 engineering guide to data center resilience AI — exploring predictive maintenance, liquid cooling digital twins, and autonomous grid orchestration.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-09-24',
     readTime: '8 min read',
@@ -2017,7 +2016,7 @@
     slug: 'best-books-for-critical-thinking',
     title: 'Best Books for Critical Thinking: 10 Essential Reads (2026)',
     deck: 'An authoritative 2026 curation of the best books for critical thinking — analyzing cognitive biases, mental models, probabilistic reasoning, and executive decision frameworks.',
-    category: 'business',
+    category: 'digital-authority',
     author: AUTHORS['evelyn-vance'],
     date: '2026-09-23',
     readTime: '9 min read',
@@ -2189,7 +2188,7 @@
     slug: 'openai-careers-guide',
     title: 'Open AI Careers: Jobs, Salaries & How to Get Hired (2026)',
     deck: 'An authoritative 2026 executive guide to Open AI careers — analyzing technical roles, research scientist compensation, interview loops, and hiring culture.',
-    category: 'business',
+    category: 'digital-authority',
     author: AUTHORS['evelyn-vance'],
     date: '2026-09-21',
     readTime: '8 min read',
@@ -2309,7 +2308,7 @@
     slug: 'what-is-seaart-ai-guide',
     title: 'What Is SeaArt AI? Free AI Image Generator & Guide (2026)',
     deck: 'An authoritative 2026 technical guide to SeaArt AI — analyzing its generative diffusion engine, LoRA model repository, prompt workbench, and coin economy.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-09-21',
     readTime: '7 min read',
@@ -2423,7 +2422,7 @@
     slug: 'what-is-hailuo-ai-video-guide',
     title: 'What Is Hailuo AI? MiniMax Video Generator & Guide (2026)',
     deck: 'An authoritative 2026 technical guide to Hailuo AI — examining MiniMax\'s Video-01 generative architecture, text-to-video realism, prompt mechanics, and tier pricing.',
-    category: 'technology',
+    category: 'ai-automation',
     author: AUTHORS['evelyn-vance'],
     date: '2026-09-20',
     readTime: '7 min read',
@@ -2543,7 +2542,7 @@
       slug: 'what-is-cursor-ai-guide',
       title: 'What Is Cursor AI? Features, Code Editor & Pricing Guide (2026)',
       deck: 'An authoritative 2026 technical guide to Cursor AI — analyzing the VS Code fork, Cursor Tab predictive autocomplete, multi-file Composer agent, codebase vector indexing, and tier pricing.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-19',
       readTime: '7 min read',
@@ -2663,7 +2662,7 @@
       slug: 'kling-ai-free',
       title: 'What Is Kling AI? How to Use Kling AI Free & Video Guide (2026)',
       deck: 'An authoritative 2026 technical analysis of Kling AI — exploring Kuaishou\'s breakthrough video generation model, daily free credits, 3D spatiotemporal architecture, and high-CTR cinematic prompts.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-19',
       readTime: '8 min read',
@@ -2787,7 +2786,7 @@
       slug: 'scary-ai',
       title: 'Scary AI: 7 Unsettling Technologies, Creepy Tools & Future Risks',
       deck: 'An authoritative 2026 investigation into scary AI — exploring autonomous cognitive agents, deepfake psychometrics, eerie AI hallucinations, and existential alignment risks.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-17',
       readTime: '7 min read',
@@ -2886,7 +2885,7 @@
       slug: 'what-is-suno-ai-guide',
       title: 'What Is Suno AI? Features, Song Generator & Pricing Guide',
       deck: 'A comprehensive 2026 guide to Suno AI — exploring its text-to-music generator, v3.5 neural audio models, custom lyrics creator, commercial licensing, and pricing.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-17',
       readTime: '6 min read',
@@ -2983,7 +2982,7 @@
       slug: 'blackbox-ai',
       title: 'What Is Blackbox AI? Features, Code Generator & Pricing Guide',
       deck: 'A comprehensive 2026 guide to Blackbox AI — exploring its AI code generator, VS Code extensions, multi-model inference, developer CLI, and pricing models.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-17',
       readTime: '6 min read',
@@ -3080,7 +3079,7 @@
       slug: 'viggle-ai',
       title: 'What Is Viggle AI? Features, Prompts & Video Creation Guide',
       deck: 'A comprehensive 2026 guide to Viggle AI — exploring its text-to-video generation, character motion transfer, Discord commands, and prompt tips.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-16',
       readTime: '6 min read',
@@ -3177,7 +3176,7 @@
       slug: 'remaker-ai',
       title: 'What Is Remaker AI? Features, Face Swap & Pricing Guide',
       deck: 'A comprehensive 2026 guide to Remaker AI — exploring its AI face swap tool, text-to-image generator, photo enhancer, credit pricing models, and safety standards.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-16',
       readTime: '6 min read',
@@ -3279,7 +3278,7 @@
       slug: 'deep-ai-image-generator',
       title: 'Deep AI Image Generator: How It Works, Features, and Best Prompts',
       deck: 'A practical guide to the Deep AI image generator — exploring text-to-image prompts, visual styles, free vs paid features, developer API calls, and alternative tools in 2026.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-15',
       readTime: '6 min read',
@@ -3381,7 +3380,7 @@
       slug: 'deep-ai',
       title: 'What Is Deep AI? Features, Pricing, and How to Use It',
       deck: 'A comprehensive beginner\'s guide to Deep AI — exploring its text-to-image generator, AI chat assistant, developer APIs, and pricing models in 2026.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-15',
       readTime: '6 min read',
@@ -3481,7 +3480,7 @@
       slug: 'character-ai-age-verification',
       title: 'Character.AI Age Verification: Policy, Safety Checks, and How It Works',
       deck: 'An in-depth, plain-English guide to Character.AI age verification requirements, safety filters, age limits for minors, and digital privacy policies in 2026.',
-      category: 'ai-agents',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-15',
       readTime: '6 min read',
@@ -3597,7 +3596,7 @@
       slug: 'perplexity-ai',
       title: 'What Is Perplexity AI? Features, Pricing, and How It Works',
       deck: 'A plain-English overview of Perplexity AI — the conversational AI search engine bridging real-time web retrieval, inline citations, and multi-model synthesis.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-13',
       readTime: '6 min read',
@@ -3702,7 +3701,7 @@
       slug: 'ai-hallucination',
       title: 'What Is AI Hallucination? Causes, Risks, and How to Spot It',
       deck: 'A beginner\'s guide to AI hallucinations — why Large Language Models invent facts, cite fake studies, and how to protect your work with modern verification techniques.',
-      category: 'ai-agents',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-13',
       readTime: '7 min read',
@@ -3813,7 +3812,7 @@
       slug: 'clever-ai-humanizer',
       title: 'Clever AI Humanizer Review: Does It Really Work?',
       deck: 'An honest look at Clever AI Humanizer — what it claims to do, how it\'s positioned, its free-vs-paid limits, and what independent reports say about reliability.',
-      category: 'digital-marketing',
+      category: 'digital-authority',
       author: AUTHORS['marcus-vane'],
       date: '2026-09-10',
       readTime: '6 min read',
@@ -3929,7 +3928,7 @@
       slug: 'claude-ai',
       title: 'What Is Claude AI? A Plain-English Beginner\'s Guide',
       deck: 'New to Claude AI? Here\'s a clear, no-jargon explanation of what it is, who built it, what it can do, and how to get started.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-08',
       readTime: '6 min read',
@@ -4059,7 +4058,7 @@
       slug: 'droven-io',
       title: 'droven.io ai tools 2026: A Beginner\'s Overview',
       deck: 'New to droven.io ai tools 2026? This beginner\'s guide explains what droven.io actually is, what it publishes, and who it\'s genuinely useful for.',
-      category: 'finance',
+      category: 'digital-authority',
       author: AUTHORS['julian-thorne'],
       date: '2026-09-07',
       readTime: '7 min read',
@@ -4190,7 +4189,7 @@
       slug: 'ai-image-prompts',
       title: 'AI Image Generator Prompts That Actually Work',
       deck: 'Learn what makes an AI image generator prompt effective, with a simple formula, real examples, and common mistakes to avoid for sharper, more accurate results.',
-      category: 'digital-marketing',
+      category: 'digital-authority',
       author: AUTHORS['marcus-vane'],
       date: '2026-08-31',
       readTime: '6 min read',
@@ -4332,7 +4331,7 @@
       slug: 'nerovet-ai-dentistry',
       title: 'What Is Nerovet AI Dentistry? A Complete Guide',
       deck: 'What does "Nerovet AI dentistry" mean? A fact-checked look at the claims, what\'s confirmed, and how AI is genuinely used in dental care today.',
-      category: 'digital-marketing',
+      category: 'digital-authority',
       author: AUTHORS['marcus-vane'],
       date: '2026-08-27',
       readTime: '6 min read',
@@ -4424,7 +4423,7 @@
       slug: 'uk-copilot-trial',
       title: 'UK Government Microsoft Copilot Trial: Full Roundup',
       deck: 'A factual roundup of the UK government\'s Microsoft Copilot trials across DBT, DWP, HMRC and GDS, including participant numbers and reported outcomes.',
-      category: 'business',
+      category: 'digital-authority',
       author: AUTHORS['evelyn-vance'],
       date: '2026-08-24',
       readTime: '9 min read',
@@ -4541,7 +4540,7 @@
       slug: 'innocams-review',
       title: 'Innocams Review 2026: Features, Pricing & Is It Legit?',
       deck: 'Considering Innocams? This 2026 review checks its claimed features, pricing, and legitimacy — with an honest, evidence-based verdict before you buy.',
-      category: 'business',
+      category: 'digital-authority',
       author: AUTHORS['evelyn-vance'],
       date: '2026-08-20',
       readTime: '6 min read',
@@ -4659,7 +4658,7 @@
       slug: 'grok-video-moderated',
       title: 'Grok Video Moderated: What It Actually Means',
       deck: 'Seeing "Grok video moderated"? Here\'s what the message means, why xAI\'s system blocks certain video generations, and what you can actually do next.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-08-19',
       readTime: '5 min read',
@@ -4791,7 +4790,7 @@
       slug: 'enterprise-ai-agents',
       title: 'Enterprise AI Agents: Autonomous Multi-Agent Architecture & Governance Guide',
       deck: 'An authoritative 2026 executive blueprint on enterprise AI agents — exploring multi-agent orchestration frameworks, autonomous workflow integration, safety guardrails, and deployment models.',
-      category: 'ai-agents',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-09-18',
       readTime: '7 min read',
@@ -4912,7 +4911,7 @@
       slug: 'hammer-ai',
       title: 'Hammer AI Explained: What It Is and How It Works',
       deck: 'Hammer AI is a free AI chat and roleplay platform with local model support. Here\'s what it does, how it runs, and who it\'s built for.',
-      category: 'technology',
+      category: 'ai-automation',
       author: AUTHORS['evelyn-vance'],
       date: '2026-08-13',
       readTime: '6 min read',
@@ -5073,7 +5072,7 @@
       slug: 'agentic-ai-pindrop-anonybit',
       title: 'Agentic AI Pindrop Anonybit Explained in Plain English',
       deck: 'Confused by "agentic AI Pindrop Anonybit"? Here\'s a clear, jargon-free breakdown of what Pindrop, Anonybit, and agentic AI actually do.',
-      category: 'finance',
+      category: 'digital-authority',
       author: AUTHORS['julian-thorne'],
       date: '2026-08-12',
       readTime: '7 min read',
@@ -5217,7 +5216,7 @@
       slug: 'enterprise-ai-security',
       title: 'Enterprise AI Security Masterclass: The Executive Governance Framework',
       deck: 'A comprehensive 1,000-word strategic blueprint examining how modern CTOs and CISOs mitigate prompt injection, data poisoning, model inversion, and autonomous agent drift.',
-      category: 'business',
+      category: 'digital-authority',
       author: AUTHORS['evelyn-vance'],
       date: '2026-08-08',
       readTime: '10 min read',
@@ -5543,12 +5542,17 @@
   // 7. APP CONTROLLER
   // --------------------------------------------------------------------------
   function normalizeImgUrl(url) {
-    if (!url) return '/assets/images/hero_tech_ai_1786192193469.jpg';
-    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/')) {
+    const isFile = (typeof window !== 'undefined' && window.location && window.location.protocol === 'file:');
+    if (!url) {
+      return isFile ? 'assets/images/hero_tech_ai_1786192193469.jpg' : '/assets/images/hero_tech_ai_1786192193469.jpg';
+    }
+    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) {
       return url;
     }
-    return '/' + url;
+    const clean = url.replace(/^\/+/, '');
+    return isFile ? clean : '/' + clean;
   }
+  window.normalizeImgUrl = normalizeImgUrl;
 
   function forceScrollToTop() {
     try {
@@ -5815,7 +5819,7 @@
         <section class="hero-section">
           <article class="hero-main-card" style="cursor: pointer;" onclick="if(window.app) window.app.navigateTo('article/${hero.slug}');">
             <div class="hero-image-wrapper">
-              <img src="${normalizeImgUrl(hero.image)}" alt="${hero.title}" loading="eager" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
+              <img src="${normalizeImgUrl(hero.image)}" alt="${hero.title}" loading="eager" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=normalizeImgUrl('');" />
             </div>
             <div class="hero-content">
               <div class="hero-meta">
@@ -6100,7 +6104,7 @@
 
             <!-- Main Hero Image -->
             <div class="article-hero-img-box">
-              <img src="${normalizeImgUrl(article.image)}" alt="${article.title}" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
+              <img src="${normalizeImgUrl(article.image)}" alt="${article.title}" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=normalizeImgUrl('');" />
               <div class="image-caption">${article.caption || article.title}</div>
             </div>
 
@@ -6213,7 +6217,7 @@
             <p>Founded on the principles of intellectual integrity and analytical transparency, <strong>BacklinkBlend</strong> operates as a sanctuary for deep-dive journalism and strategic blueprints. In an internet ecosystem saturated with automated summaries, superficial clickbait, and unverified content loops, our mission is to deliver clear, structured, and actionable intelligence.</p>
 
             <h2>Mission & Vision</h2>
-            <p>Our mission is to bridge the gap between complex technological transformations and high-level executive decision-making. We provide rigorous research and framework-driven masterclasses across seven core domains: <em>Business Strategy, AI Technology, Global Finance, Digital Marketing, Modern Culture, and AI Agents</em>.</p>
+            <p>Our mission is to bridge the gap between complex technological transformations and high-level executive decision-making. We provide rigorous research and framework-driven masterclasses across four core domains: <em>Link Building, AI & Automation, SEO & Backlink Tools, and Digital Authority</em>.</p>
 
             <h2>Editorial Values & Research Standards</h2>
             <ul>
@@ -6493,7 +6497,7 @@ renderContactView() {
       return `
         <article class="editorial-card" style="cursor: pointer;" onclick="if(window.app) window.app.navigateTo('article/${slug}');">
           <div class="card-img-wrapper">
-            <img src="${image}" alt="${title}" loading="lazy" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
+            <img src="${image}" alt="${title}" loading="lazy" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=normalizeImgUrl('');" />
           </div>
           <div class="card-body">
             <span class="badge badge-outline" style="align-self: flex-start; font-size: 0.65rem;">${catName}</span>

@@ -78,7 +78,7 @@ function normalizeImgPath(img) {
 }
 
 function getPageFooterHtml() {
-  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=85.0.0"></script></body></html>`;
+  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=86.0.0"></script></body></html>`;
 }
 
 function getBaseHeader(activeNav = '') {
@@ -110,18 +110,17 @@ function getBaseHeader(activeNav = '') {
         </div>
         <div class="brand-text-wrap">
           <div class="brand-logo">BACKLINK<span class="highlight">BLEND</span></div>
-          <div class="brand-tagline">Global Digital Publication</div>
+          <div class="brand-tagline">Link Building & AI Authority</div>
         </div>
       </a>
 
       <nav>
         <ul class="desktop-nav">
           <li><a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a></li>
-          <li><a href="/category/technology" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/technology');" class="nav-link ${activeNav === 'technology' ? 'active' : ''}">AI Technology</a></li>
-          <li><a href="/category/ai-agents" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-agents');" class="nav-link ${activeNav === 'ai-agents' ? 'active' : ''}">AI Agents</a></li>
-          <li><a href="/category/business" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/business');" class="nav-link ${activeNav === 'business' ? 'active' : ''}">Business</a></li>
-          <li><a href="/category/finance" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/finance');" class="nav-link ${activeNav === 'finance' ? 'active' : ''}">Finance</a></li>
-          <li><a href="/category/digital-marketing" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-marketing');" class="nav-link ${activeNav === 'digital-marketing' ? 'active' : ''}">Marketing</a></li>
+          <li><a href="/category/link-building" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/link-building');" class="nav-link ${activeNav === 'link-building' ? 'active' : ''}">Link Building</a></li>
+          <li><a href="/category/ai-automation" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-automation');" class="nav-link ${activeNav === 'ai-automation' ? 'active' : ''}">AI & Automation</a></li>
+          <li><a href="/category/seo-tools" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/seo-tools');" class="nav-link ${activeNav === 'seo-tools' ? 'active' : ''}">SEO Tools</a></li>
+          <li><a href="/category/digital-authority" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-authority');" class="nav-link ${activeNav === 'digital-authority' ? 'active' : ''}">Digital Authority</a></li>
           <li><a href="/articles" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('articles');" class="nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a></li>
         </ul>
       </nav>
@@ -146,11 +145,10 @@ function getBaseHeader(activeNav = '') {
     <!-- Mobile Navigation Drawer Dropdown -->
     <nav class="mobile-nav-drawer" id="mobile-nav-drawer">
       <a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="mobile-nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a>
-      <a href="/category/technology" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/technology');" class="mobile-nav-link ${activeNav === 'technology' ? 'active' : ''}">AI Technology</a>
-      <a href="/category/ai-agents" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-agents');" class="mobile-nav-link ${activeNav === 'ai-agents' ? 'active' : ''}">AI Agents</a>
-      <a href="/category/business" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/business');" class="mobile-nav-link ${activeNav === 'business' ? 'active' : ''}">Business Strategy</a>
-      <a href="/category/finance" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/finance');" class="mobile-nav-link ${activeNav === 'finance' ? 'active' : ''}">Global Finance</a>
-      <a href="/category/digital-marketing" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-marketing');" class="mobile-nav-link ${activeNav === 'digital-marketing' ? 'active' : ''}">Digital Marketing</a>
+      <a href="/category/link-building" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/link-building');" class="mobile-nav-link ${activeNav === 'link-building' ? 'active' : ''}">Link Building</a>
+      <a href="/category/ai-automation" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-automation');" class="mobile-nav-link ${activeNav === 'ai-automation' ? 'active' : ''}">AI & Automation</a>
+      <a href="/category/seo-tools" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/seo-tools');" class="mobile-nav-link ${activeNav === 'seo-tools' ? 'active' : ''}">SEO & Backlink Tools</a>
+      <a href="/category/digital-authority" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-authority');" class="mobile-nav-link ${activeNav === 'digital-authority' ? 'active' : ''}">Digital Authority</a>
       <a href="/articles" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('articles');" class="mobile-nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a>
       <div style="height: 1px; background: var(--border-light); margin: 0.5rem 0;"></div>
       <a href="/about" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('about');" class="mobile-nav-link ${activeNav === 'about' ? 'active' : ''}">About Us</a>
@@ -168,7 +166,7 @@ function getBaseFooter() {
         <div class="footer-logo">
           BACKLINK<span style="color: var(--accent-gold); font-style: italic;">BLEND</span>
         </div>
-        <p class="footer-desc">BacklinkBlend is an independent international digital publication delivering authoritative analysis across AI Technology, Business Strategy, Global Finance, Digital Marketing, Modern Culture, and AI Agents.</p>
+        <p class="footer-desc">BacklinkBlend is an independent digital publication delivering authoritative analysis across Link Building, AI & Automation, SEO Tools, and Digital Search Authority.</p>
         <div class="footer-status-pill">
           <span class="pulse-dot" style="width: 8px; height: 8px;"></span>
           <span>Global Research Active • Hyderabad, Pakistan</span>
@@ -178,12 +176,10 @@ function getBaseFooter() {
       <div>
         <h4 class="footer-column-title">Editorial Pillars</h4>
         <ul class="footer-links">
-          <li><a href="/category/technology" class="footer-link">AI Technology</a></li>
-          <li><a href="/category/ai-agents" class="footer-link">AI Agents</a></li>
-          <li><a href="/category/business" class="footer-link">Business Strategy</a></li>
-          <li><a href="/category/finance" class="footer-link">Global Finance</a></li>
-          <li><a href="/category/digital-marketing" class="footer-link">Digital Marketing</a></li>
-          <li><a href="/category/culture" class="footer-link">Modern Culture</a></li>
+          <li><a href="/category/link-building" class="footer-link">Link Building</a></li>
+          <li><a href="/category/ai-automation" class="footer-link">AI & Automation</a></li>
+          <li><a href="/category/seo-tools" class="footer-link">SEO & Backlink Tools</a></li>
+          <li><a href="/category/digital-authority" class="footer-link">Digital Authority</a></li>
         </ul>
       </div>
 
@@ -362,11 +358,10 @@ function generateAboutPage() {
 
         <h2>Our Core Editorial Pillars</h2>
         <ul>
-          <li><strong>AI Technology:</strong> Deep-dive architectural breakdowns of generative foundation models, neural processing units (NPUs), transformer scaling laws, and frontier software frameworks.</li>
-          <li><strong>AI Agents:</strong> Multi-agent orchestration, autonomous reasoning engines, tool-use protocols, and enterprise governance blueprints.</li>
-          <li><strong>Business Strategy:</strong> Corporate scaling frameworks, venture dynamics, and competitive moats in the cognitive automation era.</li>
-          <li><strong>Global Finance:</strong> Macroeconomic liquidity, private equity resilience, sovereign capital flows, and fintech infrastructure.</li>
-          <li><strong>Digital Marketing:</strong> Search engine optimization, Generative Engine Optimization (GEO), content architecture, and organic digital authority.</li>
+          <li><strong>Link Building:</strong> Advanced backlink acquisition methodologies, tiered digital PR, guest editorial outreach, and high-DA link strategies.</li>
+          <li><strong>AI & Automation:</strong> Cutting-edge artificial intelligence models, autonomous agents, prompt architecture, and search automation tools.</li>
+          <li><strong>SEO & Backlink Tools:</strong> Comprehensive audits and benchmarks of leading SEO platforms, backlink checkers, crawlers, and outreach software.</li>
+          <li><strong>Digital Authority:</strong> Google algorithm analysis, Generative Engine Optimization (GEO), search penalty recovery, and organic brand authority.</li>
         </ul>
 
         <h2 style="margin-top: 3rem;">Resident Editorial Leadership</h2>
