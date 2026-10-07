@@ -53,11 +53,54 @@ const COOKIE_BANNER_HTML = `
   </script>
 `;
 
+
+const SEARCH_MODAL_HTML = `
+  <!-- Live Search Modal Overlay -->
+  <div class="modal-overlay" id="search-overlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="modal-search-input" aria-label="Search query input" placeholder="Search articles, topics, authors, or tags..." autocomplete="off" />
+        <button id="close-search-btn" class="icon-btn" aria-label="Close search overlay window" style="border: none; width: 32px; height: 32px;">✕</button>
+      </div>
+      <div class="search-results-list" id="search-results-list">
+        <p style="padding: 1rem; color: var(--text-muted); font-size: 0.9rem;">Start typing to search articles, categories, and tags...</p>
+      </div>
+    </div>
+  </div>
+`;
+
+function normalizeImgPath(img) {
+  if (!img) return '/assets/images/hero_tech_ai_1786192193469.jpg';
+  if (img.startsWith('http://') || img.startsWith('https://')) return img;
+  if (img.startsWith('/')) return img;
+  return '/' + img;
+}
+
+function getPageFooterHtml() {
+  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=84.0.0"></script></body></html>`;
+}
+
 function getBaseHeader(activeNav = '') {
   return `
+  <!-- Top Reading Progress Line -->
+  <div id="reading-progress"></div>
+
+  <!-- Intelligence Ticker Bar -->
+  <div class="intelligence-ticker">
+    <div class="ticker-content">
+      <span class="ticker-item"><span class="ticker-badge">EDITORIAL</span> Best Books for Critical Thinking (2026)</span>
+      <span class="ticker-item"><span class="ticker-badge">AGENTS</span> Enterprise AI Agents: Autonomous Multi-Agent Architecture</span>
+      <span class="ticker-item"><span class="ticker-badge">SECURITY</span> Enterprise AI Security: Threat Models & Governance</span>
+      <span class="ticker-item"><span class="ticker-badge">AI CODE</span> Blackbox AI: Features, Code Generator & Pricing Guide</span>
+      <span class="ticker-item"><span class="ticker-badge">AI VIDEO</span> Viggle AI: Motion Transfer & Prompting Guide</span>
+      <span class="ticker-item"><span class="ticker-badge">DEEP LEARNING</span> AI Hallucination: Causes, Detection & Prevention</span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="brand-container">
+      <a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="brand-container">
         <div class="brand-emblem" title="BacklinkBlend">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -73,23 +116,46 @@ function getBaseHeader(activeNav = '') {
 
       <nav>
         <ul class="desktop-nav">
-          <li><a href="/" class="nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a></li>
-          <li><a href="/category/technology" class="nav-link ${activeNav === 'technology' ? 'active' : ''}">AI Technology</a></li>
-          <li><a href="/category/ai-agents" class="nav-link ${activeNav === 'ai-agents' ? 'active' : ''}">AI Agents</a></li>
-          <li><a href="/category/business" class="nav-link ${activeNav === 'business' ? 'active' : ''}">Business</a></li>
-          <li><a href="/category/finance" class="nav-link ${activeNav === 'finance' ? 'active' : ''}">Finance</a></li>
-          <li><a href="/category/digital-marketing" class="nav-link ${activeNav === 'digital-marketing' ? 'active' : ''}">Marketing</a></li>
-          <li><a href="/articles" class="nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a></li>
+          <li><a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a></li>
+          <li><a href="/category/technology" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/technology');" class="nav-link ${activeNav === 'technology' ? 'active' : ''}">AI Technology</a></li>
+          <li><a href="/category/ai-agents" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-agents');" class="nav-link ${activeNav === 'ai-agents' ? 'active' : ''}">AI Agents</a></li>
+          <li><a href="/category/business" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/business');" class="nav-link ${activeNav === 'business' ? 'active' : ''}">Business</a></li>
+          <li><a href="/category/finance" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/finance');" class="nav-link ${activeNav === 'finance' ? 'active' : ''}">Finance</a></li>
+          <li><a href="/category/digital-marketing" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-marketing');" class="nav-link ${activeNav === 'digital-marketing' ? 'active' : ''}">Marketing</a></li>
+          <li><a href="/articles" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('articles');" class="nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a href="/articles" class="search-pill-btn" aria-label="Search articles" style="text-decoration: none;">
+        <button class="search-pill-btn" id="search-trigger-btn" aria-label="Search articles across publication" title="Search BacklinkBlend (Ctrl+K)">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           <span>Search</span>
-        </a>
+          <span class="search-shortcut-badge">⌘K</span>
+        </button>
+
+        <button class="icon-btn" id="theme-toggle-btn" aria-label="Toggle visual theme" title="Toggle Theme">
+          <!-- Populated by JS -->
+        </button>
+
+        <button class="icon-btn mobile-menu-toggle" id="mobile-menu-toggle-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
     </div>
+
+    <!-- Mobile Navigation Drawer Dropdown -->
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="mobile-nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a>
+      <a href="/category/technology" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/technology');" class="mobile-nav-link ${activeNav === 'technology' ? 'active' : ''}">AI Technology</a>
+      <a href="/category/ai-agents" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-agents');" class="mobile-nav-link ${activeNav === 'ai-agents' ? 'active' : ''}">AI Agents</a>
+      <a href="/category/business" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/business');" class="mobile-nav-link ${activeNav === 'business' ? 'active' : ''}">Business Strategy</a>
+      <a href="/category/finance" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/finance');" class="mobile-nav-link ${activeNav === 'finance' ? 'active' : ''}">Global Finance</a>
+      <a href="/category/digital-marketing" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-marketing');" class="mobile-nav-link ${activeNav === 'digital-marketing' ? 'active' : ''}">Digital Marketing</a>
+      <a href="/articles" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('articles');" class="mobile-nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a>
+      <div style="height: 1px; background: var(--border-light); margin: 0.5rem 0;"></div>
+      <a href="/about" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('about');" class="mobile-nav-link ${activeNav === 'about' ? 'active' : ''}">About Us</a>
+      <a href="/contact" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('contact');" class="mobile-nav-link ${activeNav === 'contact' ? 'active' : ''}">Contact Us</a>
+    </nav>
   </header>
   `;
 }
@@ -149,12 +215,15 @@ function getBaseFooter() {
 }
 
 function getHead(title, description, canonicalUrl, ogImage = 'https://backlinkblend.com/assets/images/hero_tech_ai_1786192193469.jpg', jsonLd = null) {
+  const resolvedOgImage = ogImage.startsWith('http') ? ogImage : 'https://backlinkblend.com/' + ogImage.replace(/^\/+/, '');
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
   <title>${title}</title>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="${description}">
   <link rel="canonical" href="${canonicalUrl}">
 
@@ -163,7 +232,7 @@ function getHead(title, description, canonicalUrl, ogImage = 'https://backlinkbl
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${description}">
   <meta property="og:url" content="${canonicalUrl}">
-  <meta property="og:image" content="${ogImage.startsWith('http') ? ogImage : 'https://backlinkblend.com/' + ogImage}">
+  <meta property="og:image" content="${resolvedOgImage}">
   <meta property="og:site_name" content="BacklinkBlend">
 
   <!-- Twitter Card -->
@@ -171,7 +240,7 @@ function getHead(title, description, canonicalUrl, ogImage = 'https://backlinkbl
   <meta name="twitter:site" content="@BacklinkBlend">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${description}">
-  <meta name="twitter:image" content="${ogImage.startsWith('http') ? ogImage : 'https://backlinkblend.com/' + ogImage}">
+  <meta name="twitter:image" content="${resolvedOgImage}">
 
   <!-- Google AdSense Verification & Auto Ads -->
   ${ADSENSE_TAG}
@@ -187,7 +256,7 @@ function getHead(title, description, canonicalUrl, ogImage = 'https://backlinkbl
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=12.0.0">
 
   ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 </head>
@@ -255,7 +324,7 @@ function generatePrivacyPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getPageFooterHtml();
   const dir = path.join(rootDir, 'privacy');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -311,7 +380,7 @@ function generateAboutPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getPageFooterHtml();
   const dir = path.join(rootDir, 'about');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -378,7 +447,7 @@ function generateContactPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getPageFooterHtml();
   const dir = path.join(rootDir, 'contact');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -418,7 +487,7 @@ function generateTermsPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getPageFooterHtml();
   const dir = path.join(rootDir, 'terms');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -456,7 +525,7 @@ function generateDisclaimerPage() {
     </div>
   `;
 
-  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
+  const html = getHead(title, desc, canonical) + getBaseHeader() + `<main id="app-content">${content}</main>` + getPageFooterHtml();
   const dir = path.join(rootDir, 'disclaimer');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
@@ -480,14 +549,15 @@ function generateArticlePages() {
     const catName = art.category ? art.category.toUpperCase() : 'TECHNOLOGY';
     const readTime = art.readTime || '5 min read';
     const listenTime = art.listenTime || '7 min audio';
-    const image = art.image || 'assets/images/hero_tech_ai_1786192193469.jpg';
+    const rawImg = art.image || 'assets/images/hero_tech_ai_1786192193469.jpg';
+    const image = normalizeImgPath(rawImg);
 
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
       "headline": art.title,
       "description": desc,
-      "image": [image.startsWith('http') ? image : 'https://backlinkblend.com/' + image],
+      "image": [image.startsWith('http') ? image : 'https://backlinkblend.com' + image],
       "datePublished": (art.date || '2026-08-01') + "T08:00:00+05:00",
       "dateModified": (art.date || '2026-08-01') + "T08:00:00+05:00",
       "author": [{
@@ -539,7 +609,7 @@ function generateArticlePages() {
         </header>
 
         <div class="article-hero-img-box" style="margin-bottom: 2.5rem; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-light);">
-          <img src="/${image}" alt="${art.title}" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover; display: block;" />
+          <img src="${image}" alt="${art.title}" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
           ${art.caption ? `<div style="padding: 0.75rem 1rem; font-size: 0.82rem; font-family: var(--font-mono); color: var(--text-muted); background: var(--bg-surface);">${art.caption}</div>` : ''}
         </div>
 
@@ -558,7 +628,7 @@ function generateArticlePages() {
       </div>
     `;
 
-    const html = getHead(title, desc, canonical, image, jsonLd) + getBaseHeader(art.category) + `<main id="app-content">${content}</main>` + getBaseFooter() + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=80.0.0"></script></body></html>`;
+    const html = getHead(title, desc, canonical, image, jsonLd) + getBaseHeader(art.category) + `<main id="app-content">${content}</main>` + getPageFooterHtml();
     
     const dir = path.join(rootDir, 'article', art.slug);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });

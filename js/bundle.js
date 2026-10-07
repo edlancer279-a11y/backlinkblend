@@ -5353,7 +5353,7 @@
 
       setMeta('description', metaDesc);
       if (noindex) {
-        setMeta('robots', 'noindex, nofollow');
+        setMeta('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
       } else {
         setMeta('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
       }
@@ -5542,6 +5542,14 @@
 
   // 7. APP CONTROLLER
   // --------------------------------------------------------------------------
+  function normalizeImgUrl(url) {
+    if (!url) return '/assets/images/hero_tech_ai_1786192193469.jpg';
+    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/')) {
+      return url;
+    }
+    return '/' + url;
+  }
+
   class App {
     constructor() {
       this.theme = localStorage.getItem('bb_theme') || 'light';
@@ -5671,6 +5679,7 @@
     }
 
     navigateTo(rawRoute) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       const cleanRoute = (rawRoute || '').trim().replace(/^#\/?|^\//, '');
       
       if (cleanRoute === 'home' || cleanRoute === '') {
@@ -5789,7 +5798,7 @@
         <section class="hero-section">
           <article class="hero-main-card" style="cursor: pointer;" onclick="if(window.app) window.app.navigateTo('article/${hero.slug}');">
             <div class="hero-image-wrapper">
-              <img src="${hero.image}" alt="${hero.title}" loading="eager" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" />
+              <img src="${normalizeImgUrl(hero.image)}" alt="${hero.title}" loading="eager" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
             </div>
             <div class="hero-content">
               <div class="hero-meta">
@@ -5977,7 +5986,10 @@
           'what-is-blackbox-ai': 'blackbox-ai',
           'what-is-viggle-ai': 'viggle-ai',
           'what-is-remaker-ai': 'remaker-ai',
-          'deep-ai-image-generator-guide': 'deep-ai-image-generator'
+          'deep-ai-image-generator-guide': 'deep-ai-image-generator',
+          'what-is-deep-ai-guide': 'deep-ai',
+          'what-is-deep-ai': 'deep-ai',
+          'deep-ai-guide': 'deep-ai'
         };
 
         if (SLUG_ALIASES[slug]) {
@@ -6003,6 +6015,10 @@
         }
 
         if (!article) {
+          const serverArticle = document.querySelector('.article-main-title');
+          if (serverArticle && serverArticle.textContent.trim()) {
+            return;
+          }
           this.render404View(rawSlug);
           return;
         }
@@ -6064,7 +6080,7 @@
 
             <!-- Main Hero Image -->
             <div class="article-hero-img-box">
-              <img src="${article.image || 'assets/images/hero_tech_ai_1786192193469.jpg'}" alt="${article.title}" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/hero_tech_ai_1786192193469.jpg';" />
+              <img src="${normalizeImgUrl(article.image)}" alt="${article.title}" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
               <div class="image-caption">${article.caption || article.title}</div>
             </div>
 
@@ -6123,7 +6139,7 @@
         title: '404: Article Not Found — BacklinkBlend',
         description: 'The requested article could not be found. Explore our latest publications on AI Technology, Global Finance, and Digital Strategy.',
         canonicalUrl: 'https://backlinkblend.com/404',
-        noindex: true
+        noindex: false
       });
 
       const appEl = document.getElementById('app-content');
@@ -6450,14 +6466,14 @@ renderContactView() {
       const catName = art.category ? art.category.toUpperCase() : 'EDITORIAL';
       const title = art.title || 'Untitled Article';
       const deck = art.deck || art.excerpt || art.metaDescription || '';
-      const image = art.image || 'assets/images/hero_tech_ai_1786192193469.jpg';
+      const image = normalizeImgUrl(art.image);
       const readTime = art.readTime || '5 min read';
       const slug = art.slug || 'home';
 
       return `
         <article class="editorial-card" style="cursor: pointer;" onclick="if(window.app) window.app.navigateTo('article/${slug}');">
           <div class="card-img-wrapper">
-            <img src="${image}" alt="${title}" loading="lazy" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/hero_tech_ai_1786192193469.jpg';" />
+            <img src="${image}" alt="${title}" loading="lazy" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
           </div>
           <div class="card-body">
             <span class="badge badge-outline" style="align-self: flex-start; font-size: 0.65rem;">${catName}</span>
