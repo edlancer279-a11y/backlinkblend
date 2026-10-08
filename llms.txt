@@ -4,6 +4,7 @@
 
 ## Core Technical Research & Articles
 
+- [Ahrefs SEO Tools Guide: Features, Backlink Audits & Pricing](https://backlinkblend.com/article/ahrefs-seo-tools-guide): A comprehensive breakdown of Ahrefs SEO tools—covering Site Explorer backlink indexes, Keywords Explorer, technical Site Audits, Rank Tracker, and 2026 pricing plans.
 - [Suno AI Music Generation: Prompts, Metatags & Studio Guide](https://backlinkblend.com/article/suno-ai-music-generation-guide): A masterclass in Suno AI music generation—exploring the GMVP prompt architecture, structural bracket metatags, vocal timbre steering, stem separation, and studio mastering.
 - [Suno AI vs Udio: Features, Audio Quality & Music Guide](https://backlinkblend.com/article/suno-ai-vs-udio-guide): An authoritative technical evaluation comparing Suno AI and Udio—evaluating diffusion architectures, vocal realism, instrumental soundstages, DAW workflows, and commercial licensing.
 - [What Is Janitor AI? Features, JanitorLLM, Lorebooks & Guide](https://backlinkblend.com/article/what-is-janitor-ai-guide): An authoritative technical evaluation of Janitor AI—exploring its character roleplay engine, proprietary JanitorLLM, dynamic lorebook memory injection, BYOK API routing, and safety architecture.

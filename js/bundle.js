@@ -69,6 +69,172 @@
   // --------------------------------------------------------------------------
   const ARTICLES = [
   {
+    id: 'art-ahrefs-seo-tools-guide',
+    slug: 'ahrefs-seo-tools-guide',
+    title: 'Ahrefs SEO Tools Guide: Features, Backlink Audits & Pricing',
+    deck: 'A comprehensive breakdown of Ahrefs SEO tools—covering Site Explorer backlink indexes, Keywords Explorer, technical Site Audits, Rank Tracker, and 2026 pricing plans.',
+    category: 'seo-tools',
+    author: AUTHORS['marcus-vane'],
+    date: '2026-10-08',
+    readTime: '8 min read',
+    listenTime: null,
+    image: 'assets/images/ahrefs_seo_tools_guide_banner.jpg',
+    imageAlt: 'Visual infographic representing SEO crawlers, authoritative backlink networks, keyword rank curves, and domain analytics.',
+    caption: 'Deconstructing the modern Ahrefs SEO tools ecosystem: backlink graph crawlers, SERP intelligence, and competitive search workflows.',
+    featured: true,
+    trendingRank: 2,
+    tags: ['Ahrefs SEO Tools', 'Ahrefs', 'Backlink Analysis', 'SEO Software', 'Site Explorer', 'Keyword Research'],
+    takeaway: 'Ahrefs SEO tools empower search marketers to uncover competitor backlink profiles, reverse-engineer organic ranking keywords, and resolve critical technical site health issues through an industry-leading web crawler.',
+    focusKeyword: 'ahrefs seo tools',
+    metaDescription: 'Discover how to use Ahrefs SEO tools for in-depth backlink audits, keyword research, site crawls, and competitive intelligence with verified 2026 pricing.',
+    content: `
+      <p>The full ecosystem of <strong>ahrefs seo tools</strong> provides digital marketers, enterprise SEOs, and content teams with an industry-standard technical foundation for competitive backlink auditing, keyword discovery, and technical health diagnostics.</p>
+
+      <p>In modern organic search, relying on guesswork or surface-level metrics guarantees wasted marketing capital. Search algorithms evaluate thousands of interconnected quality signals—ranging from domain-level link equity and semantic keyword relevance to crawlability and internal link distribution. Ahrefs has solidified its reputation across the digital strategy industry not by merely aggregating public search results, but by developing one of the largest proprietary web-crawling infrastructures outside of Google.</p>
+
+      <h2>1. Platform Architecture: The Ahrefs Crawling Engine and Web Index</h2>
+      <p>At the center of Ahrefs lies <strong>AhrefsBot</strong>, a proprietary, 24/7 web crawler that consistently ranks among the most active commercial web robots globally. AhrefsBot crawls billions of web pages daily, updating a live link graph containing over 35 trillion known backlinks and more than 400 billion indexed pages.</p>
+
+      <ul>
+        <li><strong>Domain Rating (DR)</strong>: A logarithmic scale from 0 to 100 measuring the relative strength and quantity of unique referring domains pointing to a root target domain.</li>
+        <li><strong>URL Rating (UR)</strong>: A page-specific metric evaluating the backlink equity directed toward an individual webpage.</li>
+        <li><strong>Ahrefs Rank (AR)</strong>: A global ranking that orders every website on the internet by backlink profile strength.</li>
+      </ul>
+
+      <div style="background: var(--bg-secondary); border-left: 4px solid var(--accent-gold); padding: 1.25rem; margin: 2rem 0; border-radius: var(--radius-sm);">
+        <h4 style="margin: 0 0 0.5rem 0; font-family: var(--font-serif-header); color: var(--text-primary);">Expert Insight: Why DR Is Not Equivalent to PageRank</h4>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Domain Rating measures the relative quality and quantity of a site's backlink profile as computed by Ahrefs' own crawler—it does not reflect Google's internal PageRank algorithm. Google weighs hundreds of additional signals including content relevance, E-E-A-T, and user experience when determining actual organic rankings.</p>
+      </div>
+
+      <h2>2. Site Explorer: Competitive Backlink and Organic Traffic Intelligence</h2>
+      <p>Site Explorer is the flagship module within the Ahrefs SEO tools platform—a unified intelligence dashboard for auditing any domain's backlink profile, historical organic visibility, and top-performing content assets.</p>
+
+      <ul>
+        <li><strong>Backlinks Report</strong>: Enumerates all discovered inbound links with attributes including DR, anchor text, link type (dofollow/nofollow), and first/last seen dates.</li>
+        <li><strong>Referring Domains Report</strong>: Aggregates unique linking root domains enabling accurate measurement of topical link diversity.</li>
+        <li><strong>Organic Keywords Report</strong>: Surfaces all keywords for which a target domain ranks in top 100 organic positions.</li>
+        <li><strong>Top Pages Report</strong>: Identifies URLs generating the highest estimated organic traffic for gap analysis and link acquisition targeting.</li>
+        <li><strong>Link Intersect Tool</strong>: Isolates websites linking to competitors but not yet to your domain—highest-priority outreach prospects.</li>
+      </ul>
+
+      <h2>3. Keywords Explorer: Search Demand Analysis</h2>
+      <p>Keywords Explorer covers over 170 countries and 10+ search engines including Google, YouTube, Amazon, Bing, and Baidu.</p>
+
+      <ul>
+        <li><strong>Keyword Difficulty (KD)</strong>: A 0-100 score estimating ranking difficulty based on the median DR of pages holding top positions.</li>
+        <li><strong>Search Volume</strong>: Estimated average monthly search count derived from clickstream modeling.</li>
+        <li><strong>Traffic Potential (TP)</strong>: Total organic traffic the top-ranking page receives from all keyword variants it ranks for.</li>
+        <li><strong>Click-Through Rate (CTR) Data</strong>: Percentage of searchers clicking organic results versus AI Overviews, snippets, or paid ads.</li>
+      </ul>
+
+      <div style="overflow-x: auto; margin: 1.5rem 0;">
+        <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm);">
+          <thead>
+            <tr style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">Ahrefs Tool</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">Primary Function</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">Key Metrics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Site Explorer</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Backlink & organic traffic intelligence for any domain/URL</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">DR, UR, Referring Domains, Organic Keywords, Top Pages</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Keywords Explorer</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Search demand analysis across 170+ countries</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">KD, Volume, Traffic Potential, SERP CTR</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Site Audit</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Automated technical SEO health diagnostics</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Health Score, Crawl Errors, Core Web Vitals, Schema Issues</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Rank Tracker</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Daily SERP position monitoring across devices & locations</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Visibility Score, SERP Features, Share of Voice</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Content Explorer</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">High-performing content discovery across the web</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Referring Domains, Organic Traffic, Social Shares, DR</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>4. Site Audit: Technical SEO Health Diagnostics</h2>
+      <p>Site Audit is Ahrefs cloud-based technical crawling engine that maps and analyzes every accessible URL within a target domain, generating a prioritized <strong>Health Score</strong> (0-100) alongside granular issue reports.</p>
+
+      <ul>
+        <li><strong>Crawlability Issues</strong>: Detects pages blocked by robots.txt, noindex tags, or crawl depth barriers.</li>
+        <li><strong>HTTP Status Code Errors</strong>: Flags 4xx errors, 5xx server errors, and redirect loops that fragment link equity.</li>
+        <li><strong>On-Page SEO Signals</strong>: Audits title tag duplication, missing meta descriptions, H1 tags, thin content, and keyword cannibalization.</li>
+        <li><strong>Core Web Vitals</strong>: Evaluates LCP, CLS, and INP—Google official page experience ranking signals.</li>
+        <li><strong>Structured Data Validation</strong>: Reviews schema.org JSON-LD markup for errors and Search Console eligibility violations.</li>
+      </ul>
+
+      <h2>5. Ahrefs Pricing Plans (2026)</h2>
+
+      <div style="overflow-x: auto; margin: 1.5rem 0;">
+        <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm);">
+          <thead>
+            <tr style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold);">Plan</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">Monthly Price</th>
+              <th style="padding: 0.85rem 1rem; text-align: left; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Starter</td>
+              <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">$29/mo</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Freelancers & side projects</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Lite</td>
+              <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">$129/mo</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">In-house SEO specialists</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Standard</td>
+              <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">$249/mo</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Growing agencies & consultants</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--text-primary);">Advanced</td>
+              <td style="padding: 0.85rem 1rem; color: var(--accent-gold); font-weight: 600;">$449/mo</td>
+              <td style="padding: 0.85rem 1rem; color: var(--text-secondary);">Enterprise SEO teams</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Annual billing reduces all plan costs by approximately 20%. Verify current pricing at <a href="https://ahrefs.com/pricing" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline;">ahrefs.com/pricing</a>.</p>
+
+      <h2>6. Frequently Asked Questions</h2>
+      <div class="faq-container" style="display: flex; flex-direction: column; gap: 1.25rem; margin: 1.75rem 0;">
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.5rem;">
+          <h3 style="font-family: var(--font-sans-body); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Q: Is Ahrefs better than Semrush for backlink analysis?</h3>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0; line-height: 1.6;">Ahrefs is widely regarded as the industry benchmark for backlink index size and freshness. For pure backlink auditing and link building, most enterprise practitioners prefer Ahrefs. For all-in-one marketing intelligence, Semrush offers a broader toolset.</p>
+        </div>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.5rem;">
+          <h3 style="font-family: var(--font-sans-body); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Q: Does Ahrefs offer a free trial?</h3>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0; line-height: 1.6;">As of 2026, Ahrefs does not offer a traditional free trial. However, <strong>Ahrefs Webmaster Tools (AWT)</strong> provides verified site owners with limited Site Explorer data and Site Audit crawls for their own domains at no cost.</p>
+        </div>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.5rem;">
+          <h3 style="font-family: var(--font-sans-body); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Q: How accurate is Ahrefs traffic estimation?</h3>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0; line-height: 1.6;">Ahrefs organic traffic estimates are modeled figures—not direct analytics. Always cross-reference with Google Search Console data for strategic decisions.</p>
+        </div>
+      </div>
+
+      <p>In conclusion, the <strong>ahrefs seo tools</strong> suite represents one of the most technically sophisticated platforms available to search marketers in 2026. For further reading, explore our guide to <a href="/article/seo-tools-guide" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('article/seo-tools-guide');" style="color: var(--accent-gold); text-decoration: underline;">modern SEO tools</a>.</p>
+    `
+  },
+  {
     id: 'art-seo-tools-guide',
     slug: 'seo-tools-guide',
     title: 'SEO Tools Guide: Audits, Backlink Analysis & SERP Tracking',
@@ -5457,8 +5623,8 @@
 
         <p>In summary, adopting a comprehensive, multi-layered <strong>Enterprise AI Security</strong> strategy ensures that organizations can aggressively deploy cutting-edge AI capabilities while safeguarding customer trust, corporate intellectual property, and long-term enterprise brand equity.</p>
       `
-    }
-  ];
+    },
+];
 
   // --------------------------------------------------------------------------
   // 5. SEO MANAGER
@@ -5956,7 +6122,7 @@
     renderHome() {
       forceScrollToTop();
       this.setActiveNav('home');
-      updateSEO({ title: 'Home — Global Digital Publication', description: SITE_CONFIG.description });
+      updateSEO({ title: SITE_CONFIG.title, description: SITE_CONFIG.description });
 
       const hero = ARTICLES.find(a => a && a.featured) || ARTICLES[0];
       const sideStories = ARTICLES.filter(a => a && a.id !== hero.id).slice(0, 3);
@@ -5970,7 +6136,7 @@
         <section class="hero-section">
           <article class="hero-main-card" style="cursor: pointer;" onclick="if(window.app) window.app.navigateTo('article/${hero.slug}');">
             <div class="hero-image-wrapper">
-              <img src="${normalizeImgUrl(hero.image)}" alt="${hero.title}" loading="eager" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=normalizeImgUrl('');" />
+              <img src="${normalizeImgUrl(hero.image)}" alt="${hero.title}" loading="eager" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=window.normalizeImgUrl('');" />
             </div>
             <div class="hero-content">
               <div class="hero-meta">
@@ -6260,7 +6426,7 @@
 
             <!-- Main Hero Image -->
             <div class="article-hero-img-box">
-              <img src="${normalizeImgUrl(article.image)}" alt="${article.title}" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=normalizeImgUrl('');" />
+              <img src="${normalizeImgUrl(article.image)}" alt="${article.title}" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=window.normalizeImgUrl('');" />
               <div class="image-caption">${article.caption || article.title}</div>
             </div>
 
@@ -6653,7 +6819,7 @@ renderContactView() {
       return `
         <article class="editorial-card" style="cursor: pointer;" onclick="if(window.app) window.app.navigateTo('article/${slug}');">
           <div class="card-img-wrapper">
-            <img src="${image}" alt="${title}" loading="lazy" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=normalizeImgUrl('');" />
+            <img src="${image}" alt="${title}" loading="lazy" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src=window.normalizeImgUrl('');" />
           </div>
           <div class="card-body">
             <span class="badge badge-outline" style="align-self: flex-start; font-size: 0.65rem;">${catName}</span>

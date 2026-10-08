@@ -1002,7 +1002,7 @@ button {
   margin-bottom: 1.75rem;
 }
 
-.article-body p:first-of-type::first-letter {
+.article-reader-container .article-body p:first-of-type::first-letter {
   font-family: var(--font-serif-header);
   font-size: 3.8rem;
   float: left;
@@ -1314,6 +1314,9 @@ button {
     display: flex;
   }
   .search-shortcut-badge {
+    display: none;
+  }
+  .search-pill-btn span:not(.search-shortcut-badge) {
     display: none;
   }
 }
