@@ -5631,7 +5631,10 @@
   // --------------------------------------------------------------------------
   function updateSEO({ title, description, canonicalUrl, ogImage, ogType = 'website', articleObj = null, noindex = false }) {
     try {
-      const fullTitle = title ? `${title} | BacklinkBlend` : SITE_CONFIG.title;
+      let fullTitle = SITE_CONFIG.title;
+      if (title && title !== SITE_CONFIG.title) {
+        fullTitle = title.includes("BacklinkBlend") ? title : `${title} | BacklinkBlend`;
+      }
       document.title = fullTitle;
 
       const setMeta = (name, content, attr = 'name') => {
@@ -6122,7 +6125,7 @@
     renderHome() {
       forceScrollToTop();
       this.setActiveNav('home');
-      updateSEO({ title: SITE_CONFIG.title, description: SITE_CONFIG.description });
+      updateSEO({ title: "", description: SITE_CONFIG.description });
 
       const hero = ARTICLES.find(a => a && a.featured) || ARTICLES[0];
       const sideStories = ARTICLES.filter(a => a && a.id !== hero.id).slice(0, 3);
@@ -6522,7 +6525,7 @@
     renderAboutView() {
       this.setActiveNav('about');
       updateSEO({
-        title: 'About Us — Global Digital Publication',
+        title: 'About Us',
         description: 'BacklinkBlend is an independent international digital publication delivering authoritative analysis on Business Strategy, AI Technology, Global Finance, Digital Marketing, Modern Culture, and AI Agents.'
       });
 
