@@ -49,11 +49,15 @@
   RewriteRule ^(.*)$ https://backlinkblend.com/$1 [R=301,L]
 
   # Direct Exclusions for Sitemap, Robots, Ads, & LLMs files (Do not rewrite)
-  RewriteRule ^(sitemap\.xml|robots\.txt|llms\.txt|llms-full\.txt|ads\.txt)$ - [L]
+  RewriteRule ^(sitemap\.xml|robots\.txt|llms\.txt|llms-full\.txt|ads\.txt|favicon\.ico)$ - [L]
+
+  # Allow existing static assets directly (Never rewrite or block real files)
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule \.(css|js|jpe?g|png|gif|webp|svg|ico|woff|woff2|ttf)$ - [L]
 
   # 1. SPIDER TRAP DEFENSE: Instantly 404 any crawler recursion loops with nested asset or category paths
-  RewriteCond %{REQUEST_URI} (css|js)/.*(css|js) [NC,OR]
-  RewriteCond %{REQUEST_URI} /(article|category)/.*/(article|category) [NC,OR]
+  RewriteCond %{REQUEST_URI} /(css|js)/.+/(css|js)/ [NC,OR]
+  RewriteCond %{REQUEST_URI} /(article|category)/.+/(article|category)/ [NC,OR]
   RewriteCond %{REQUEST_URI} /(css|js|assets)/.+\.(html|htm)$ [NC]
   RewriteRule ^ - [R=404,L]
 
