@@ -4,6 +4,19 @@
 
 ---
 
+# SEO Tools Guide: Audits, Backlink Analysis & SERP Tracking
+
+An authoritative breakdown of modern SEO tools—evaluating backlink crawlers, technical audit spiders, keyword research suites, and first-party search console telemetry.
+
+Key Architecture & Insights:
+- Four-Tier SEO Software Hierarchy: 1st-Party Telemetry, Intelligence Suites, Technical Crawlers, & AI Citation Trackers
+- Logarithmic Authority Dynamics: Domain Rating (DR) & Domain Authority (DA) Link Graph Analysis
+- Advanced Crawl Diagnostics: Client-Side JavaScript Hydration, Redirect Chain Tracing, & Orphaned URL Pruning
+- Generative Engine Optimization (GEO): Tracking Entity Citations Across AI Answer Engines
+- Lean Stack Architecture: Google Search Console + Screaming Frog + Competitive Intelligence Platform
+
+---
+
 # Suno AI Music Generation: Prompts, Metatags & Studio Guide
 
 A masterclass in Suno AI music generation—exploring the GMVP prompt architecture, structural bracket metatags, vocal timbre steering, stem separation, and studio mastering.
