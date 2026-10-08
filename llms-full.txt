@@ -4,20 +4,6 @@
 
 ---
 
-# Ahrefs SEO Tools Guide: Features, Backlink Audits & Pricing
-
-A comprehensive breakdown of Ahrefs SEO tools—covering Site Explorer backlink indexes, Keywords Explorer, technical Site Audits, Rank Tracker, and 2026 pricing plans.
-
-Key Architecture & Insights:
-- AhrefsBot Web Crawler Infrastructure (35+ Trillion Backlinks, 400+ Billion Pages)
-- Domain Rating (DR) Logarithmic Scaling & URL Rating (UR) Page-Level Equity
-- Site Explorer Backlink Audits: Referring Domains, Anchor Distributions & Link Intersect
-- Keywords Explorer: Search Volume vs. Actual Clicks Modeling & SERP Volatility
-- Cloud Site Audit: 140+ Technical Health Checks & Contextual Internal Link Opportunities
-- 2026 Subscription Tiers (Starter, Lite, Standard, Advanced, Enterprise) & Ahrefs Webmaster Tools (AWT)
-
----
-
 # Suno AI Music Generation: Prompts, Metatags & Studio Guide
 
 A masterclass in Suno AI music generation—exploring the GMVP prompt architecture, structural bracket metatags, vocal timbre steering, stem separation, and studio mastering.
