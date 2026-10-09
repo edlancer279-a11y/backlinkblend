@@ -6363,11 +6363,12 @@
           }
         }
 
+        const serverArticle = document.querySelector('.article-main-title');
+        if (serverArticle && serverArticle.textContent.trim()) {
+          return;
+        }
+
         if (!article) {
-          const serverArticle = document.querySelector('.article-main-title');
-          if (serverArticle && serverArticle.textContent.trim()) {
-            return;
-          }
           this.render404View(rawSlug);
           return;
         }
