@@ -18,6 +18,37 @@ const ADSTERRA_BANNER_HTML = `
   </div>
 `;
 
+const ADSTERRA_300X250_TAG = `
+  <!-- Adsterra 300x250 Medium Rectangle Ad Unit -->
+  <div class="adsterra-rectangle-ad" style="margin: 2.5rem auto; text-align: center; display: flex; justify-content: center; min-height: 250px; overflow: hidden;">
+    <script>
+      atOptions = {
+        'key' : 'd81f6aea9dee9ba13cc5c6190268f2ef',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://bauval.org/22/d81f6aea9dee9ba13cc5c6190268f2ef"></script>
+  </div>
+`;
+
+function injectMidArticleAd(content) {
+  if (!content) return '';
+  const h2Matches = [...content.matchAll(/<h2[^>]*>/gi)];
+  if (h2Matches.length >= 2) {
+    const secondH2Index = h2Matches[1].index;
+    return content.slice(0, secondH2Index) + ADSTERRA_300X250_TAG + '\n' + content.slice(secondH2Index);
+  }
+  const pMatches = [...content.matchAll(/<\/p>/gi)];
+  if (pMatches.length >= 3) {
+    const thirdPEnd = pMatches[2].index + 4;
+    return content.slice(0, thirdPEnd) + '\n' + ADSTERRA_300X250_TAG + '\n' + content.slice(thirdPEnd);
+  }
+  return content + '\n' + ADSTERRA_300X250_TAG;
+}
+
 const COOKIE_BANNER_HTML = `
   <!-- Cookie Consent Banner -->
   <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; max-width: 600px; margin: 0 auto; background: var(--bg-surface); border: 1px solid var(--accent-gold); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 1.25rem 1.5rem; z-index: 99999; backdrop-filter: blur(12px);">
@@ -621,7 +652,7 @@ function generateArticlePages() {
         </div>
 
         <main class="article-body" style="font-size: 1.1rem; line-height: 1.8; color: var(--text-primary);">
-          ${art.content}
+          ${injectMidArticleAd(art.content)}
 
           ${ADSTERRA_BANNER_HTML}
 
