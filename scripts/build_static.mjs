@@ -9,6 +9,15 @@ const rootDir = path.resolve(__dirname, '..');
 
 const ADSENSE_TAG = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2869103987354107" crossorigin="anonymous"></script>`;
 
+const ADSTERRA_TAG = `<script async="async" data-cfasync="false" src="https://bauval.org/21/f96b4ce25e9b165a5b69df91e673c151"></script>`;
+
+const ADSTERRA_BANNER_HTML = `
+  <!-- Adsterra Native/Display Banner Ad Unit -->
+  <div class="adsterra-ad-container" style="margin: 2.5rem auto; text-align: center; max-width: 100%; overflow: hidden;">
+    <div id="container-f96b4ce25e9b165a5b69df91e673c151"></div>
+  </div>
+`;
+
 const COOKIE_BANNER_HTML = `
   <!-- Cookie Consent Banner -->
   <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; max-width: 600px; margin: 0 auto; background: var(--bg-surface); border: 1px solid var(--accent-gold); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 1.25rem 1.5rem; z-index: 99999; backdrop-filter: blur(12px);">
@@ -240,6 +249,9 @@ function getHead(title, description, canonicalUrl, ogImage = 'https://backlinkbl
 
   <!-- Google AdSense Verification & Auto Ads -->
   ${ADSENSE_TAG}
+
+  <!-- Adsterra Banner Script -->
+  ${ADSTERRA_TAG}
 
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -610,6 +622,8 @@ function generateArticlePages() {
 
         <main class="article-body" style="font-size: 1.1rem; line-height: 1.8; color: var(--text-primary);">
           ${art.content}
+
+          ${ADSTERRA_BANNER_HTML}
 
           <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; margin: 3rem 0; display: flex; gap: 1.5rem; align-items: flex-start;">
             <img src="${authorAvatar}" alt="${authorName}" style="width: 70px; height: 70px; border-radius: var(--radius-full); object-fit: cover;" />
