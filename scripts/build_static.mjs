@@ -117,7 +117,7 @@ function normalizeImgPath(img) {
 }
 
 function getPageFooterHtml() {
-  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=86.0.0"></script></body></html>`;
+  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=90.0.0"></script></body></html>`;
 }
 
 function getBaseHeader(activeNav = '') {
@@ -126,7 +126,7 @@ function getBaseHeader(activeNav = '') {
   <div id="reading-progress"></div>
 
   <!-- Intelligence Ticker Bar -->
-  <div class="intelligence-ticker">
+  <div class="intelligence-ticker" aria-label="Latest editorial headlines">
     <div class="ticker-content">
       <span class="ticker-item"><span class="ticker-badge">EDITORIAL</span> Best Books for Critical Thinking (2026)</span>
       <span class="ticker-item"><span class="ticker-badge">AGENTS</span> Enterprise AI Agents: Autonomous Multi-Agent Architecture</span>
@@ -134,12 +134,18 @@ function getBaseHeader(activeNav = '') {
       <span class="ticker-item"><span class="ticker-badge">AI CODE</span> Blackbox AI: Features, Code Generator & Pricing Guide</span>
       <span class="ticker-item"><span class="ticker-badge">AI VIDEO</span> Viggle AI: Motion Transfer & Prompting Guide</span>
       <span class="ticker-item"><span class="ticker-badge">DEEP LEARNING</span> AI Hallucination: Causes, Detection & Prevention</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">EDITORIAL</span> Best Books for Critical Thinking (2026)</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">AGENTS</span> Enterprise AI Agents: Autonomous Multi-Agent Architecture</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">SECURITY</span> Enterprise AI Security: Threat Models & Governance</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">AI CODE</span> Blackbox AI: Features, Code Generator & Pricing Guide</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">AI VIDEO</span> Viggle AI: Motion Transfer & Prompting Guide</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">DEEP LEARNING</span> AI Hallucination: Causes, Detection & Prevention</span>
     </div>
   </div>
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="brand-container">
+      <a href="/" class="brand-container">
         <div class="brand-emblem" title="BacklinkBlend">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -155,12 +161,12 @@ function getBaseHeader(activeNav = '') {
 
       <nav>
         <ul class="desktop-nav">
-          <li><a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a></li>
-          <li><a href="/category/link-building" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/link-building');" class="nav-link ${activeNav === 'link-building' ? 'active' : ''}">Link Building</a></li>
-          <li><a href="/category/ai-automation" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-automation');" class="nav-link ${activeNav === 'ai-automation' ? 'active' : ''}">AI & Automation</a></li>
-          <li><a href="/category/seo-tools" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/seo-tools');" class="nav-link ${activeNav === 'seo-tools' ? 'active' : ''}">SEO Tools</a></li>
-          <li><a href="/category/digital-authority" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-authority');" class="nav-link ${activeNav === 'digital-authority' ? 'active' : ''}">Digital Authority</a></li>
-          <li><a href="/articles" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('articles');" class="nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a></li>
+          <li><a href="/" class="nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a></li>
+          <li><a href="/category/link-building" class="nav-link ${activeNav === 'link-building' ? 'active' : ''}">Link Building</a></li>
+          <li><a href="/category/ai-automation" class="nav-link ${activeNav === 'ai-automation' ? 'active' : ''}">AI & Automation</a></li>
+          <li><a href="/category/seo-tools" class="nav-link ${activeNav === 'seo-tools' ? 'active' : ''}">SEO Tools</a></li>
+          <li><a href="/category/digital-authority" class="nav-link ${activeNav === 'digital-authority' ? 'active' : ''}">Digital Authority</a></li>
+          <li><a href="/articles" class="nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a></li>
         </ul>
       </nav>
 
@@ -183,15 +189,15 @@ function getBaseHeader(activeNav = '') {
 
     <!-- Mobile Navigation Drawer Dropdown -->
     <nav class="mobile-nav-drawer" id="mobile-nav-drawer">
-      <a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="mobile-nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a>
-      <a href="/category/link-building" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/link-building');" class="mobile-nav-link ${activeNav === 'link-building' ? 'active' : ''}">Link Building</a>
-      <a href="/category/ai-automation" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-automation');" class="mobile-nav-link ${activeNav === 'ai-automation' ? 'active' : ''}">AI & Automation</a>
-      <a href="/category/seo-tools" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/seo-tools');" class="mobile-nav-link ${activeNav === 'seo-tools' ? 'active' : ''}">SEO & Backlink Tools</a>
-      <a href="/category/digital-authority" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-authority');" class="mobile-nav-link ${activeNav === 'digital-authority' ? 'active' : ''}">Digital Authority</a>
-      <a href="/articles" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('articles');" class="mobile-nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a>
+      <a href="/" class="mobile-nav-link ${activeNav === 'home' ? 'active' : ''}">Home</a>
+      <a href="/category/link-building" class="mobile-nav-link ${activeNav === 'link-building' ? 'active' : ''}">Link Building</a>
+      <a href="/category/ai-automation" class="mobile-nav-link ${activeNav === 'ai-automation' ? 'active' : ''}">AI & Automation</a>
+      <a href="/category/seo-tools" class="mobile-nav-link ${activeNav === 'seo-tools' ? 'active' : ''}">SEO & Backlink Tools</a>
+      <a href="/category/digital-authority" class="mobile-nav-link ${activeNav === 'digital-authority' ? 'active' : ''}">Digital Authority</a>
+      <a href="/articles" class="mobile-nav-link ${activeNav === 'articles' ? 'active' : ''}">All Articles</a>
       <div style="height: 1px; background: var(--border-light); margin: 0.5rem 0;"></div>
-      <a href="/about" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('about');" class="mobile-nav-link ${activeNav === 'about' ? 'active' : ''}">About Us</a>
-      <a href="/contact" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('contact');" class="mobile-nav-link ${activeNav === 'contact' ? 'active' : ''}">Contact Us</a>
+      <a href="/about" class="mobile-nav-link ${activeNav === 'about' ? 'active' : ''}">About Us</a>
+      <a href="/contact" class="mobile-nav-link ${activeNav === 'contact' ? 'active' : ''}">Contact Us</a>
     </nav>
   </header>
   `;
@@ -745,6 +751,9 @@ function generateArticlesPage() {
       <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
         ${cardsHtml}
       </div>
+
+      ${ADSTERRA_300X250_TAG}
+      ${ADSTERRA_BANNER_HTML}
     </div>
   `;
 
@@ -810,6 +819,8 @@ function generateCategoryPages() {
           <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
             ${cardsHtml}
           </div>
+          ${ADSTERRA_300X250_TAG}
+          ${ADSTERRA_BANNER_HTML}
         ` : `
           <p style="text-align: center; color: var(--text-muted); padding: 4rem 0;">No articles published in this hub yet. Check back soon!</p>
         `}
@@ -824,7 +835,173 @@ function generateCategoryPages() {
   });
 }
 
+// 9. GENERATE STATIC HOMEPAGE (index.html)
+function generateHomePage() {
+  const title = "BacklinkBlend — Link Building, AI Search & Digital Authority";
+  const desc = "BacklinkBlend is an independent digital publication delivering authoritative analysis on link building, AI-driven SEO, backlink software, and search engine authority.";
+  const canonical = "https://backlinkblend.com/";
+
+  // Lead Featured Article (Authority SEO / Link Building focus)
+  const hero = ARTICLES.find(a => a && a.featured && a.category === 'seo-tools') || ARTICLES.find(a => a && a.featured) || ARTICLES[0];
+  
+  // Diverse Editor's Pick from across the pillars
+  const sidePickSlugs = [
+    'google-september-2026-spam-update-guide',
+    'turnitin-ai-detector-guide',
+    'best-books-for-critical-thinking'
+  ];
+  let sideStories = sidePickSlugs.map(slug => ARTICLES.find(a => a && a.slug === slug)).filter(Boolean);
+  if (sideStories.length < 3) {
+    sideStories = ARTICLES.filter(a => a && a.id !== hero.id).slice(0, 3);
+  }
+
+  const latestGrid = ARTICLES.filter(a => a && a.id !== hero.id && !sideStories.some(s => s.id === a.id)).slice(0, 6);
+  const trending = [...ARTICLES].sort((a, b) => (a.trendingRank || 99) - (b.trendingRank || 99)).slice(0, 5);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://backlinkblend.com/#website",
+        "url": "https://backlinkblend.com/",
+        "name": "BacklinkBlend",
+        "description": desc,
+        "publisher": {
+          "@type": "Organization",
+          "name": "BacklinkBlend",
+          "url": "https://backlinkblend.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://backlinkblend.com/assets/images/favicon.jpg"
+          }
+        }
+      }
+    ]
+  };
+
+  const content = `
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+      <section class="hero-section" style="margin-top: 2rem;">
+        <article class="hero-main-card">
+          <a href="/article/${hero.slug}" style="text-decoration: none; color: inherit; display: block;">
+            <div class="hero-image-wrapper">
+              <img src="${normalizeImgPath(hero.image)}" alt="${hero.title}" loading="eager" fetchpriority="high" decoding="async" width="1600" height="900" style="aspect-ratio: 16/9; width: 100%; height: auto; object-fit: cover;" onerror="this.onerror=null; this.src='/assets/images/hero_tech_ai_1786192193469.jpg';" />
+            </div>
+            <div class="hero-content">
+              <div class="hero-meta">
+                <span class="badge">${(hero.category || 'SEO-TOOLS').toUpperCase()}</span>
+                <span>${hero.date || ''}</span>
+                <span>•</span>
+                <span>${hero.readTime || '8 min read'}</span>
+              </div>
+              <h1 class="hero-title">${hero.title}</h1>
+              <p class="hero-excerpt">${hero.deck || hero.metaDescription || ''}</p>
+              
+              ${hero.takeaway ? `
+                <div class="takeaway-box">
+                  <strong>Lead Takeaway:</strong> ${hero.takeaway}
+                </div>
+              ` : ''}
+
+              <div class="author-meta">
+                <img src="${hero.author ? hero.author.avatar : 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80'}" alt="${hero.author ? hero.author.name : 'BacklinkBlend Editorial'}" class="author-avatar" />
+                <div class="author-info">
+                  <span class="author-name">${hero.author ? hero.author.name : 'BacklinkBlend Editorial'}</span>
+                  <span class="author-role">${hero.author ? hero.author.role : 'Lead Marketing & Growth Researcher'}</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        ${sideStories.length > 0 ? `
+          <aside class="hero-side-column">
+            <div class="section-header" style="margin-bottom: 1rem;">
+              <h2 class="section-title" style="font-size: 1.25rem;">Editor's Pick</h2>
+              <span class="section-subtitle">Curated</span>
+            </div>
+
+            ${sideStories.map(story => `
+              <article class="side-article-card">
+                <a href="/article/${story.slug}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.35rem;">
+                  <span class="badge badge-outline" style="align-self: flex-start;">${(story.category || 'EDITORIAL').toUpperCase()}</span>
+                  <h3 class="side-article-title">${story.title}</h3>
+                  <div style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">
+                    ${story.date || ''} • ${story.readTime || '5 min read'}
+                  </div>
+                </a>
+              </article>
+            `).join('')}
+          </aside>
+        ` : ''}
+      </section>
+
+      ${ADSTERRA_BANNER_HTML}
+
+      <section style="margin: 3.5rem 0;">
+        <div class="section-header">
+          <h2 class="section-title">Editorial Pillars</h2>
+          <a href="/articles" class="section-subtitle" style="color: var(--accent-gold); font-weight: 600; text-decoration: none;">View All Articles →</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.25rem;">
+          ${CATEGORIES.map(cat => {
+            const count = ARTICLES.filter(a => a && a.category && a.category.toLowerCase() === cat.slug).length;
+            return `
+            <a href="/category/${cat.slug}" style="text-decoration: none; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; transition: transform 0.2s ease, border-color 0.2s ease;">
+              <span style="font-family: var(--font-serif-header); font-weight: 700; font-size: 1.15rem; color: var(--text-primary);">${cat.name}</span>
+              <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">${cat.description}</p>
+              <span style="margin-top: auto; padding-top: 0.75rem; font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-gold); font-weight: 600;">${count} Articles Indexed →</span>
+            </a>
+            `;
+          }).join('')}
+        </div>
+      </section>
+
+      <div class="layout-with-sidebar" style="margin-bottom: 3.5rem;">
+        <div>
+          <div class="section-header">
+            <h2 class="section-title">Latest Analysis</h2>
+            <span class="section-subtitle">Updated Real-Time</span>
+          </div>
+          <div class="grid-2" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+            ${latestGrid.map(art => renderStaticCardHTML(art)).join('')}
+          </div>
+        </div>
+
+        <aside>
+          <div class="section-header">
+            <h2 class="section-title">Trending Index</h2>
+            <span class="section-subtitle">Most Read</span>
+          </div>
+          <div class="trending-list" style="display: flex; flex-direction: column; gap: 1rem;">
+            ${trending.map((art, idx) => `
+              <div class="trending-item" style="display: flex; gap: 1rem; align-items: flex-start; padding: 0.75rem; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm);">
+                <span style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); line-height: 1;">0${idx + 1}</span>
+                <div style="flex: 1;">
+                  <span class="badge badge-outline" style="font-size: 0.6rem; padding: 0.15rem 0.4rem;">${(art.category || 'EDITORIAL').toUpperCase()}</span>
+                  <h4 style="margin: 0.35rem 0; font-size: 0.95rem; line-height: 1.35;">
+                    <a href="/article/${art.slug}" style="text-decoration: none; color: var(--text-primary); font-weight: 700;">${art.title}</a>
+                  </h4>
+                  <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">${art.readTime || '5 min read'}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+
+          ${ADSTERRA_300X250_TAG}
+        </aside>
+      </div>
+    </div>
+  `;
+
+  const html = getHead(title, desc, canonical, 'https://backlinkblend.com/assets/images/ahrefs_seo_tools_guide_banner.jpg', jsonLd) + getBaseHeader('home') + `<main id="app-content">${content}</main>` + getPageFooterHtml();
+  fs.writeFileSync(path.join(rootDir, 'index.html'), html, 'utf8');
+  console.log("Generated /index.html (Static Homepage with both Adsterra ad units)");
+}
+
 // EXECUTE ALL
+generateHomePage();
 generatePrivacyPage();
 generateAboutPage();
 generateContactPage();

@@ -48,7 +48,7 @@
   <div id="reading-progress"></div>
 
   <!-- Intelligence Ticker Bar -->
-  <div class="intelligence-ticker">
+  <div class="intelligence-ticker" aria-label="Latest editorial headlines">
     <div class="ticker-content">
       <span class="ticker-item"><span class="ticker-badge">EDITORIAL</span> Best Books for Critical Thinking (2026)</span>
       <span class="ticker-item"><span class="ticker-badge">AGENTS</span> Enterprise AI Agents: Autonomous Multi-Agent Architecture</span>
@@ -56,12 +56,18 @@
       <span class="ticker-item"><span class="ticker-badge">AI CODE</span> Blackbox AI: Features, Code Generator & Pricing Guide</span>
       <span class="ticker-item"><span class="ticker-badge">AI VIDEO</span> Viggle AI: Motion Transfer & Prompting Guide</span>
       <span class="ticker-item"><span class="ticker-badge">DEEP LEARNING</span> AI Hallucination: Causes, Detection & Prevention</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">EDITORIAL</span> Best Books for Critical Thinking (2026)</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">AGENTS</span> Enterprise AI Agents: Autonomous Multi-Agent Architecture</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">SECURITY</span> Enterprise AI Security: Threat Models & Governance</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">AI CODE</span> Blackbox AI: Features, Code Generator & Pricing Guide</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">AI VIDEO</span> Viggle AI: Motion Transfer & Prompting Guide</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-badge">DEEP LEARNING</span> AI Hallucination: Causes, Detection & Prevention</span>
     </div>
   </div>
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="brand-container">
+      <a href="/" class="brand-container">
         <div class="brand-emblem" title="BacklinkBlend">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -77,12 +83,12 @@
 
       <nav>
         <ul class="desktop-nav">
-          <li><a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="nav-link ">Home</a></li>
-          <li><a href="/category/link-building" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/link-building');" class="nav-link ">Link Building</a></li>
-          <li><a href="/category/ai-automation" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-automation');" class="nav-link ">AI & Automation</a></li>
-          <li><a href="/category/seo-tools" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/seo-tools');" class="nav-link ">SEO Tools</a></li>
-          <li><a href="/category/digital-authority" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-authority');" class="nav-link active">Digital Authority</a></li>
-          <li><a href="/articles" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('articles');" class="nav-link ">All Articles</a></li>
+          <li><a href="/" class="nav-link ">Home</a></li>
+          <li><a href="/category/link-building" class="nav-link ">Link Building</a></li>
+          <li><a href="/category/ai-automation" class="nav-link ">AI & Automation</a></li>
+          <li><a href="/category/seo-tools" class="nav-link ">SEO Tools</a></li>
+          <li><a href="/category/digital-authority" class="nav-link active">Digital Authority</a></li>
+          <li><a href="/articles" class="nav-link ">All Articles</a></li>
         </ul>
       </nav>
 
@@ -105,15 +111,15 @@
 
     <!-- Mobile Navigation Drawer Dropdown -->
     <nav class="mobile-nav-drawer" id="mobile-nav-drawer">
-      <a href="/" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('home');" class="mobile-nav-link ">Home</a>
-      <a href="/category/link-building" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/link-building');" class="mobile-nav-link ">Link Building</a>
-      <a href="/category/ai-automation" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/ai-automation');" class="mobile-nav-link ">AI & Automation</a>
-      <a href="/category/seo-tools" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/seo-tools');" class="mobile-nav-link ">SEO & Backlink Tools</a>
-      <a href="/category/digital-authority" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('category/digital-authority');" class="mobile-nav-link active">Digital Authority</a>
-      <a href="/articles" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('articles');" class="mobile-nav-link ">All Articles</a>
+      <a href="/" class="mobile-nav-link ">Home</a>
+      <a href="/category/link-building" class="mobile-nav-link ">Link Building</a>
+      <a href="/category/ai-automation" class="mobile-nav-link ">AI & Automation</a>
+      <a href="/category/seo-tools" class="mobile-nav-link ">SEO & Backlink Tools</a>
+      <a href="/category/digital-authority" class="mobile-nav-link active">Digital Authority</a>
+      <a href="/articles" class="mobile-nav-link ">All Articles</a>
       <div style="height: 1px; background: var(--border-light); margin: 0.5rem 0;"></div>
-      <a href="/about" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('about');" class="mobile-nav-link ">About Us</a>
-      <a href="/contact" onclick="event.preventDefault(); if(window.app) window.app.navigateTo('contact');" class="mobile-nav-link ">Contact Us</a>
+      <a href="/about" class="mobile-nav-link ">About Us</a>
+      <a href="/contact" class="mobile-nav-link ">Contact Us</a>
     </nav>
   </header>
   <main id="app-content">
@@ -400,4 +406,4 @@
       } catch(e) {}
     })();
   </script>
-<script src="/js/bundle.js?v=86.0.0"></script></body></html>
+<script src="/js/bundle.js?v=90.0.0"></script></body></html>

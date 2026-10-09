@@ -19,6 +19,11 @@ class Router {
 
   handleRoute() {
     try {
+      const appEl = document.getElementById('app-content');
+      if (appEl && appEl.children.length > 0 && !appEl.querySelector('.static-seo-fallback')) {
+        return;
+      }
+
       let rawRoute = '';
       const path = window.location.pathname.replace(/^\/+|\/+$/g, '').trim();
       const hash = window.location.hash.replace(/^#\/?/, '').trim();
@@ -180,58 +185,16 @@ export class AppController {
 
   navigateTo(rawRoute) {
     const cleanRoute = (rawRoute || '').trim().replace(/^#\/?|^\//, '');
-    
     if (cleanRoute === 'home' || cleanRoute === '') {
-      if (window.location.protocol !== 'file:' && window.location.origin && window.location.origin !== 'null') {
-        history.pushState(null, '', '/');
-      } else {
-        window.location.hash = '';
-      }
-      this.renderHome();
+      window.location.href = '/';
     } else {
-      if (window.location.protocol !== 'file:' && window.location.origin && window.location.origin !== 'null') {
-        history.pushState(null, '', `/${cleanRoute}`);
-      } else {
-        window.location.hash = `#${cleanRoute}`;
-      }
-
-      if (cleanRoute === 'articles') {
-        this.renderArticlesView();
-      } else if (cleanRoute.startsWith('category/')) {
-        const slug = cleanRoute.replace('category/', '');
-        this.renderCategoryView(slug);
-      } else if (cleanRoute.startsWith('article/')) {
-        const slug = cleanRoute.replace('article/', '');
-        this.renderArticleDetail(slug);
-      } else if (cleanRoute === 'about') {
-        this.renderAboutView();
-      } else if (cleanRoute === 'contact') {
-        this.renderContactView();
-      } else if (cleanRoute === 'privacy') {
-        this.renderPrivacyView();
-      } else if (cleanRoute === 'terms') {
-        this.renderTermsView();
-      } else if (cleanRoute === 'disclaimer') {
-        this.renderDisclaimerView();
-      }
+      window.location.href = '/' + cleanRoute;
     }
   }
 
   initEventListeners() {
     const themeBtn = document.getElementById('theme-toggle-btn');
     if (themeBtn) themeBtn.addEventListener('click', () => this.toggleTheme());
-
-    document.addEventListener('click', (e) => {
-      const link = e.target.closest('a[href]');
-      if (link) {
-        const href = link.getAttribute('href');
-        if (href && (href.startsWith('/') || href.startsWith('#'))) {
-          e.preventDefault();
-          const route = href.replace(/^#\/?|^\//, '').trim();
-          this.navigateTo(route);
-        }
-      }
-    });
   }
 
   initRouter() {
