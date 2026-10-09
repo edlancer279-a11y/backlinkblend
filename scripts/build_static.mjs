@@ -9,19 +9,18 @@ const rootDir = path.resolve(__dirname, '..');
 
 const ADSENSE_TAG = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2869103987354107" crossorigin="anonymous"></script>`;
 
-const ADSTERRA_TAG = `<script async="async" data-cfasync="false" src="https://bauval.org/21/f96b4ce25e9b165a5b69df91e673c151"></script>`;
-
 const ADSTERRA_BANNER_HTML = `
-  <!-- Adsterra Native/Display Banner Ad Unit -->
+  <!-- Adsterra Native Banner Ad Unit (ID: 31640542) -->
   <div class="adsterra-ad-container" style="margin: 2.5rem auto; text-align: center; max-width: 100%; overflow: hidden;">
+    <script async="async" data-cfasync="false" src="https://bauval.org/21/f96b4ce25e9b165a5b69df91e673c151"></script>
     <div id="container-f96b4ce25e9b165a5b69df91e673c151"></div>
   </div>
 `;
 
 const ADSTERRA_300X250_TAG = `
-  <!-- Adsterra 300x250 Medium Rectangle Ad Unit -->
+  <!-- Adsterra 300x250 Medium Rectangle Ad Unit (ID: 31641467) -->
   <div class="adsterra-rectangle-ad" style="margin: 2.5rem auto; text-align: center; display: flex; justify-content: center; min-height: 250px; overflow: hidden;">
-    <script>
+    <script type="text/javascript">
       atOptions = {
         'key' : 'd81f6aea9dee9ba13cc5c6190268f2ef',
         'format' : 'iframe',
@@ -30,7 +29,7 @@ const ADSTERRA_300X250_TAG = `
         'params' : {}
       };
     </script>
-    <script src="https://bauval.org/22/d81f6aea9dee9ba13cc5c6190268f2ef"></script>
+    <script type="text/javascript" src="https://bauval.org/22/d81f6aea9dee9ba13cc5c6190268f2ef"></script>
   </div>
 `;
 
@@ -280,9 +279,6 @@ function getHead(title, description, canonicalUrl, ogImage = 'https://backlinkbl
 
   <!-- Google AdSense Verification & Auto Ads -->
   ${ADSENSE_TAG}
-
-  <!-- Adsterra Banner Script -->
-  ${ADSTERRA_TAG}
 
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">

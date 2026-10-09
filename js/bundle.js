@@ -5890,6 +5890,25 @@
     }, 10);
   }
 
+  function injectMidArticleAd(content) {
+    if (!content) return '';
+    const adHtml = `
+      <!-- Adsterra 300x250 Medium Rectangle Ad Unit (ID: 31641467) -->
+      <div class="adsterra-rectangle-ad" style="margin: 2.5rem auto; text-align: center; display: flex; justify-content: center; min-height: 250px; overflow: hidden;"></div>
+    `;
+    const h2Matches = [...content.matchAll(/<h2[^>]*>/gi)];
+    if (h2Matches.length >= 2) {
+      const secondH2Index = h2Matches[1].index;
+      return content.slice(0, secondH2Index) + adHtml + '\n' + content.slice(secondH2Index);
+    }
+    const pMatches = [...content.matchAll(/<\/p>/gi)];
+    if (pMatches.length >= 3) {
+      const thirdPEnd = pMatches[2].index + 4;
+      return content.slice(0, thirdPEnd) + '\n' + adHtml + '\n' + content.slice(thirdPEnd);
+    }
+    return content + '\n' + adHtml;
+  }
+
   class App {
     constructor() {
       this.theme = localStorage.getItem('bb_theme') || 'light';
@@ -5900,6 +5919,43 @@
       this.initSearch();
       this.initRouter();
       this.initReadingProgress();
+      this.loadAds();
+    }
+
+    loadAds() {
+      try {
+        // 1. Adsterra Native Banner (Placement ID: 31640542)
+        const nativeContainer = document.getElementById('container-f96b4ce25e9b165a5b69df91e673c151');
+        if (nativeContainer) {
+          const parent = nativeContainer.parentElement;
+          if (parent && !parent.querySelector('script[src*="f96b4ce25e9b165a5b69df91e673c151"]')) {
+            const s = document.createElement('script');
+            s.async = true;
+            s.setAttribute('data-cfasync', 'false');
+            s.src = 'https://bauval.org/21/f96b4ce25e9b165a5b69df91e673c151';
+            parent.insertBefore(s, nativeContainer);
+          }
+        }
+
+        // 2. Adsterra 300x250 Medium Rectangle (Placement ID: 31641467)
+        const rectContainers = document.querySelectorAll('.adsterra-rectangle-ad:not([data-ad-injected="true"])');
+        rectContainers.forEach(container => {
+          container.setAttribute('data-ad-injected', 'true');
+          window.atOptions = {
+            'key': 'd81f6aea9dee9ba13cc5c6190268f2ef',
+            'format': 'iframe',
+            'height': 250,
+            'width': 300,
+            'params': {}
+          };
+          const s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.src = 'https://bauval.org/22/d81f6aea9dee9ba13cc5c6190268f2ef';
+          container.appendChild(s);
+        });
+      } catch (err) {
+        console.error('Adsterra loader error:', err);
+      }
     }
 
     initTheme() {
@@ -6185,6 +6241,11 @@
           ` : ''}
         </section>
 
+        <!-- Adsterra Native Banner Ad Unit (ID: 31640542) -->
+        <div class="adsterra-ad-container" style="margin: 2rem auto; text-align: center; max-width: 100%; overflow: hidden;">
+          <div id="container-f96b4ce25e9b165a5b69df91e673c151"></div>
+        </div>
+
         <section style="margin-bottom: 3.5rem;">
           <div class="section-header">
             <h2 class="section-title">Explore Hubs</h2>
@@ -6228,9 +6289,13 @@
                 </article>
               `).join('')}
             </div>
+
+            <!-- Adsterra 300x250 Medium Rectangle Ad Unit (ID: 31641467) -->
+            <div class="adsterra-rectangle-ad" style="margin: 2rem auto; text-align: center; display: flex; justify-content: center; min-height: 250px; overflow: hidden;"></div>
           </aside>
         </div>
       `;
+      this.loadAds();
     }
 
     // 2. ALL ARTICLES VIEW
@@ -6450,7 +6515,12 @@
 
               <!-- Article Main Content Body -->
               <main class="article-body">
-                ${article.content}
+                ${injectMidArticleAd(article.content)}
+
+                <!-- Adsterra Native Banner Ad Unit (ID: 31640542) -->
+                <div class="adsterra-ad-container" style="margin: 2.5rem auto; text-align: center; max-width: 100%; overflow: hidden;">
+                  <div id="container-f96b4ce25e9b165a5b69df91e673c151"></div>
+                </div>
 
                 <!-- Author Bio Card -->
                 <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; margin: 3rem 0; display: flex; gap: 1.5rem; align-items: flex-start;">
@@ -6478,6 +6548,7 @@
             ` : ''}
           </div>
         `;
+        this.loadAds();
       } catch (err) {
         console.error('Error rendering article detail:', err);
       }
