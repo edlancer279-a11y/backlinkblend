@@ -12,14 +12,14 @@ const ADSENSE_TAG = `<script async src="https://pagead2.googlesyndication.com/pa
 const ADSTERRA_BANNER_HTML = `
   <!-- Adsterra Native Banner Ad Unit (ID: 31640542) -->
   <div class="adsterra-ad-container" style="margin: 2.5rem auto; text-align: center; max-width: 100%; overflow: hidden;">
-    <script async="async" data-cfasync="false" src="https://bauval.org/21/f96b4ce25e9b165a5b69df91e673c151"></script>
+    <script async="async" data-cfasync="false" src="https://www.highperformanceformat.com/f96b4ce25e9b165a5b69df91e673c151/invoke.js"></script>
     <div id="container-f96b4ce25e9b165a5b69df91e673c151"></div>
   </div>
 `;
 
 const ADSTERRA_300X250_TAG = `
   <!-- Adsterra 300x250 Medium Rectangle Ad Unit (ID: 31641467) -->
-  <div class="adsterra-rectangle-ad" style="margin: 2.5rem auto; text-align: center; display: flex; justify-content: center; min-height: 250px; overflow: hidden;">
+  <div class="adsterra-rectangle-ad" style="margin: 2.5rem auto; text-align: center; display: flex; justify-content: center; min-height: 250px; max-width: 100%; overflow: hidden;" data-ad-injected="true">
     <script type="text/javascript">
       atOptions = {
         'key' : 'd81f6aea9dee9ba13cc5c6190268f2ef',
@@ -29,7 +29,7 @@ const ADSTERRA_300X250_TAG = `
         'params' : {}
       };
     </script>
-    <script type="text/javascript" src="https://bauval.org/22/d81f6aea9dee9ba13cc5c6190268f2ef"></script>
+    <script type="text/javascript" src="https://www.highperformanceformat.com/d81f6aea9dee9ba13cc5c6190268f2ef/invoke.js"></script>
   </div>
 `;
 

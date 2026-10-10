@@ -6112,7 +6112,7 @@
             const s = document.createElement('script');
             s.async = true;
             s.setAttribute('data-cfasync', 'false');
-            s.src = 'https://bauval.org/21/f96b4ce25e9b165a5b69df91e673c151';
+            s.src = 'https://www.highperformanceformat.com/f96b4ce25e9b165a5b69df91e673c151/invoke.js';
             parent.insertBefore(s, nativeContainer);
           }
         }
@@ -6121,6 +6121,9 @@
         const rectContainers = document.querySelectorAll('.adsterra-rectangle-ad:not([data-ad-injected="true"])');
         rectContainers.forEach(container => {
           container.setAttribute('data-ad-injected', 'true');
+          if (container.querySelector('script[src*="d81f6aea9dee9ba13cc5c6190268f2ef"]')) {
+            return;
+          }
           window.atOptions = {
             'key': 'd81f6aea9dee9ba13cc5c6190268f2ef',
             'format': 'iframe',
@@ -6128,9 +6131,17 @@
             'width': 300,
             'params': {}
           };
+          window.atAsyncOptions = window.atAsyncOptions || [];
+          window.atAsyncOptions.push({
+            'key': 'd81f6aea9dee9ba13cc5c6190268f2ef',
+            'format': 'iframe',
+            'height': 250,
+            'width': 300,
+            'params': {}
+          });
           const s = document.createElement('script');
           s.type = 'text/javascript';
-          s.src = 'https://bauval.org/22/d81f6aea9dee9ba13cc5c6190268f2ef';
+          s.src = 'https://www.highperformanceformat.com/d81f6aea9dee9ba13cc5c6190268f2ef/invoke.js';
           container.appendChild(s);
         });
       } catch (err) {
