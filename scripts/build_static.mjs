@@ -117,7 +117,7 @@ function normalizeImgPath(img) {
 }
 
 function getPageFooterHtml() {
-  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=92.0.0"></script></body></html>`;
+  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=94.0.0"></script></body></html>`;
 }
 
 function getBaseHeader(activeNav = '') {
@@ -588,7 +588,7 @@ function generateArticlePages() {
     const authorBio = (art.author && art.author.bio) ? art.author.bio : 'Senior editorial lead covering enterprise artificial intelligence, cybersecurity governance, and autonomous agent systems.';
     const catName = art.category ? art.category.toUpperCase() : 'TECHNOLOGY';
     const readTime = art.readTime || '5 min read';
-    const listenTime = art.listenTime || '7 min audio';
+    const listenTime = art.listenTime ? ` • ${art.listenTime}` : '';
     const rawImg = art.image || 'assets/images/hero_tech_ai_1786192193469.jpg';
     const image = normalizeImgPath(rawImg);
 
@@ -599,7 +599,7 @@ function generateArticlePages() {
       "description": desc,
       "image": [image.startsWith('http') ? image : 'https://backlinkblend.com' + image],
       "datePublished": (art.date || '2026-08-01') + "T08:00:00+05:00",
-      "dateModified": (art.date || '2026-08-01') + "T08:00:00+05:00",
+      "dateModified": (art.updated || art.date || '2026-08-01') + "T08:00:00+05:00",
       "author": [{
         "@type": "Person",
         "name": authorName,
@@ -642,8 +642,8 @@ function generateArticlePages() {
               <div style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">${authorRole}</div>
             </div>
             <div style="margin-left: auto; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-align: right;">
-              <div>Published ${art.date || ''}</div>
-              <div>${readTime} • ${listenTime}</div>
+              <div>${art.updated ? `Updated ${art.updated}` : `Published ${art.date || ''}`}</div>
+              <div>${readTime}${listenTime}</div>
             </div>
           </div>
         </header>

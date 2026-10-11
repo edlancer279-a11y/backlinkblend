@@ -265,3 +265,32 @@ Claude AI by Anthropic is a leading Large Language Model family emphasizing cons
 # Enterprise AI Security Architecture: Threat Models & Defense Frameworks
 
 An executive blueprint for securing LLMs, agentic tools, and RAG pipelines against prompt injection, data poisoning, and model theft.
+
+---
+
+# Droven IO Artificial Intelligence News: Tools & Platform Guide
+
+An authoritative 2026 editorial breakdown of Droven IO artificial intelligence news—analyzing tech topics, clarifying AI tool misconceptions, and comparing real workflow automation.
+
+Key Architecture & Insights:
+- Platform Classification: Editorial technology publication and educational explainer blog rather than a SaaS automation tool or developer dashboard
+- Deconstructing Brand Misconceptions: How .io domain conventions, third-party lead generation, and category conflation led to "AI tools" confusion
+- Core Technology Verticals: Generative AI, robotic process automation (RPA), enterprise cybersecurity hygiene, cloud migration, and SaaS reviews
+- Architectural Comparison Matrix: Informational Tech Portals vs. Execution-Layer Automation Tools (Make, n8n, Zapier) vs. Institutional AI Research (MIT Tech Review, arXiv)
+- Media Evaluation Framework: Corporate masthead transparency, cross-examining commercial pricing/specs, citation depth, and structured content audits
+- Practical Automation Transition: Moving from general tech news to authenticated workflow middleware (n8n, Zapier) and RAG research tools (Google NotebookLM)
+
+---
+
+# What Is Viggle AI? Features, Motion Prompts & Video Guide
+
+An authoritative 2026 technical guide to Viggle AI—exploring JST-1 physics models, character motion transfer, prompt engineering, and pricing plans.
+
+Key Architecture & Insights:
+- JST-1 Physics-Informed Foundation Model: 3D spatial representations and biomechanical motion vectors enforcing rigid joint constraints and natural mass dynamics
+- Four Primary Operational Modes: Mix Mode (/mix motion retargeting), Animate Mode (/animate prompt-driven motion), Ideate Mode (/ideate complete text-to-video), and Stylize Mode (/stylize character reskinning)
+- 3D Skeletal Animation Pipeline: Exporting raw character motion data to FBX and GLB formats for Unreal Engine and Unity pipelines
+- Kinematic Prompt Engineering: Directing pacing, acceleration/deceleration curves, and separating camera tracking from character trajectories
+- Studio Production Toolchain: Compositing solid-green alpha channels with Luma Dream Machine and Hailuo AI virtual environments
+- Verified 2026 Creator Pricing: Free ($0/mo, 720p watermarked), Creator/Pro ($9.99/mo, 1080p commercial), Live ($19.99/mo, real-time OBS streaming), Studio (~$63.99/mo, 4K and API)
+
