@@ -41,11 +41,8 @@ This skill defines the standardized, end-to-end editorial pipeline for generatin
 ### Step 2: Editorial Specifications & Metadata
 
 #### Author Assignment
-Assign the article to the appropriate resident author in `AUTHORS`:
-- `evelyn-vance` (Executive Editor, Technology & AI): AI tools, LLMs, neural models, cloud computing, developer tools.
-- `julian-thorne` (Senior Financial Strategist): Global finance, macroeconomics, private equity, fintech.
-- `marcus-vane` (Dr. Marcus Vane, Lead Marketing & Growth): SEO, digital marketing, organic growth, brand strategy.
-- `elena-rostova` (Global Culture & Design Director): Architectural design, modern minimalism, digital culture.
+Assign the article to:
+- bdul (Abdul, Founder & Lead Search Strategist): Link building, AI & search automation, SEO tools, digital search authority.
 
 #### Category Assignment
 Choose one of the 6 core pillars:
