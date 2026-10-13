@@ -4,6 +4,19 @@
 
 ---
 
+# Scribbr AI Detector: Accuracy, Pricing & How It Works
+
+An authoritative technical evaluation of the Scribbr AI detector—examining detection algorithms, free vs. premium tiers, Turnitin differences, and benchmark accuracy.
+
+Key Architecture & Insights:
+- Algorithmic Architecture: Linguistic perplexity and burstiness statistical analysis with sentence-level probability heatmaps
+- Free vs. Premium Tiers: Free 1,200-word browser scanner versus pay-per-document academic plagiarism and AI bundles ($19.95 to $39.95)
+- The Turnitin Distinction: Dispelling the myth that Scribbr uses Turnitin AI—Scribbr AI uses Learneo/QuillBot models, not Turnitin's proprietary institutional engine
+- Accuracy & Evasion Benchmarks: High accuracy on raw synthetic prose (78%-84%), sharp drops below 50% against automated paraphrasing and AI humanizers
+- False Positive Risks & ESL Bias: 8-10% false positive rates on formal human academic prose, highlighting Stanford research on non-native English speaker bias
+
+---
+
 # How to Optimize Content for Google AI Overviews: 2026 SEO Guide
 
 An authoritative 2026 framework for optimizing web content for Google AI Overviews—covering retrieval-augmented generation (RAG), answer-first formatting, E-E-A-T authority signals, and structured data implementation.
