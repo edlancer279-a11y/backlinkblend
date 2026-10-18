@@ -4,6 +4,8 @@
 
 ## Core Technical Research & Articles
 
+- [Grok AI: Features, Models, Pricing & How It Works (2026)](https://backlinkblend.com/article/grok-ai): An authoritative technical evaluation of xAI’s Grok AI—exploring real-time X data retrieval, frontier reasoning models, Flux image synthesis, and pricing tiers.
+- [Gramhir.pro AI Art: Reality Check, Features & Alternatives](https://backlinkblend.com/article/gramhir-pro-ai-art): An authoritative technical investigation into Gramhir.pro AI art claims—separating viral programmatic review hype from reality, analyzing Instagram scraper origins, and testing legitimate generative alternatives.
 - [Scribbr AI Detector: Accuracy, Pricing & How It Works](https://backlinkblend.com/article/scribbr-ai-detector): An authoritative technical evaluation of the Scribbr AI detector—examining detection algorithms, free vs. premium tiers, Turnitin differences, and benchmark accuracy.
 - [How to Optimize Content for Google AI Overviews: 2026 SEO Guide](https://backlinkblend.com/article/how-to-optimize-content-for-google-ai-overviews): An authoritative 2026 framework for optimizing web content for Google AI Overviews—covering retrieval-augmented generation (RAG), answer-first formatting, E-E-A-T authority signals, and structured data implementation.
 - [Ahrefs SEO Tools Guide: Features, Backlink Audits & Pricing](https://backlinkblend.com/article/ahrefs-seo-tools-guide): A comprehensive breakdown of Ahrefs SEO tools—covering Site Explorer backlink indexes, Keywords Explorer, technical Site Audits, Rank Tracker, and 2026 pricing plans.

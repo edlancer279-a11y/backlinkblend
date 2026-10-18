@@ -4,6 +4,32 @@
 
 ---
 
+# Grok AI: Features, Models, Pricing & How It Works (2026)
+
+An authoritative technical evaluation of xAI’s Grok AI—exploring real-time X data retrieval, frontier reasoning models, Flux image synthesis, and pricing tiers.
+
+Key Architecture & Insights:
+- Colossus Compute Engine: 100,000+ liquid-cooled NVIDIA H100 GPU cluster driving accelerated transformer pre-training
+- Live Social Knowledge Graph: Ingesting the real-time X streaming firehose to provide near-instantaneous event awareness
+- Grok Imagine & FLUX.1: High-fidelity rectified flow diffusion producing photorealistic anatomy and accurate in-image typography
+- Benchmark Performance: Mathematical reasoning (MATH/GSM8K) and coding (HumanEval) evaluations alongside GPT-4o and Claude 3.5 Sonnet
+- Commercial Tiers & API: Consumer plans from $0 to $30/mo and OpenAI-compatible developer endpoints billed per million tokens
+
+---
+
+# Gramhir.pro AI Art: Reality Check, Features & Alternatives
+
+An authoritative technical investigation into Gramhir.pro AI art claims—separating viral programmatic review hype from reality, analyzing Instagram scraper origins, and testing legitimate generative alternatives.
+
+Key Architecture & Insights:
+- Origin & Lineage: Historical analysis of Gramho and Gramhir anonymous Instagram scrapers and subsequent domain pivots
+- The Review Mirage: How programmatic SEO networks fabricate reviews of non-existent AI image generation features
+- Diagnostic Comparison: Empirical benchmarking of claimed GAN features against actual platform capabilities and industry standards
+- Cybersecurity & Privacy: Evaluating malvertising vectors, lookalike phishing domains, and safe browsing protocols
+- Verified Alternatives: Practical workflows using Midjourney v6, OpenAI DALL-E 3, Adobe Firefly, and Deep AI
+
+---
+
 # Scribbr AI Detector: Accuracy, Pricing & How It Works
 
 An authoritative technical evaluation of the Scribbr AI detector—examining detection algorithms, free vs. premium tiers, Turnitin differences, and benchmark accuracy.
