@@ -4,6 +4,19 @@
 
 ---
 
+# Vidqu Face Swap: Features, Video Tools & Pricing (2026)
+
+An authoritative technical evaluation of Vidqu Face Swap—exploring AI photo and video swapping mechanics, multi-face detection, credit pricing, and deepfake safety policies.
+
+Key Architecture & Insights:
+- Biometric Landmark Extraction: Convolutional neural networks calculate 2D/3D facial mesh coordinates across eyes, nose, lips, and jawlines
+- Identity Embedding Isolation: High-density feature vector extraction strips peripheral artifacts while preserving subject identity
+- Multi-Person Remapping: Scans group media to detect distinct faces and allows discrete target identity assignment per person
+- Temporal Video Consistency: Frame-by-frame transformation matching head yaw, pitch, roll, and expressions with boundary blending
+- Credit Economics & Safety: Freemium trial credits, on-demand packs, Pro tiers, and strict biometric consent policies
+
+---
+
 # Grok AI: Features, Models, Pricing & How It Works (2026)
 
 An authoritative technical evaluation of xAI’s Grok AI—exploring real-time X data retrieval, frontier reasoning models, Flux image synthesis, and pricing tiers.
