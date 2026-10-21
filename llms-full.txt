@@ -4,6 +4,35 @@
 
 ---
 
+# OpenAI GPT-5.4 Thinking-Mini: Specs, Benchmarks & Pricing
+
+An authoritative technical evaluation of OpenAI's GPT-5.4 Thinking-Mini—exploring its 400K context window, configurable reasoning effort, benchmarks, and API pricing.
+
+Key Architecture & Insights:
+- Distilled Reasoning Latency: Executes chain-of-thought deliberation over 2x faster than previous small reasoning models with near-flagship SWE-bench pass rates
+- Configurable Reasoning Effort: API parameter `reasoning.effort` enables granular tuning across `none`, `low`, `medium`, `high`, and `xhigh`
+- 400,000-Token Context: Enables direct ingestion of entire repositories, technical documentation, and visual system schematics with up to 128K output tokens
+- High-Efficiency Economics: Priced at $0.75/1M input and $4.50/1M output tokens, with up to 90% savings ($0.075/1M) via prompt context caching
+
+URL: https://backlinkblend.com/article/openai-gpt-5-4-thinking-mini
+
+---
+
+# Google AI Gemini: Models, Features, Pricing & Guide (2026)
+
+An authoritative technical evaluation of Google AI Gemini—exploring native multimodal architecture, Flash and Pro model capabilities, context windows, API pricing, and Gemini Live.
+
+Key Architecture & Insights:
+- Native Multimodality: Unified attention layers pre-trained simultaneously across text, code, audio, video, and imagery without external conversion bottlenecks
+- Model Tier Hierarchy: Low-latency Gemini Flash and Flash-Lite for high-throughput APIs; Gemini Pro for complex multi-step reasoning and software engineering; Ultra/Frontier for apex research
+- Million-Token Context: Native ingestion capacity from 1M to 2M+ tokens with >99% needle-in-a-haystack retrieval accuracy, eliminating vector fragmentation
+- Real-Time Duplex Streaming: Gemini Live powers natural voice-to-voice dialogues with conversational interruption handling and simultaneous visual processing
+- Token Economics: Context Caching unlocks up to 90% savings on repeated input payloads, with structured thinking token budgets for reasoning loops
+
+URL: https://backlinkblend.com/article/google-ai-gemini
+
+---
+
 # Vidqu Face Swap: Features, Video Tools & Pricing (2026)
 
 An authoritative technical evaluation of Vidqu Face Swap—exploring AI photo and video swapping mechanics, multi-face detection, credit pricing, and deepfake safety policies.

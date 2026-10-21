@@ -4,6 +4,7 @@
 
 ## Core Technical Research & Articles
 
+- [Google AI Gemini: Models, Features, Pricing & Guide (2026)](https://backlinkblend.com/article/google-ai-gemini): An authoritative technical evaluation of Google AI Gemini—exploring native multimodal architecture, Flash and Pro model capabilities, context windows, API pricing, and Gemini Live.
 - [Vidqu Face Swap: Features, Video Tools & Pricing (2026)](https://backlinkblend.com/article/vidqu-face-swap): An authoritative technical evaluation of Vidqu Face Swap—exploring AI photo and video swapping mechanics, multi-face detection, credit pricing, and deepfake safety policies.
 - [Grok AI: Features, Models, Pricing & How It Works (2026)](https://backlinkblend.com/article/grok-ai): An authoritative technical evaluation of xAI’s Grok AI—exploring real-time X data retrieval, frontier reasoning models, Flux image synthesis, and pricing tiers.
 - [Gramhir.pro AI Art: Reality Check, Features & Alternatives](https://backlinkblend.com/article/gramhir-pro-ai-art): An authoritative technical investigation into Gramhir.pro AI art claims—separating viral programmatic review hype from reality, analyzing Instagram scraper origins, and testing legitimate generative alternatives.
