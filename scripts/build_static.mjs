@@ -145,7 +145,7 @@ function normalizeImgPath(img) {
 }
 
 function getPageFooterHtml() {
-  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=96.0.0"></script></body></html>`;
+  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=98.0.0"></script></body></html>`;
 }
 
 function getBaseHeader(activeNav = '') {

@@ -4,6 +4,9 @@
 
 ## Core Technical Research & Articles
 
+- [Roleplay AI Chat Bot: Architecture, Models & Guide](https://backlinkblend.com/article/roleplay-ai-chat-bot-guide): An authoritative technical evaluation of roleplay AI chat bots—examining narrative model weights, context memory injection, character card architecture, and safety guardrails.
+- [Bot Traffic Generator: Mechanics, SEO Risks & Detection](https://backlinkblend.com/article/bot-traffic-generator-guide): An authoritative technical evaluation of bot traffic generators—how headless browser scripts and residential proxies simulate visits, and why artificial traffic destroys SEO and ad monetization.
+- [OpenAI GPT-5.4 Thinking-Mini: Specs, Benchmarks & Pricing](https://backlinkblend.com/article/openai-gpt-5-4-thinking-mini): An authoritative technical evaluation of OpenAI's GPT-5.4 Thinking-Mini—exploring its 400K context window, configurable reasoning effort, benchmarks, and API pricing.
 - [Google AI Gemini: Models, Features, Pricing & Guide (2026)](https://backlinkblend.com/article/google-ai-gemini): An authoritative technical evaluation of Google AI Gemini—exploring native multimodal architecture, Flash and Pro model capabilities, context windows, API pricing, and Gemini Live.
 - [Vidqu Face Swap: Features, Video Tools & Pricing (2026)](https://backlinkblend.com/article/vidqu-face-swap): An authoritative technical evaluation of Vidqu Face Swap—exploring AI photo and video swapping mechanics, multi-face detection, credit pricing, and deepfake safety policies.
 - [Grok AI: Features, Models, Pricing & How It Works (2026)](https://backlinkblend.com/article/grok-ai): An authoritative technical evaluation of xAI’s Grok AI—exploring real-time X data retrieval, frontier reasoning models, Flux image synthesis, and pricing tiers.
