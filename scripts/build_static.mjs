@@ -7,7 +7,32 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const ADSENSE_TAG = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2869103987354107" crossorigin="anonymous"></script>`;
+const ADSENSE_TAG = `
+  <!-- Google AdSense Verification & High-Performance Script Loader -->
+  <meta name="google-adsense-account" content="ca-pub-2869103987354107">
+  <script>
+    (function() {
+      var adLoaded = false;
+      function loadAdSense() {
+        if (adLoaded) return;
+        adLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2869103987354107';
+        s.crossOrigin = 'anonymous';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'];
+      events.forEach(function(e) {
+        window.addEventListener(e, loadAdSense, { once: true, passive: true });
+      });
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(function() { setTimeout(loadAdSense, 3000); });
+      } else {
+        setTimeout(loadAdSense, 3500);
+      }
+    })();
+  </script>`;
 
 const ADSTERRA_BANNER_HTML = '';
 const ADSTERRA_300X250_TAG = '';
@@ -145,7 +170,7 @@ function normalizeImgPath(img) {
 }
 
 function getPageFooterHtml() {
-  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script src="/js/bundle.js?v=99.0.0"></script></body></html>`;
+  return getBaseFooter() + SEARCH_MODAL_HTML + COOKIE_BANNER_HTML + `<script defer src="/js/bundle.js?v=99.0.0"></script></body></html>`;
 }
 
 function getBaseHeader(activeNav = '') {
@@ -206,10 +231,10 @@ function getBaseHeader(activeNav = '') {
         </button>
 
         <button class="icon-btn" id="theme-toggle-btn" aria-label="Toggle visual theme" title="Toggle Theme">
-          <!-- Populated by JS -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         </button>
 
-        <button class="icon-btn mobile-menu-toggle" id="mobile-menu-toggle-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+        <button class="icon-btn mobile-menu-toggle" id="mobile-menu-toggle-btn" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer" title="Open Menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
       </div>
@@ -247,7 +272,7 @@ function getBaseFooter() {
       </div>
 
       <div>
-        <h4 class="footer-column-title">Editorial Pillars</h4>
+        <h3 class="footer-column-title">Editorial Pillars</h3>
         <ul class="footer-links">
           <li><a href="/category/link-building" class="footer-link">Link Building</a></li>
           <li><a href="/category/ai-automation" class="footer-link">AI & Automation</a></li>
@@ -257,7 +282,7 @@ function getBaseFooter() {
       </div>
 
       <div>
-        <h4 class="footer-column-title">Publication</h4>
+        <h3 class="footer-column-title">Publication</h3>
         <ul class="footer-links">
           <li><a href="/about" class="footer-link">About Us</a></li>
           <li><a href="/contact" class="footer-link">Contact Us</a></li>
@@ -266,7 +291,7 @@ function getBaseFooter() {
       </div>
 
       <div>
-        <h4 class="footer-column-title">Legal & Trust</h4>
+        <h3 class="footer-column-title">Legal & Trust</h3>
         <ul class="footer-links">
           <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
           <li><a href="/terms" class="footer-link">Terms & Conditions</a></li>
@@ -322,7 +347,11 @@ function getHead(title, description, canonicalUrl, ogImage = 'https://backlinkbl
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap">
+  </noscript>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/styles.css?v=13.0.0">
@@ -950,7 +979,7 @@ function generateHomePage() {
               ` : ''}
 
               <div class="author-meta">
-                <img src="${hero.author ? hero.author.avatar : '/assets/images/author-abdul.jpg'}" alt="${hero.author ? hero.author.name : 'BacklinkBlend Editorial'}" class="author-avatar" />
+                <img src="${hero.author ? hero.author.avatar : '/assets/images/author-abdul.jpg'}" alt="${hero.author ? hero.author.name : 'BacklinkBlend Editorial'}" class="author-avatar" width="40" height="40" loading="lazy" decoding="async" />
                 <div class="author-info">
                   <span class="author-name">${hero.author ? hero.author.name : 'Abdul'}</span>
                   <span class="author-role">${hero.author ? hero.author.role : 'Founder & Lead Search Strategist'}</span>
@@ -1025,9 +1054,9 @@ function generateHomePage() {
                 <span style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); line-height: 1;">0${idx + 1}</span>
                 <div style="flex: 1;">
                   <span class="badge badge-outline" style="font-size: 0.6rem; padding: 0.15rem 0.4rem;">${(art.category || 'EDITORIAL').toUpperCase()}</span>
-                  <h4 style="margin: 0.35rem 0; font-size: 0.95rem; line-height: 1.35;">
+                  <h3 style="margin: 0.35rem 0; font-size: 0.95rem; line-height: 1.35;">
                     <a href="/article/${art.slug}" style="text-decoration: none; color: var(--text-primary); font-weight: 700;">${art.title}</a>
-                  </h4>
+                  </h3>
                   <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">${art.readTime || '5 min read'}</span>
                 </div>
               </div>

@@ -7474,7 +7474,19 @@
       this.initSearch();
       this.initRouter();
       this.initReadingProgress();
-      this.loadAds();
+      const triggerAds = () => {
+        if (this._adsInitialized) return;
+        this._adsInitialized = true;
+        this.loadAds();
+      };
+      ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(e => {
+        window.addEventListener(e, triggerAds, { once: true, passive: true });
+      });
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => setTimeout(triggerAds, 3500));
+      } else {
+        setTimeout(triggerAds, 4000);
+      }
     }
 
     loadAds() {
