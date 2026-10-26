@@ -4,6 +4,7 @@
 
 ## Core Technical Research & Articles
 
+- [Technical SEO Audits: 7-Pillar Framework, Checklist & Guide](https://backlinkblend.com/article/technical-seo-audits-guide): A comprehensive technical SEO audit framework evaluating crawl budgets, JavaScript rendering, indexing directives, Core Web Vitals, and structured data architecture.
 - [Roleplay AI Chat Bot: Architecture, Models & Guide](https://backlinkblend.com/article/roleplay-ai-chat-bot-guide): An authoritative technical evaluation of roleplay AI chat bots—examining narrative model weights, context memory injection, character card architecture, and safety guardrails.
 - [Bot Traffic Generator: Mechanics, SEO Risks & Detection](https://backlinkblend.com/article/bot-traffic-generator-guide): An authoritative technical evaluation of bot traffic generators—how headless browser scripts and residential proxies simulate visits, and why artificial traffic destroys SEO and ad monetization.
 - [OpenAI GPT-5.4 Thinking-Mini: Specs, Benchmarks & Pricing](https://backlinkblend.com/article/openai-gpt-5-4-thinking-mini): An authoritative technical evaluation of OpenAI's GPT-5.4 Thinking-Mini—exploring its 400K context window, configurable reasoning effort, benchmarks, and API pricing.
